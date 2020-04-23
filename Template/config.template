@@ -1,0 +1,16 @@
+{
+    "timeLimit": 0,
+    "tests": [],
+    "isInteractive": false,
+    "name": "",
+    "truncateLongTest": false,
+    "checkerParameters": "",
+    "useGeneration": false,
+    "printWrongAnswer": false,
+    "useLocalChecker": false,
+    "url": null,
+    "group": "",
+    "numTest": 0,
+    "genParameters": "",
+    "knowGenAns": false
+}

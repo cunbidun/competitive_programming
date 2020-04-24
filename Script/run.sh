@@ -94,6 +94,7 @@ checkerParameters=$(jq -r '.checkerParameters' config.json)
 DIR="./TestCase/" 
 if [ "$(ls -A $DIR)" ]; then
     cd './TestCase/'
+
     cp ../solution.cpp ../../../output
     for f in `ls -v *.in` 
     do
@@ -198,27 +199,29 @@ if [ "$(ls -A $DIR)" ]; then
     rm -f ../checker 
     rm -f ../gen 
 else 
+    cd './TestCase/'
     rm -rf ../TestCase 
     rm -f ../solution 
     rm -f ../checker 
     rm -f ../gen  
-fi 
+fi
 
 echo '==================================================================' 
 echo "Test results:"
 
 if $rte; then 
     echo "\e[31;1mRun Time Error!\e[0m" 
-else if $allPassed; then 
-    if $tle; then 
-        echo "\e[31;1mTime limit exceeded!\e[0m" 
-    else 
-        printf "\e[32;1mAll test passed!\e[0m" 
-        echo " in \e[32;1m$maxTime\e[0m ms." 
-    fi 
 else 
-    echo "\e[31;1mSome cases failed!\e[0m" 
-fi 
+    if $allPassed; then 
+        if $tle; then 
+            echo "\e[31;1mTime limit exceeded!\e[0m" 
+        else 
+            printf "\e[32;1mAll test passed!\e[0m" 
+            echo " in \e[32;1m$maxTime\e[0m ms." 
+        fi 
+    else 
+        echo "\e[31;1mSome cases failed!\e[0m" 
+    fi 
 fi
 
 EF=$(($(date +%s%N)/1000000)) 

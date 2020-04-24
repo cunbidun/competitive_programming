@@ -15,5 +15,5 @@ cd ..
 if [ "$name" = "" ]; then
     rm -rf newTask
 else 
-    mv newTask $name
+    mv newTask "$name"
 fi

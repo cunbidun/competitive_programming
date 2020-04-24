@@ -129,7 +129,7 @@ if [ "$(ls -A $DIR)" ]; then
         START=$(($(date +%s%N)/1000000))
         ../solution < $f > "${f%.*}.actual"
         if [ $? -ne 0 ];then 
-            rte = true 
+            rte=true 
             echo "Verdict: \e[31;1mRTE\e[0m" 
             echo '------------------------------------------------------------------' 
             continue 

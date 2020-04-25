@@ -28,8 +28,8 @@ fi
 name=$(jq -r '.name' config.json)
 
 cd ..
-if [ "$name" = "" ]; then
-    rm -rf $prename
-elif [ ! "$name" = "$prename" ];then
-    mv $prename $name
+if [ ! "$prename" = "" ]; then
+    if [ ! "$name" = "$prename" ];then
+        mv "$prename" "$name"
+    fi
 fi

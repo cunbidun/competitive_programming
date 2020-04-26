@@ -21,14 +21,14 @@ app.post('/', (req, res) => {
         };
         tests.push(test);
     }
-    fs.copyFile(`../Template/solution.template`, `../Task/${data.name}/solution.cpp`, function(err) {});
+    fs.copyFile(`../Template/solution.template`, `../Task/${data.name.replace("\"","\'")}/solution.cpp`, function(err) {});
     obj =  { 
         "tests" : tests,
-        "name": data.name, 
-        "group": data.group,
+        "name": data.name.replace("\"","\'"), 
+        "group": data.group.replace("\"","\'"),
         "isInteractive": data.interactive, 
-        "timeLimit": 20000, 
-        // "timeLimit": data.timeLimit, 
+        // "timeLimit": 20000, 
+        "timeLimit": data.timeLimit, 
         "truncateLongTest":false, 
         "checkerParameters": "",
         "useGeneration": false,

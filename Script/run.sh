@@ -1,23 +1,42 @@
 #!/bin/zsh
 #reset
-trap '  
-    rm -rf ./TestCase 
-    rm -rf ./solution 
-    rm -f ./checker 
-    rm -f ./gen
+SF=$(($(date +%s%N)/1000000));
+START=$(($(date +%s%N)/1000000));
+
+trap ' 
+    rm -rf ../TestCase 
+    rm -rf ../solution 
+    rm -f ../checker 
+    rm -f ../gen 
+    echo
+    echo "\e[31;1mReceived SIGINT\e[0m"
+    echo "------------------------------------------------------------------"
+    echo "=================================================================="
+    echo "Test results:" 
+    
+    
+
+    EF=$(($(date +%s%N)/1000000)) 
+    time=$((EF - SF)) 
+    echo "\e[35;1mAll Testing finished in $time ms\e[0m"
+
+    exit 0
 ' INT;
 clear;
 
 ulimit -s unlimited;
 
 cd "$1";
-SF=$(($(date +%s%N)/1000000));
-START=$(($(date +%s%N)/1000000));
+
 
 if [ ! "$(<$1/solution.cpp)" = "$(<$1/../../Cache/solution.cpp)" ]; then 
     g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o solution ./solution.cpp --std=c++17
     if [ $? -ne 0 ]; then
         echo "\e[31;1mCompile solution file failed!\e[0m" 
+        rm -rf ./TestCase 
+        rm -f ./solution 
+        rm -f ./checker 
+        rm -f ./gen  
         exit 0
     fi
         cp "$1/solution.cpp" "$1/../../Cache/solution.cpp"
@@ -36,6 +55,10 @@ else
     if [ $? -ne 0 ]
         then
             echo "\e[31;1mCompile checker file failed!\e[0m" 
+            rm -rf ./TestCase 
+            rm -f ./solution 
+            rm -f ./checker 
+            rm -f ./gen  
             exit 0
         fi
         echo "\e[34;1mUse Local Checker!\e[0m" 
@@ -49,19 +72,45 @@ fi
 
 useGeneration=$(jq -r '.useGeneration' config.json)
 if [ $useGeneration = "true" ]; then
+    numTest=$(jq -r '.numTest' config.json) 
+    genParameters=$(jq -r '.genParameters' config.json) 
+    knowGenAns=$(jq -r '.knowGenAns' config.json)
+
+    if [ $knowGenAns = "true" ]; then
+        mkdir tmp
+        cat ./gen.cpp > ./tmp/orig    
+        awk 'NR>=18' ./slow.cpp > ./tmp/tmp
+        sed -i 's/ cin / in /g' ./tmp/tmp
+        sed -i 's/ cout / out /g' ./tmp/tmp
+        sed -i 's/main/___solve/g' ./tmp/tmp
+        sed -i 's/___solve(){}/___solve()/g' ./gen.cpp 
+        cat ./tmp/tmp >> ./gen.cpp   
+    fi
     if [ ! "$(<$1/gen.cpp)" = "$(<$1/../../Cache/gen.cpp)" ]; then 
         g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o gen ./gen.cpp --std=c++17;
-    if [ $? -ne 0 ]
-        then
-            echo "\e[31;1mCompile generator file failed!\e[0m" 
-            exit 0
-        fi
+        if [ $? -ne 0 ]
+            then
+                echo "\e[31;1mCompile generator file failed!\e[0m" 
+                rm -rf ./TestCase 
+                rm -f ./solution 
+                rm -f ./checker 
+                rm -f ./gen  
+                if [ $knowGenAns = "true" ]; then
+                    cp ./tmp/orig ./gen.cpp
+                    rm -rf tmp 
+                fi
+                exit 0
+            fi
         echo "\e[34;1mStress Test!\e[0m" 
         cp "$1/gen.cpp" "$1/../../Cache/gen.cpp"
         cp "$1/gen" "$1/../../Cache/gen"
     else 
         echo "\e[34;1mStress Test!\e[0m" 
         cp "$1/../../Cache/gen" "$1/gen"
+    fi
+    if [ $knowGenAns = "true" ]; then
+        cp ./tmp/orig ./gen.cpp
+        rm -rf tmp 
     fi
 fi
 
@@ -81,11 +130,9 @@ maxTime=0;
 #stress test
 if [ $useGeneration = "true" ];
 then 
-    numTest=$(jq -r '.numTest' config.json) 
-    genParameters=$(jq -r '.genParameters' config.json) 
-    knowGenAns=$(jq -r '.knowGenAns' config.json)
     ../../Script/Gen.jar "$1" $numTest "$genParameters" 
 fi
+
 
 #test
 truncateLongTest=$(jq -r '.truncateLongTest' config.json) 
@@ -103,6 +150,7 @@ if [ "$(ls -A $DIR)" ]; then
         fi
 
         if [ ${f:0:1} = "S" ]; then
+            
             ../gen "$f" "$knowGenAns" 
             echo "\e[33;1mTest #${f%.*}:\e[0m" 
         else 

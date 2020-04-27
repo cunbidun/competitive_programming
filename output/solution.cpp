@@ -14,32 +14,31 @@ typedef pair<int, int> ii;
 typedef pair<ii, int> iii;
 typedef vector<ii> vii;
 
-const int N = 2e5 + 1;
+const int N = 1e5 + 1;
 const int INF = 2e9;
-const ll INFLL = 7e18;  
-ll ans = INFLL;
 
-ll n, m, k, x, s;
-ll c[N], d[N];
-pair<ll, ll> a[N];
+int solve() {
+    string s;
+    cin >> s;
+    int ch = 0;
+    rf(i, 1, sz(s) - 1) {
+        if (s[i] != s[i - 1])
+            ch = 1;
+    }
+    if (!ch) {
+        cout << s << "\n";
+        return 0;
+    }
+    int cur = 0;
+    rf(i, 0, sz(s) - 1) cout << "01" << 1;
+    cout << "\n";
+}
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    cin >> n >> m >> k >> x >> s;
-    rf(i, 1, m) cin >> a[i].second;
-    rf(i, 1, m) cin >> a[i].first;
-    rf(i, 1, k) cin >> c[i];
-    rf(i, 1, k) cin >> d[i];
-    int p = k;
-    sort(a + 1, a + m + 1);
-    a[0] = {0, x};
-    c[0] = 0;
-    d[0] = 0;
-    rf(i, 0, m) {
-        while (p > 0 && d[p] + a[i].first > s)
-            p--;
-        if (d[p] + a[i].first <= s)
-            ans = min(ans, (n - c[p]) * a[i].second);
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
     }
-    cout << ans << "\n";
 }

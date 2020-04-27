@@ -49,10 +49,62 @@ int main(int argc, char *argv[]) {
         out.close();
     }
 }
-int ___solve() {
-    int n;
-    in >> n;
-    out << n + n << '\n';
-    int ascdcin;
-
+const int INF = (int)(1e9 + 7);
+const double EPS = 1e-6;
+const int MAXN = (int)(1e5 + 500);
+ll a, b, q, l, r;
+ 
+ll calc(ll x, ll f, ll s, ll tr){
+    if (f == 0)
+        return 0;
+    if (x < f)
+        return 0;
+    x -= (f - 1);
+    ll ans = x / (tr - f) * (s - f + 1);
+    ans += min(x % (tr - f), (s - f + 1));
+    return ans;
+}
+ 
+ 
+ll f, s, tr;
+ 
+int ___solve(){
+    //freopen("A.out", "w", stdout);
+    int t;
+    in >> t;
+ 
+    for (int ttt = 1; ttt <= t; ttt++){
+        in >> a >> b >> q;
+ 
+        bool was = false;
+        bool waas = false;
+        f = s = tr = 0;
+        for (ll j = max(a, b); j <= 3000000; j++)
+            if (j % a % b != j % b % a){
+                if (!was)
+                {
+                    f = j;
+                    was = true;
+                }
+                else if (waas == false){
+                    s = j;
+                }
+                else{
+                    tr = j;
+                    break;
+                }
+            }
+            else
+                waas = true;
+       //cout << f <<  ' ' << s << ' ' << tr << endl;
+        for (int i = 1; i <= q; i++){
+            in >> l >> r;
+            out << calc(r, f, s, tr) - calc(l - 1, f, s, tr) << ' ';
+        }
+        out << endl;
+    }
+ 
+ 
+ 
+	return 0;
 }

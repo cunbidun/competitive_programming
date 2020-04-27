@@ -227,6 +227,7 @@ if [ "$(ls -A $DIR)" ]; then
         else 
             export GREP_COLORS='ms=01;31' 
             grep --color -E "WA|$" "${f%.*}.res" 
+            # exit 0; 
         fi
 
         printf "Run Time: " 

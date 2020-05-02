@@ -13,9 +13,6 @@ trap '
     echo "------------------------------------------------------------------"
     echo "=================================================================="
     echo "Test results:" 
-    
-    
-
     EF=$(($(date +%s%N)/1000000)) 
     time=$((EF - SF)) 
     echo "\e[35;1mAll Testing finished in $time ms\e[0m"
@@ -137,6 +134,7 @@ fi
 #test
 truncateLongTest=$(jq -r '.truncateLongTest' config.json) 
 checkerParameters=$(jq -r '.checkerParameters' config.json)
+printWrongAnswer=$(jq -r '.printWrongAnswer' config.json)
 
 DIR="./TestCase/" 
 if [ "$(ls -A $DIR)" ]; then
@@ -150,7 +148,6 @@ if [ "$(ls -A $DIR)" ]; then
         fi
 
         if [ ${f:0:1} = "S" ]; then
-            
             ../gen "$f" "$knowGenAns" 
             echo "\e[33;1mTest #${f%.*}:\e[0m" 
         else 
@@ -227,7 +224,20 @@ if [ "$(ls -A $DIR)" ]; then
         else 
             export GREP_COLORS='ms=01;31' 
             grep --color -E "WA|$" "${f%.*}.res" 
-            # exit 0; 
+            if [ $printWrongAnswer = "true" ]; then
+                rm -rf ../TestCase 
+                rm -rf ../solution 
+                rm -f ../checker 
+                rm -f ../gen 
+                echo "------------------------------------------------------------------"
+                echo "=================================================================="
+                echo "Test results:" 
+                echo "\e[31;1mWA Detected!\e[0m"
+                EF=$(($(date +%s%N)/1000000)) 
+                time=$((EF - SF)) 
+                echo "\e[35;1mAll Testing finished in $time ms\e[0m"
+                exit 0
+            fi
         fi
 
         printf "Run Time: " 

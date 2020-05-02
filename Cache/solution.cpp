@@ -17,28 +17,57 @@ typedef vector<ii> vii;
 const int N = 1e5 + 1;
 const int INF = 2e9;
 
-int solve() {
-    string s;
-    cin >> s;
-    int ch = 0;
-    rf(i, 1, sz(s) - 1) {
-        if (s[i] != s[i - 1])
-            ch = 1;
+int n, k;
+ll a[N], sum[N];
+
+bool check(int m) {
+    int p = 0;
+    rf(i, 1, n) {
+        ll mn = a[i];
+        ll mx = min(mn + m, a[n]);
+        ll left = i * mn - sum[i];
+
+        if (mn * n > sum[n])
+            break;
+
+        while (p <= n && a[p] < a[i] + m)
+            p++;
+
+        ll right = 0;
+        if (p != n + 1) {
+            right = sum[n] - sum[p - 1] - (n - p + 1) * mx;
+        }
+
+        if (mx * n < sum[n])
+            continue;
+        if (max(left, right) <= k) {
+            cout << mn << " " << mx << "\n";
+            return 1;
+        }
     }
-    if (!ch) {
-        cout << s << "\n";
-        return 0;
-    }
-    int cur = 0;
-    rf(i, 0, sz(s) - 1) cout << "01" << 1;
-    cout << "\n";
+    return 0;
 }
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int t;
-    cin >> t;
-    while (t--) {
-        solve();
+    cin >> n >> k;
+    rf(i, 1, n) {
+        cin >> a[i];
+        sum[i] = sum[i - 1] + a[i];
     }
+    sort(a + 1, a + 1 + n);
+    int l = 0, r = 1e9;
+    while (l != r) {
+        if (l + 1 == r) {
+            if (!check(l))
+                l = r;
+            break;
+        }
+        int m = (l + r) >> 1;
+        if (check(m))
+            r = m;
+        else
+            l = m;
+    }
+    cout << l << '\n';
 }

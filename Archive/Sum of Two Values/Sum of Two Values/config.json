@@ -1,0 +1,1 @@
+{"numTest":0,"genParameters":"","isInteractive":false,"useGeneration":false,"printWrongAnswer":false,"knowGenAns":false,"url":null,"timeLimit":1000,"tests":[{"output":"2 4","input":"4 8\n2 7 5 1\n\n","index":0,"active":true}],"name":"Sum of Two Values","truncateLongTest":false,"checkerParameters":"","useLocalChecker":false,"group":"Sum of Two Values"}

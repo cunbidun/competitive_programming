@@ -10,10 +10,10 @@ app.post('/', (req, res) => {
     const data = req.body;
     console.log(req.body);
     const path = `../Task/${data.name.replace(/"/g, `'`)}`;
-    if (fs.existsSync(path)) {
-        res.sendStatus(200);
-        return;
-    }
+    // if (fs.existsSync(path)) {
+    //     res.sendStatus(200);
+    //     return;
+    // }
     mkdirp(path, function (err) { });
     let tests = [];
 

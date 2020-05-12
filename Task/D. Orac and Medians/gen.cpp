@@ -31,7 +31,7 @@ string TextFileToString(string filename) {
 // get correct input format from rawInput
 void get(string name) { in << TextFileToString(name); }
 
-int ___solve();
+int ___solve(){};
 
 int main(int argc, char *argv[]) {
     string name = string(argv[1]);
@@ -48,37 +48,4 @@ int main(int argc, char *argv[]) {
         ___solve();
         out.close();
     }
-}int ___solve() {
-  ios::sync_with_stdio(false);
-  cin.tie(0);
-  int tt;
-  in >> tt;
-  while (tt--) {
-    int n, k;
-    in >> n >> k;
-    vector<int> a(n);
-    int zeros = 0;
-    for (int i = 0; i < n; i++) {
-      in >> a[i];
-      a[i] = (a[i] < k ? -1 : (a[i] > k ? 1 : 0));
-      zeros += (a[i] == 0);
-    }
-    if (zeros == 0) {
-      out << "no" << '\n';
-      continue;
-    }
-    if (zeros == n) {
-      out << "yes" << '\n';
-      continue;
-    }
-    bool ok = false;
-    for (int i = 0; i < n - 1; i++) {
-      ok |= (a[i] >= 0 && a[i + 1] >= 0);
-    }
-    for (int i = 0; i < n - 2; i++) {
-      ok |= (a[i] >= 0 && a[i + 2] >= 0);
-    }
-    out << (ok ? "yes" : "no") << '\n';
-  }
-  return 0;
 }

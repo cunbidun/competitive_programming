@@ -1,5 +1,6 @@
 #!/bin/zsh
 #reset
+
 SF=$(($(date +%s%N)/1000000));
 START=$(($(date +%s%N)/1000000));
 
@@ -10,8 +11,8 @@ trap '
     rm -f ../gen 
     echo
     echo "\e[31;1mReceived SIGINT\e[0m"
-    echo "------------------------------------------------------------------"
-    echo "=================================================================="
+    echo "--------------------------------------------------------"
+    echo "========================================================"
     echo "Test results:" 
     EF=$(($(date +%s%N)/1000000)) 
     time=$((EF - SF)) 
@@ -25,6 +26,10 @@ ulimit -s unlimited;
 
 cd "$1";
 
+contest=$(jq -r '.group' config.json)
+problem=$(jq -r '.name' config.json)
+echo "$contest"
+echo "$problem" 
 
 if [ ! "$(<$1/solution.cpp)" = "$(<$1/../../Cache/solution.cpp)" ]; then 
     g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o solution ./solution.cpp --std=c++17
@@ -114,7 +119,7 @@ fi
 END=$(($(date +%s%N)/1000000))
 time=$((END-START))
 echo "\e[35;1mCompilations finished in $time ms\e[0m" 
-echo '------------------------------------------------------------------' 
+echo '--------------------------------------------------------' 
 
 timeLimit=$(jq -r '.timeLimit' config.json);
 allPassed=true;
@@ -177,7 +182,7 @@ if [ "$(ls -A $DIR)" ]; then
         if [ $? -ne 0 ];then 
             rte=true 
             echo "Verdict: \e[31;1mRTE\e[0m" 
-            echo '------------------------------------------------------------------' 
+            echo '--------------------------------------------------------' 
             continue 
         fi 
         END=$(($(date +%s%N)/1000000)) 
@@ -229,8 +234,8 @@ if [ "$(ls -A $DIR)" ]; then
                 rm -rf ../solution 
                 rm -f ../checker 
                 rm -f ../gen 
-                echo "------------------------------------------------------------------"
-                echo "=================================================================="
+                echo "--------------------------------------------------------"
+                echo "========================================================"
                 echo "Test results:" 
                 echo "\e[31;1mWA Detected!\e[0m"
                 EF=$(($(date +%s%N)/1000000)) 
@@ -251,7 +256,7 @@ if [ "$(ls -A $DIR)" ]; then
         if [ $time -gt $maxTime ]; then 
             maxTime=$time 
         fi 
-        echo '------------------------------------------------------------------' 
+        echo '--------------------------------------------------------' 
     done 
     rm -rf ../TestCase 
     rm -f ../solution 
@@ -265,7 +270,7 @@ else
     rm -f ../gen  
 fi
 
-echo '==================================================================' 
+echo '========================================================' 
 echo "Test results:"
 
 if $rte; then 

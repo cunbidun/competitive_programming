@@ -34,11 +34,7 @@ Test Configuration: Ctrl + Alt + E
 Test Dialog: Ctrl + Alt + T
 Complie and Run: Ctrl + Alt + B
 Complie with terminal: Ctrl + Alt + Shift + B
-
 Format Code: Ctrl + Alt + L
-
-
-
 
 #### Verdic
 1. AC

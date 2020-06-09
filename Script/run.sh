@@ -204,7 +204,7 @@ if [ "$(ls -A $DIR)" ]; then
             if test -f "${f%.*}.out"; then
                 ../checker "$f" "${f%.*}.out" "${f%.*}.actual" "$checkerParameters" > "${f%.*}.res" 
             else 
-                ../ checker "$f" "" "${f%.*}.actual" "$checkerParameters" > "${f%.*}.res" 
+                ../checker "$f" "" "${f%.*}.actual" "$checkerParameters" > "${f%.*}.res" 
             fi 
         fi
 

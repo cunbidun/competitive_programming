@@ -1,0 +1,18 @@
+{
+  "tests": [
+    { "input": "2\n1\n11\n", "output": "0\n5\n", "index": 0, "active": true }
+  ],
+  "name": "The Tom and Jerry Game",
+  "group": "CodeChef - June Challenge 2020 Division 1",
+  "isInteractive": false,
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "checkerParameters": "",
+  "useGeneration": false,
+  "printWrongAnswer": false,
+  "useLocalChecker": false,
+  "url": "https://www.codechef.com/JUNE20A/problems/EOEO",
+  "numTest": 0,
+  "genParameters": null,
+  "knowGenAns": false
+}

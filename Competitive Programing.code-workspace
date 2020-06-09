@@ -107,7 +107,7 @@
 			"valarray": "cpp",
 			"tmp": "cpp"
 		},
-		"workbench.sideBar.location": "right",
+		"workbench.sideBar.location": "left",
 		"terminal.integrated.rendererType": "dom",
 		"files.autoSave": "afterDelay",
 		"editor.tabSize": 2

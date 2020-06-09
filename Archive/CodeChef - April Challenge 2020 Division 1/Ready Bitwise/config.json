@@ -1,1 +1,46 @@
-{"numTest":0,"genParameters":"","isInteractive":false,"useGeneration":false,"printWrongAnswer":false,"knowGenAns":false,"url":"https:\/\/www.codechef.com\/APRIL20A\/problems\/REBIT","timeLimit":1000,"tests":[{"output":"748683265 748683265 748683265 748683265\n436731905 935854081 811073537 811073537\n","input":"2\n#\n(#&#)\n","index":0,"active":true},{"output":"857866241 608305153 764280833 764280833\n857866241 608305153 764280833 764280833","input":"2\n((#|#)^(#&#))\n((#&#)^(#|((#^#)^#)))","index":1,"active":true},{"output":null,"input":"1\n(#^#)","index":2,"active":true},{"output":null,"input":"1\n(#|#)","index":3,"active":true},{"output":null,"input":"1\n((#^#)^#)","index":4,"active":true}],"name":"Ready Bitwise","truncateLongTest":false,"checkerParameters":"","useLocalChecker":false,"group":"CodeChef - April Challenge 2020 Division 1"}
+{
+  "numTest": 0,
+  "genParameters": "",
+  "isInteractive": false,
+  "useGeneration": false,
+  "printWrongAnswer": false,
+  "knowGenAns": false,
+  "url": "https://www.codechef.com/APRIL20A/problems/REBIT",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "748683265 748683265 748683265 748683265\n436731905 935854081 811073537 811073537\n",
+      "input": "2\n#\n(#&#)\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "857866241 608305153 764280833 764280833\n857866241 608305153 764280833 764280833",
+      "input": "2\n((#|#)^(#&#))\n((#&#)^(#|((#^#)^#)))",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1\n(#^#)",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1\n(#|#)",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1\n((#^#)^#)",
+      "index": 4,
+      "active": true
+    } ],
+  "name": "Ready Bitwise",
+  "truncateLongTest": false,
+  "checkerParameters": "",
+  "useLocalChecker": false,
+  "group": "CodeChef - April Challenge 2020 Division 1"
+}

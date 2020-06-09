@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.post('/', (req, res) => {
     const data = req.body;
     console.log(req.body);
-    const path = `../Task/${data.name.replace(/"/g, `'`)}`;
+    const path = `../Task/${data.name.replace(/"/g, `'`).replace(/!/g, ``)}`;
     // if (fs.existsSync(path)) {
     //     res.sendStatus(200);
     //     return;
@@ -26,11 +26,11 @@ app.post('/', (req, res) => {
         };
         tests.push(test);
     }
-    fs.copyFile(`../Template/solution.template`, `../Task/${data.name.replace(/"/g, `'`)}/solution.cpp`, function (err) { });
+    fs.copyFile(`../Template/solution.template`, `../Task/${data.name.replace(/"/g, `'`).replace(/!/g, ``)}/solution.cpp`, function (err) { });
     obj = {
         "tests": tests,
-        "name": data.name.replace(/"/g, `'`),
-        "group": data.group.replace(/"/g, `'`),
+        "name": data.name.replace(/"/g, `'`).replace(/!/g, ``),
+        "group": data.group.replace(/"/g, `'`).replace(/!/g, ``),
         "isInteractive": data.interactive,
         // "timeLimit": 20000, 
         "timeLimit": data.timeLimit,
@@ -44,7 +44,7 @@ app.post('/', (req, res) => {
         "genParameters": null,
         "knowGenAns": false,
     };
-    fs.writeFile(`../Task/${data.name.replace(/"/g, `'`)}/config.json`, JSON.stringify(obj), function (err) { });
+    fs.writeFile(`../Task/${data.name.replace(/"/g, `'`).replace(/!/g, ``)}/config.json`, JSON.stringify(obj), function (err) { });
     res.sendStatus(200);
 });
 

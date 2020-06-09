@@ -14,42 +14,55 @@ typedef pair<int, int> ii;
 typedef pair<ii, int> iii;
 typedef vector<ii> vii;
 
-const int N = 1e5 + 1;
+const int N = 2e5 + 1;
 const int INF = 2e9;
 
-int n, k, cnt = 0;
-int a[N];
+vii a[N];
+int n;
+int tot = 0;
+int cnt[N], cntd[N];
 
-int solve() {
-  cin >> n >> k;
-  cnt = 0;
-  rf(i, 1, n) {
-    cin >> a[i];
-    if (a[i] > k)
-      a[i] = 1;
-    else if (a[i] < k)
-      a[i] = -1;
-    else {
-      a[i] = 1;
-      cnt++;
+int dfs(int u, int l) {
+  for (ii v : a[u]) {
+    if (v.first != l) {
+      if (v.second == 1) {
+        tot++;
+        cnt[v.first] = cnt[u] + 1;
+        cntd[v.first] = cntd[u];
+      }
+      if (v.second == 0) {
+        cnt[v.first] = cnt[u];
+        cntd[v.first] = cntd[u] + 1;
+      }
+      dfs(v.first, u);
     }
   }
-  if (cnt == n) return cout << "yes\n", 0;
-  if (cnt == 0) return cout << "no\n", 0;
-
-  int ans = 0;
-  rf(i, 1, n - 1) ans |= (a[i] == 1 && a[i] == a[i + 1]);
-  rf(i, 1, n - 2) ans |= (a[i] == 1 && a[i] == a[i + 2]);
-
-  if (ans)
-    cout << "yes\n";
-  else
-    cout << "no\n";
 }
+
 int main() {
   ios_base::sync_with_stdio(0);
   cin.tie(0);
-  int t;
-  cin >> t;
-  while (t--) solve();
+  cin >> n;
+  rf(i, 1, n - 1) {
+    int u, v;
+    cin >> u >> v;
+    a[u].pb({v, 0});
+    a[v].pb({u, 1});
+  }
+
+  dfs(1, 1);
+
+  int ans = INF;
+
+  rf(i, 1, n) {
+    ans = min(ans, tot - cnt[i] + cntd[i]);
+  }
+
+  cout << ans << "\n";
+
+  rf(i, 1, n) {
+    if (ans == tot - cnt[i] + cntd[i])
+      cout << i << " ";
+  }
+  cout << "\n";
 }

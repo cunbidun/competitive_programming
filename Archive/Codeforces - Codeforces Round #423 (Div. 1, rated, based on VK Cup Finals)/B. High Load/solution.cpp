@@ -24,7 +24,7 @@ int main() {
     cin >> n >> k;
     if (k == 2) {
         cout << n - 1 << "\n";
-        rf(i, 1, n - 1) { cout << i << " " << i + 1 << '\n'; }
+        rf(i, 1, n - 1)  cout << i << " " << i + 1 << '\n'; 
         return 0;
     }
     int t = (n - 1) / k;

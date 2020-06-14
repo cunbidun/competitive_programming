@@ -81,7 +81,7 @@ if [ $useGeneration = "true" ]; then
     if [ $knowGenAns = "true" ]; then
         mkdir tmp
         cat ./gen.cpp > ./tmp/orig    
-        awk 'NR>=18' ./slow.cpp > ./tmp/tmp
+        awk 'NR>13' ./slow.cpp > ./tmp/tmp
         sed -i 's/ cin / in /g' ./tmp/tmp
         sed -i 's/ cout / out /g' ./tmp/tmp
         sed -i 's/main/___solve/g' ./tmp/tmp

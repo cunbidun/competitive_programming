@@ -17,26 +17,35 @@ typedef vector<ii> vii;
 const int N = 1e5 + 1;
 const int INF = 2e9;
 
-int n;
-int a[N];
+int n, x;
+int a[N], s[N];
+
 int solve() {
-  cin >> n;
-  rf(i, 1, n) cin >> a[i];
-  vi ans;
-  ans.pb(a[1]);
-  int cur = a[1];
-  rf(i, 2, n) {
-    while (i < n && ((cur < a[i] && a[i] < a[i + 1]) || (cur > a[i] && a[i] > a[i + 1]))) {
-      i++;
+  cin >> n >> x;
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i];
+    s[i] = s[i - 1] + a[i];
+  }
+  if (s[n] % x != 0) {
+    return cout << n << "\n", 0;
+  }
+  int left = 0;
+  int right = 0;
+  for (int i = 1; i <= n; i++) {
+    if (a[i] % x != 0) {
+      left = i;
+      break;
     }
-    ans.pb(a[i]);
-    cur = a[i];
   }
-  cout << sz(ans) << "\n";
-  for (int i : ans) {
-    cout << i << " ";
+  rb(j, n, 1) if (a[j] % x != 0) {
+    right = n - j + 1;
+    break;
   }
-  cout << "\n";
+  if (left == 0 && right == 0)
+    cout << "-1\n";
+  else {
+    cout << n - min(left, right) << "\n";
+  }
 }
 
 int main() {

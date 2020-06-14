@@ -21,7 +21,7 @@ int n;
 int a[N];
 int solve() {
   cin >> n;
-  rf(i, 1, n) cin >> a[i];
+  rf(i, 1, n) { cin >> a[i]; }
   vi ans;
   ans.pb(a[1]);
   int cur = a[1];

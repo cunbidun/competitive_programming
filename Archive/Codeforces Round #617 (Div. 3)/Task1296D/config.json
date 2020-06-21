@@ -1,1 +1,35 @@
-{"tests":[{"input":"6 2 3 3\n7 10 50 12 1 8\n","output":"5\n","index":0,"active":true},{"input":"1 1 100 99\n100\n","output":"1\n","index":1,"active":true},{"input":"7 4 2 1\n1 3 5 4 2 7 6\n","output":"6\n","index":2,"active":true}],"name":"Task1296D","group":"Codeforces Round #617 (Div. 3)","isInteractive":false,"timeLimit":1000,"truncateLongTest":false,"checkerParameters":"","useGeneration":false,"printWrongAnswer":false,"useLocalChecker":false,"url":"https://codeforces.com/contest/1296/problem/D","numTest":0,"genParameters":null,"knowGenAns":false}
+{
+  "tests": [
+    {
+      "input": "6 2 3 3\n7 10 50 12 1 8\n",
+      "output": "5\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "1 1 100 99\n100\n",
+      "output": "1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "7 4 2 1\n1 3 5 4 2 7 6\n",
+      "output": "6\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "name": "Task1296D",
+  "group": "Codeforces Round #617 (Div. 3)",
+  "isInteractive": false,
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "checkerParameters": "",
+  "useGeneration": false,
+  "printWrongAnswer": false,
+  "useLocalChecker": false,
+  "url": "https://codeforces.com/contest/1296/problem/D",
+  "numTest": 0,
+  "genParameters": null,
+  "knowGenAns": false
+}

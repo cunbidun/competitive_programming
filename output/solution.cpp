@@ -1,49 +1,70 @@
 #include <bits/stdc++.h>
 
-#define pb push_back
 #define sz(v) ((int)(v).size())
 #define all(v) (v).begin(), (v).end()
-#define rf(i, a, b) for (int(i) = (a); (i) <= (b); (i)++)
-#define rb(i, b, a) for (int(i) = (b); (i) >= (a); (i)--)
 
 using namespace std;
 
 typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
-typedef pair<ii, int> iii;
-typedef vector<ii> vii;
 
-const int N = 1e5 + 1;
+const int N = 2e5 + 1;
 const int INF = 2e9;
 
-int n;
 int a[N];
-int solve() {
-  cin >> n;
-  rf(i, 1, n) cin >> a[i];
-  vi ans;
-  ans.pb(a[1]);
-  int cur = a[1];
-  rf(i, 2, n) {
-    while (i < n && ((cur < a[i] && a[i] < a[i + 1]) || (cur > a[i] && a[i] > a[i + 1]))) {
-      i++;
+int n, k;
+int check(int x) {
+  int cnt = 0;
+  int cur = 0;
+  for (int i = 1; i <= n; i++) {
+    if ((i + cur) % 2 == 1) {
+      if (a[i] > x) {
+        cnt++;
+        cur = 1 - cur;
+      }
     }
-    ans.pb(a[i]);
-    cur = a[i];
   }
-  cout << sz(ans) << "\n";
-  for (int i : ans) {
-    cout << i << " ";
+  if (cnt <= n - k) {
+    return 1;
   }
-  cout << "\n";
+  cnt = 0;
+  cur = 0;
+  for (int i = 1; i <= n; i++) {
+    if ((i + cur) % 2 == 0) {
+      if (a[i] > x) {
+        cnt++;
+        cur = 1 - cur;
+      }
+    }
+  }
+  if (cnt <= n - k) {
+    return 1;
+  }
+  return 0;
 }
-
 int main() {
   ios_base::sync_with_stdio(0);
   cin.tie(0);
-  int t;
-  cin >> t;
-  while (t--)
-    solve();
+  cin >> n >> k;
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i];
+  }
+  int l = 1, r = 1e9;
+  while (l != r) {
+    if (l + 1 == r) {
+      if (!check(l)) {
+        l = r;
+      }
+      break;
+    }
+    int m = (l + r) >> 1;
+    if (check(m)) {
+      r = m;
+    } else {
+      l = m + 1;
+    }
+  }
+  cout << l << "\n"; 
+  // cout << check(1) << "\n";
 }

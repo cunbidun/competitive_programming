@@ -1,0 +1,26 @@
+{
+  "numTest": 0,
+  "genParameters": "",
+  "isInteractive": false,
+  "useGeneration": false,
+  "printWrongAnswer": false,
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1371/problem/D",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "0\n10\n01\n2\n111\n111\n101\n0\n0\n0\n1111\n1111\n1111\n1111\n",
+      "input": "4\n2 2\n3 8\n1 0\n4 16\n",
+      "index": 0,
+      "active": true
+    },
+    { "output": null, "input": "1\n2 2", "index": 1, "active": true },
+    { "output": null, "input": "1\n3 8", "index": 2, "active": true },
+    { "output": null, "input": "1 \n4 11", "index": 3, "active": true }
+  ],
+  "name": "D. Grid-00100",
+  "truncateLongTest": false,
+  "checkerParameters": "",
+  "useLocalChecker": false,
+  "group": "Codeforces - Codeforces Round #654 (Div. 2)"
+}

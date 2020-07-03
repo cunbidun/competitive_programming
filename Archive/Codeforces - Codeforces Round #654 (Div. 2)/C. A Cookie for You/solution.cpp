@@ -9,7 +9,22 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 
+int solve() {
+  ll a, b, n, m;
+  cin >> a >> b >> n >> m;
+  if (a + b < n + m || min(a, b) < m) {
+    cout << "No\n";
+  } else {
+    cout << "Yes\n";
+  }
+}
+
 int main() {
   ios_base::sync_with_stdio(0);
   cin.tie(0);
+  int t;
+  cin >> t;
+  while (t--) {
+    solve();
+  }
 }

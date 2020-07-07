@@ -9,45 +9,45 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 
-const int INF = 1e9;
-
-int res[301][301];
+int a[301][301];
 int solve() {
-  int n, k;
-  cin >> n >> k;
-  int K = k;
+  int n, m;
+  cin >> n >> m;
+  int f = 0;
   for (int i = 1; i <= n; i++) {
-    for (int j = 1; j <= n; j++) {
-      res[i][j] = 0;
+    for (int j = 1; j <= m; j++) {
+      cin >> a[i][j];
+      if (i == 1 || i == n || j == 1 || j == m) {
+        if (a[i][j] > 3) {
+          f = 1;
+        }
+      } else {
+        if (a[i][j] > 4) {
+          f = 1;
+        }
+      }
     }
   }
-  int cur = 1;
-
-  int x = 1;
-  int y = 1;
-  while (k--) {
-    res[x][y] = 1;
-    x++;
-    y++;
-    if (y > n) {
-      y = 1;
-      x = cur + 1;
-      cur++;
-    }
-    if (x > n) {
-      x = 1;
-    }
+  if (f) {
+    cout << "NO\n";
+    return 0;
   }
-  if (K % n != 0) {
-    cout << 2 << "\n";
-  } else {
-    cout << 0 << "\n";
+  if (a[1][1] > 2 || a[1][m] > 2 || a[n][1] > 2 || a[n][m] > 2) {
+    cout << "NO\n";
+    return 0;
   }
+  cout << "YES\n";
   for (int i = 1; i <= n; i++) {
-    for (int j = 1; j <= n; j++) {
-      cout << res[i][j];
+    for (int j = 1; j <= m; j++) {
+      if ((i == 1 && j == 1) || (i == 1 && j == m) || (i == n && j == 1) || (i == n && j == m)) {
+        cout << 2 << " ";
+      } else if (i == 1 || i == n || j == 1 || j == m) {
+        cout << 3 << " ";
+      } else {
+        cout << 4 << " ";
+      }
     }
-    cout << "\n";
+		cout << "\n";
   }
 }
 

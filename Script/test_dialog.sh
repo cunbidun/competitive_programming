@@ -1,7 +1,7 @@
 clear
 cd "$1"
 
-../../Script/Test.jar ./
+java -jar ../../Script/Test.jar ./
 
 useGeneration=$(jq -r '.useGeneration' config.json)
 if [ $useGeneration = "true" ]

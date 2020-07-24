@@ -127,12 +127,12 @@ tle=false;
 rte=false;
 maxTime=0;
 
-../../Script/ToTestText.jar "$1";
+java -jar ../../Script/ToTestText.jar "$1";
 
 #stress test
 if [ $useGeneration = "true" ];
 then 
-    ../../Script/Gen.jar "$1" $numTest "$genParameters" 
+    java -jar ../../Script/Gen.jar "$1" $numTest "$genParameters" 
 fi
 
 

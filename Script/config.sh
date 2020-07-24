@@ -3,7 +3,7 @@ cd "$1"
 
 prename=$(jq -r '.name' config.json)
 
-../../Script/TaskConfigDialog.jar ./
+java -jar ../../Script/TaskConfigDialog.jar ./
 
 useLocalChecker=$(jq -r '.useLocalChecker' config.json)
 if [ $useLocalChecker = "true" ]

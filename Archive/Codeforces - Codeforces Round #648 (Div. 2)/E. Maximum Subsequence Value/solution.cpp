@@ -19,13 +19,21 @@ const int INF = 2e9;
 
 int n;
 ll a[501];
-
 int main() {
   ios_base::sync_with_stdio(0);
   cin.tie(0);
   cin >> n;
   ll ans = 0;
-  rf(i, 1, n) cin >> a[i];
-  rf(i, 1, n) rf(j, 1, n) rf(k, 1, n) ans = max(ans, a[i] | a[j] | a[k]);
+  rf(i, 1, n) {
+    cin >> a[i];
+    ans = max(ans, a[i]);
+  }
+  rf(i, 1, n) {
+    rf(j, 1, n) { ans = max(ans, a[i] | a[j]); }
+  }
+
+  rf(i, 1, n) {
+    rf(j, 1, n) rf(k, 1, n) { ans = max(ans, a[i] | a[j] | a[k]); }
+  }
   cout << ans << "\n";
 }

@@ -12,7 +12,7 @@ typedef pair<int, int> ii;
 int solve() {
   int n;
   cin >> n;
-  cout << (n + 1) / 2 << "\n";
+  cout << max(1 + (n - 1) / 2, n / 2) << "\n";
 }
 
 int main() {

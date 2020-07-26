@@ -23,7 +23,7 @@ int main() {
     cin.tie(0);
     cin >> n >> d >> a >> b;
     rf(i, 1, n) {
-        ll x, y;
+        int x, y;
         cin >> x >> y;
         arr[i] = {x * a + y * b, i};
     }

@@ -20,17 +20,19 @@ const int INF = 2e9;
 int solve() {
     string s;
     cin >> s;
-    int ch = 0;
-    rf(i, 1, sz(s) - 1) {
-        if (s[i] != s[i - 1])
-            ch = 1;
+    int ch0 = 0, ch1 = 0;
+    rf(i, 0, sz(s) - 1) {
+        if (s[i] == '0')
+            ch0 = 1;
+        if (s[i] == '1')
+            ch1 = 1;
     }
-    if (!ch) {
+    if ((ch0 && !ch1) || (ch1 && !ch0)) {
         cout << s << "\n";
         return 0;
     }
     int cur = 0;
-    rf(i, 0, sz(s) - 1) cout << "01" << 1;
+    rf(i, 0, sz(s) - 1) { cout << 0 << 1; }
     cout << "\n";
 }
 int main() {
@@ -42,4 +44,3 @@ int main() {
         solve();
     }
 }
-

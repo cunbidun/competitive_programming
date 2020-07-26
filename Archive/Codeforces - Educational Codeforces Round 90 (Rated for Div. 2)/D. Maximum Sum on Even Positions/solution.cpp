@@ -38,8 +38,8 @@ int solve() {
     }
     add = max(add, cur);
   }
-  cur = 0;
-  for (int i = 0; i < sz(e); i++) {
+   cur = 0;
+	for (int i = 0; i < sz(e); i++) {
     cur += e[i];
     if (cur < 0) {
       cur = 0;

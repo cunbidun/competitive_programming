@@ -26,7 +26,7 @@ int solve() {
   rf(i, 1, n) {
     cin >> a[i];
     if (a[i] > k)
-      a[i] = 1;   
+      a[i] = 1;
     else if (a[i] < k)
       a[i] = -1;
     else {

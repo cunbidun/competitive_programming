@@ -23,7 +23,7 @@ int tot = 0;
 int cnt[N], cntd[N];
 
 int dfs(int u, int l) {
-  for (ii v : a[u]) {
+  for (ii v : a[u])
     if (v.first != l) {
       if (v.second == 1) {
         tot++;
@@ -36,7 +36,6 @@ int dfs(int u, int l) {
       }
       dfs(v.first, u);
     }
-  }
 }
 
 int main() {
@@ -49,20 +48,14 @@ int main() {
     a[u].pb({v, 0});
     a[v].pb({u, 1});
   }
-
   dfs(1, 1);
-
   int ans = INF;
-
-  rf(i, 1, n) {
-    ans = min(ans, tot - cnt[i] + cntd[i]);
-  }
-
+  rf(i, 1, n) { ans = min(ans, tot - cnt[i] + cntd[i]); }
   cout << ans << "\n";
-
   rf(i, 1, n) {
-    if (ans == tot - cnt[i] + cntd[i])
+    if (ans == tot - cnt[i] + cntd[i]) {
       cout << i << " ";
+    }
   }
   cout << "\n";
 }

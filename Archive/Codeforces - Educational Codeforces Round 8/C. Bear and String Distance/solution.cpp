@@ -27,7 +27,7 @@ int main() {
     rf(i, 0, n - 1) {
         if (s[i] - 'a' > 'z' - s[i]) {
             if (s[i] - 'a' >= k) {
-                s[i] = s[i] - k;        
+                s[i] = s[i] - k;
                 k = 0;
                 break;
             } else {

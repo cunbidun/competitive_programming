@@ -40,6 +40,7 @@ int main() {
         c[y] = __builtin_ffs(cur);
         cur -= (1 << (c[y] - 1));
         c[z] = __builtin_ffs(cur);
+        // cout << c[x] << " " << c[y] << " " << c[z] << "\n";
       } else if (c[y] != 0) {
         int cur = 7 - (1 << (c[y] - 1));
         c[x] = __builtin_ffs(cur);

@@ -27,4 +27,6 @@ int main() {
         cin >> n;
         cout << max(0, n - 2) << "\n";
     }
+    // cout << "Helloworld!" << "\n";
+
 }

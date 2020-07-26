@@ -2,9 +2,9 @@
 
 #define pb push_back
 #define sz(v) ((int)(v).size())
-#define all(v) (v).begin(),(v).end()
-#define rf(i, a, b) for(int (i) = (a); (i) <= (b); (i)++)
-#define rb(i, b, a) for(int (i) = (b); (i) >= (a); (i)--)
+#define all(v) (v).begin(), (v).end()
+#define rf(i, a, b) for (int(i) = (a); (i) <= (b); (i)++)
+#define rb(i, b, a) for (int(i) = (b); (i) >= (a); (i)--)
 
 using namespace std;
 
@@ -17,8 +17,25 @@ typedef vector<ii> vii;
 const int N = 1e5 + 1;
 const int INF = 2e9;
 
-int main(){
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    
+int solve() {
+  int n, k;
+  cin >> n >> k;
+  int p = 0;
+  rf(i, 2, sqrt(n)) {
+    if (n % i == 0) {
+      p = i;
+      break;
+    }
+  }
+  if (p == 0) p = n;
+  cout << n + p + (k - 1) * 2 << "\n";
+}
+int main() {
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  int t;
+  cin >> t;
+  while (t--) {
+    solve();
+  }
 }

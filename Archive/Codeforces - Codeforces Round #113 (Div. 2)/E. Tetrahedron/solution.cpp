@@ -39,11 +39,10 @@ public:
     Matrix res;
     res.init(r, o.c);
     for (int i = 0; i < r; i++) {
-      for (int j = 0; j < o.c; j++) {
+      for (int j = 0; j < o.c; j++)
         for (int k = 0; k < c; k++) {
           res.a[i][j] += a[i][k] * o.a[k][j];
         }
-      }
     }
     return res;
   }
@@ -93,6 +92,20 @@ string to_string(Matrix<T> matrix) {
     res += "\n";
   }
   return res;
+}
+
+template <typename T>
+T inverse(T a, T m) {
+  T u = 0, v = 1;
+  while (a != 0) {
+    T t = m / a;
+    m -= t * a;
+    swap(a, m);
+    u -= t * v;
+    swap(u, v);
+  }
+  assert(m == 1);
+  return u;
 }
 
 template <typename T>
@@ -153,7 +166,17 @@ public:
 
   template <typename U = T>
   typename enable_if<is_same<typename Modular<U>::Type, int>::value, Modular>::type &operator*=(const Modular &rhs) {
+#ifdef _WIN32
+    uint64_t x = static_cast<int64_t>(value) * static_cast<int64_t>(rhs.value);
+    uint32_t xh = static_cast<uint32_t>(x >> 32), xl = static_cast<uint32_t>(x), d, m;
+    asm(
+        "divl %4; \n\t"
+        : "=a"(d), "=d"(m)
+        : "d"(xh), "a"(xl), "r"(mod()));
+    value = m;
+#else
     value = normalize(static_cast<int64_t>(value) * static_cast<int64_t>(rhs.value));
+#endif
     return *this;
   }
   template <typename U = T>
@@ -185,20 +208,6 @@ public:
 private:
   Type value;
 };
-
-template <typename T>
-T inverse(T a, T m) {
-  T u = 0, v = 1;
-  while (a != 0) {
-    T t = m / a;
-    m -= t * a;
-    swap(a, m);
-    u -= t * v;
-    swap(u, v);
-  }
-  assert(m == 1);
-  return u;
-}
 
 template <typename T>
 bool operator==(const Modular<T> &lhs, const Modular<T> &rhs) { return lhs.value == rhs.value; }
@@ -282,7 +291,16 @@ std::istream &operator>>(std::istream &stream, Modular<T> &number) {
   return stream;
 }
 
-constexpr int md = 1e9 + 7;
+/*
+using ModType = int;
+ 
+struct VarMod { static ModType value; };
+ModType VarMod::value;
+ModType& md = VarMod::value;
+using Mint = Modular<VarMod>;
+*/
+
+constexpr int md = 1e9+7;
 using Mint = Modular<std::integral_constant<decay<decltype(md)>::type, md>>;
 
 int main() {

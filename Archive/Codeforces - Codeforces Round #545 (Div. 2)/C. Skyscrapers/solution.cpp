@@ -10,7 +10,7 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 
 const int N = 1e3 + 1;
-int n, m, a[N][N];
+int n, m, a[N][N], ans[N][N];
 vi r[N], c[N];
 
 int main() {

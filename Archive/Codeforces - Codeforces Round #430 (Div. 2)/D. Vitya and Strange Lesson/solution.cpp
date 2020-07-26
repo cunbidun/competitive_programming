@@ -38,9 +38,6 @@ int query() {
   int cur = 0;
   int ans = 0;
   for (int i = MAX_BIT; i >= 0; i--) {
-    if (cur == -1) {
-      break;
-    }
     int b = ((sum >> i) & 1);
     int nxt = b;
     if (child[trie[cur][b]] == (1 << (i + 1)) - 1) {
@@ -55,19 +52,16 @@ int query() {
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-
   for (int i = 0; i < (1 << 20); i++) {
     trie[i][0] = -1;
     trie[i][1] = -1;
   }
-
   cin >> n >> m;
   for (int i = 1; i <= n; i++) {
     cin >> a[i];
     add(a[i]);
   }
   cal(0);
-
   while (m--) {
     int x;
     cin >> x;

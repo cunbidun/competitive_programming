@@ -14,7 +14,7 @@ typedef pair<int, int> ii;
 typedef pair<ii, int> iii;
 typedef vector<ii> vii;
 
-const int N = 2e6 + 1;
+const int N = 1e7 + 1;
 const int INF = 2e9;
 
 vi lp;

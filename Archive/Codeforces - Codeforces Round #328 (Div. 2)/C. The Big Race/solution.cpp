@@ -24,10 +24,11 @@ int main() {
   cin >> t >> w >> b;
   if (w > b) swap(w, b);
   if (t / b < w / __gcd(b, w)) {
-    tot = min(w - 1, t);
+    tot = min(w-1, t);
   } else {
     ll x = b / __gcd(b, w) * w;
-    tot = t / x * w + min(w, t % x + 1) - 1;
+    // cout << x << " " << t / x * w << "\n";
+    tot = t / x * w + min(w, t % x + 1)-1;
   }
   ll d = __gcd(tot, t);
   cout << tot / d << "/" << t / d << "\n";

@@ -8,14 +8,11 @@ using namespace std;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 typedef vector<ii> vii;
-
 const int N = 1e5 + 1;
 const int INF = 2e9;
-
-long long ans = 0;
 int n, vis[N], c[N];
 vii a[N];
-
+long long ans = 0;
 int check(int x) {
   while (x) {
     if (x % 10 != 4 && x % 10 != 7)
@@ -24,7 +21,6 @@ int check(int x) {
   }
   return 1;
 }
-
 void dfs(int u) {
   vis[u] = 1;
   c[u] = 1;
@@ -37,7 +33,6 @@ void dfs(int u) {
     c[u] += c[v];
   }
 }
-
 int main() {
   ios_base::sync_with_stdio(0);
   cin.tie(0);
@@ -52,6 +47,7 @@ int main() {
   for (int i = 1; i <= n; i++) {
     if (!vis[i]) {
       dfs(i);
+      // cout << c[i] << "\n";
       ans -= 1LL * c[i] * (c[i] - 1) * (c[i] - 2) + 2LL * c[i] * (c[i] - 1) * (n - c[i]);
     }
   }

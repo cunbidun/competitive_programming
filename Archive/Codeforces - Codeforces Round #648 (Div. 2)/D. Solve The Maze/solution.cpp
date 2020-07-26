@@ -11,8 +11,11 @@ int d = 0;
 
 void dfs(int i, int j) {
   if (vis[i][j] || a[i][j] == '#') return;
+
   if (a[i][j] == 'B') d = -1e9;
-  if (a[i][j] == 'G') d++;
+  if (a[i][j] == 'G') {
+    d++;
+  }
   vis[i][j] = 1;
   if (i > 1) dfs(i - 1, j);
   if (i < n) dfs(i + 1, j);
@@ -38,12 +41,20 @@ int solve() {
     }
   }
   if (cnt == 0) return cout << "Yes\n", 0;
-  dfs(n, m);
-  if (vis[n][m] && d == cnt)
-    cout << "Yes\n";
-  else
-    cout << "No\n";
-  return 0;
+  // rf(i, 1, n) {
+  //   rf(j, 1, m) cout << a[i][j];
+  //   cout << "\n";
+  // }
+  rf(i, 1, n) {
+    rf(j, 1, m) if (a[i][j] == 'G') {
+      dfs(i, j);
+      if (vis[n][m] && d == cnt)
+        cout << "Yes\n";
+      else
+        cout << "No\n";
+      return 0;
+    }
+  }
 }
 int main() {
   ios_base::sync_with_stdio(0);

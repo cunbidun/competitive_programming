@@ -17,16 +17,6 @@ typedef vector<ii> vii;
 const int N = 1e5 + 1;
 const int INF = 2e9;
 
-int bin_pow(int a, int x) {
-  if (x == 0) return 1;
-  if (x == 1) return a;
-  int t = bin_pow(a, x / 2);
-  if (x % 2 == 0)
-    return t * t;
-  else
-    return t * t * x;
-}
-
 int solve() {
   int n;
   cin >> n;
@@ -35,7 +25,7 @@ int solve() {
   vi ans;
   while (n) {
     if (n % 10 != 0) {
-      ans.pb(n % 10 * bin_pow(10, p));
+      ans.pb(n % 10 * pow(10, p));
     }
     p++;
     n /= 10;

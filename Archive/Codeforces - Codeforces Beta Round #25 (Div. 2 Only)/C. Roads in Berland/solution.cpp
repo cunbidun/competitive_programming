@@ -1,9 +1,17 @@
 #include <bits/stdc++.h>
 
+#define sz(v) ((int)(v).size())
+#define all(v) (v).begin(), (v).end()
+
 using namespace std;
 
+typedef long long ll;
+typedef pair<ll, int> ii;
+typedef vector<ll> vl;
+
+const int N = 301;
 int n;
-int m[301][301];
+int m[N][N];
 
 int main() {
   ios_base::sync_with_stdio(0);
@@ -25,7 +33,8 @@ int main() {
         m[i][j] = min(m[i][j], m[u][j] + w + m[v][i]);
       }
     }
-    long long ans = 0;
+
+    ll ans = 0;
     for (int i = 1; i <= n; i++) {
       for (int j = 1; j <= n; j++) {
         ans += m[i][j];

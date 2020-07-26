@@ -22,78 +22,9 @@ ostream &operator<<(ostream &os, const vector<T> &a) {
   return os;
 }
 
-template <class T>
-class Matrix {
-  vector<vector<T>> a;
-  int r, c;
-
-public:
-  void init(int r, int c) {
-    this->r = r;
-    this->c = c;
-    a.resize(r);
-    for (int i = 0; i < r; i++) {
-      a[i].resize(c);
-    }
-  }
-
-  Matrix operator+(const Matrix &o) const {
-    Matrix res;
-    res.init(r, c);
-    for (int i = 0; i < r; i++) {
-      for (int j = 0; j < c; j++) {
-        res.a[i][j] = a[i][j] + o.a[i][j];
-      }
-    }
-    return res;
-  }
-
-  Matrix operator*(const Matrix &o) const {
-    Matrix res;
-    res.init(r, o.c);
-    for (int i = 0; i < r; i++) {
-      for (int j = i; j < r; j++)
-        for (int k = i; k <= j; k++) {
-          res.a[i][j] = max(res.a[i][j], a[i][k] + o.a[k][j]);
-        }
-    }
-    return res;
-  }
-
-  Matrix power(int p) const {
-    if (p == 0) {
-      Matrix res;
-      res.init(r, r);
-      return res;
-    }
-    if (p == 1) {
-      Matrix res(*this);
-      return res;
-    }
-    Matrix tmp = power(p / 2);
-    if (p % 2 == 0) {
-      return tmp * tmp;
-    }
-    return *this * tmp * tmp;
-  }
-
-  vector<T> &operator[](int i) {
-    return a[i];
-  }
-
-  friend std::ostream &operator<<(std::ostream &stream, const Matrix &matrix) {
-    for (int i = 0; i < matrix.r; i++) {
-      for (int j = 0; j < matrix.c; j++) {
-        stream << matrix.a[i][j] << " ";
-      }
-      stream << endl;
-    }
-    return stream;
-  }
-};
-
 int n, T;
 int a[101];
+int f[101][101];
 vi l;
 map<int, int> mp;
 void compress() {
@@ -103,6 +34,51 @@ void compress() {
     mp[i] = sz(mp) + 1;
 }
 
+void mul(int A[101][101], int B[101][101]) {
+  int C[101][101];
+  for (int i = 1; i <= 100; i++) {
+    for (int j = 1; j <= 100; j++) {
+      C[i][j] = 0;
+      for (int k = i; k <= j; k++) {
+        C[i][j] = max(C[i][j], A[i][k] + B[k][j]);
+      }
+    }
+  }
+  for (int i = 1; i <= 100; i++) {
+    for (int j = 1; j <= 100; j++) {
+      if (i > j)
+        A[i][j] = 0;
+      else
+        A[i][j] = C[i][j];
+    }
+  }
+}
+
+void bin_pow(int A[101][101], int p) {
+  if (p == 1)
+    return;
+  int C[101][101];
+  for (int i = 1; i <= 100; i++) {
+    for (int j = 1; j <= 100; j++) {
+      if (i > j)
+        C[i][j] = 0;
+      else
+        C[i][j] = A[i][j];
+    }
+  }
+  bin_pow(C, p / 2);
+  mul(C, C);
+  if (p % 2 == 1)
+    mul(C, A);
+  for (int i = 1; i <= 100; i++) {
+    for (int j = 1; j <= 100; j++) {
+      if (i > j)
+        A[i][j] = 0;
+      else
+        A[i][j] = C[i][j];
+    }
+  }
+}
 int main() {
   ios_base::sync_with_stdio(0);
   cin.tie(0);
@@ -115,9 +91,6 @@ int main() {
   for (int i = 1; i <= n; i++) {
     a[i] = mp[a[i]];
   }
-
-  Matrix<int> base;
-  base.init(n, n);
   for (int i = 1; i <= n; i++) {
     for (int j = i; j <= n; j++) {
       vi tmp;
@@ -140,16 +113,14 @@ int main() {
         arr[k] = cur + 1;
         res = max(res, arr[k]);
       }
-      base[i - 1][j - 1] = res;
+      f[i][j] = res;
     }
   }
-
-  base = base.power(T);
-
+  bin_pow(f, T);
   int ans = 0;
   for (int i = 1; i <= n; i++) {
     for (int j = 1; j <= n; j++) {
-      ans = max(ans, base[i - 1][j - 1]);
+      ans = max(ans, f[i][j]);
     }
   }
   cout << ans << "\n";

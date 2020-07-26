@@ -16,24 +16,24 @@ int cnt0[N], cnt1[N];
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  
-	cin >> a >> b;
-  for (int i = 0; i < sz(a); i++) {
+  cin >> a >> b;
+  a = "*" + a;
+  b = "*" + b;
+  for (int i = 1; i < sz(a); i++) {
     cnt0[i] = cnt0[i - 1];
     if (a[i] == '0') {
       cnt0[i]++;
     }
   }
-  
-	int cnt = 0;
-  for (int i = 0; i < sz(b); i++) {
+  int cnt = 0;
+  for (int i = 1; i < sz(b); i++) {
     if (b[i] == '0')
       cnt++;
   }
-	
+
   int ans = 0;
   for (int i = sz(b) - 1; i < sz(a); i++) {
-    int c0 = cnt0[i] - ((i == sz(b) - 1) ? 0 : cnt0[i - sz(b)]);
+    int c0 = cnt0[i] - cnt0[i - sz(b) + 1];
     if ((c0 + cnt) % 2 == 0) {
       ans++;
     }

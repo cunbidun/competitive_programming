@@ -10,7 +10,6 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 
 const int INF = 2e9;
-
 template <class T1, class T2>
 ostream &operator<<(ostream &os, const pair<T1, T2> &a) {
   return os << '(' << a.first << ", " << a.second << ')';
@@ -23,7 +22,6 @@ ostream &operator<<(ostream &os, const vector<T> &a) {
   os << ']';
   return os;
 }
-
 int main() {
   ios_base::sync_with_stdio(0);
   cin.tie(0);
@@ -40,8 +38,6 @@ int main() {
     }
   }
 
-  // cout << pos << "\n";
-
   set<int> cur;
   while (true) {
     if (sz(cur) >= sz(pos) - step) {
@@ -50,22 +46,19 @@ int main() {
     }
     vi l;
     for (int i : pos) {
-      if (sz(l) == N) {
+      if (sz(l) == N)
         break;
-      }
       if (cur.find(i) == cur.end()) {
         l.push_back(i);
       }
     }
     for (int i : pos) {
-      if (sz(l) == N) {
+      if (sz(l) == N)
         break;
-      }
       if (cur.find(i) == cur.end()) {
         l.push_back(i);
       }
     }
-		
     cout << N << " ";
     for (int i : l) {
       cout << i << " ";

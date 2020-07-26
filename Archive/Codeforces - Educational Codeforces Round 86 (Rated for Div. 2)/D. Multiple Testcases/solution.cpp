@@ -37,7 +37,7 @@ int main() {
     }
     int cur = 1;
     rb(i, k, 1) {
-        while (cnt[i]--) {  
+        while (cnt[i]--) {
             l[cur].pb(i);
             cur++;
             if (cur == ans + 1)

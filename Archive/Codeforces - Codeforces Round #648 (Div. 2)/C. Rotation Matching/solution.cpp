@@ -30,10 +30,11 @@ int main() {
     int cur;
     if (i <= p[b[i]])
       cur = p[b[i]] - i;
+
     else
       cur = n - i + p[b[i]];
     cnt[cur]++;
     ans = max(ans, cnt[cur]);
   }
-  cout << ans << "\n";
+	cout << ans << "\n";
 }

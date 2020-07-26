@@ -16,7 +16,7 @@ typedef vector<ii> vii;
 
 const int N = 2e5 + 1;
 const int INF = 2e9;
-const ll INFLL = 7e18;  
+const ll INFLL = 7e18;
 ll ans = INFLL;
 
 ll n, m, k, x, s;

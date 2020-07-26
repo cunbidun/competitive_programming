@@ -27,10 +27,11 @@ int main() {
     int ans = 0;
     int i = n;
     int d = n;
-    while (i) {
+    while (i > 0) {
         if (d >= i)
             ans++;
         d = min(d, i - a[i] - 1);
+        // cout << i - a[i] - 1 << "\n";
         i--;
     }
     cout << ans << "\n";

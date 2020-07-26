@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.post("/", (req, res) => {
   const data = req.body;
-  const path = `../Task/${data.name.replace(/"/g, `'`).replace(/!/g, ``)}`;
+  const path = `../Task/${data.name.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`)}`;
   mkdirp(path, function (err) {});
   let tests = [];
 
@@ -28,8 +28,8 @@ app.post("/", (req, res) => {
   );
   obj = {
     tests: tests,
-    name: data.name.replace(/"/g, `'`).replace(/!/g, ``),
-    group: data.group.replace(/"/g, `'`).replace(/!/g, ``),
+    name: data.name.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`),
+    group: data.group.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`),
     isInteractive: data.interactive,
     timeLimit: data.timeLimit,
     truncateLongTest: false,

@@ -12,11 +12,15 @@ typedef pair<int, int> ii;
 int solve() {
   ll a, b, n, m;
   cin >> a >> b >> n >> m;
-  if (a + b < n + m || min(a, b) < m) {
+  if (a + b < n + m) {
     cout << "No\n";
-  } else {
-    cout << "Yes\n";
+    return 0;
   }
+  if (min(a, b) < m) {
+    cout << "No\n";
+    return 0;
+  }
+  cout << "Yes\n";
 }
 
 int main() {

@@ -12,6 +12,7 @@ typedef pair<int, int> ii;
 int solve() {
   ll n, r;
   cin >> n >> r;
+  // n--;
   cout << min(n - 1, r) * (min(n - 1, r) + 1) / 2 + (n <= r) << "\n";
 }
 

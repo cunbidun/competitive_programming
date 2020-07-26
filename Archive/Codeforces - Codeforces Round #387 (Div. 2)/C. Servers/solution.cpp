@@ -32,8 +32,9 @@ int main() {
             if (a[j] < t) {
                 cnt++;
                 ans += j;
-                if (cnt == k) 
+                if (cnt == k) {
                     break;
+                }
             }
         }
         if (cnt != k) {

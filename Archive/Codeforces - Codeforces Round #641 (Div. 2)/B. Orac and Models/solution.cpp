@@ -1,22 +1,22 @@
 #include <bits/stdc++.h>
- 
+
 #define pb push_back
 #define sz(v) ((int)(v).size())
 #define all(v) (v).begin(), (v).end()
 #define rf(i, a, b) for (int(i) = (a); (i) <= (b); (i)++)
 #define rb(i, b, a) for (int(i) = (b); (i) >= (a); (i)--)
- 
+
 using namespace std;
- 
+
 typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 typedef pair<ii, int> iii;
 typedef vector<ii> vii;
- 
+
 const int N = 1e5 + 1;
 const int INF = 2e9;
- 
+
 int n, f[N], a[N];
 int solve() {
   cin >> n;
@@ -25,7 +25,7 @@ int solve() {
     cin >> a[i];
   }
   int ans = 1;
- 
+
   rf(i, 2, n) {
     // if (a[i] > a[1]) f[i] = 2;
     rf(j, 1, sqrt(i)) if (i % j == 0) {

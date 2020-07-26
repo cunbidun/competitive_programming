@@ -26,10 +26,22 @@ int main() {
   }
   sort(b + 1, b + 1 + n);
 
+  for (int i = 0; i <= 1; i++) {
+    for (int j = 0; j <= n; j++) {
+      f[i][j] = INF;
+    }
+  }
+
   for (int i = 1; i <= n; i++) {
+    f[1][i] = abs(a[1] - b[i]);
+  }
+
+  for (int i = 2; i <= n; i++) {
     for (int j = 1; j <= n; j++) {
       f[0][j] = f[1][j];
+      f[1][j] = INF;
     }
+
     ll l[5005];
     for (int j = 0; j <= n; j++) {
       l[j] = INF;
@@ -40,6 +52,7 @@ int main() {
     for (int j = 1; j <= n; j++) {
       f[1][j] = l[j] + abs(a[i] - b[j]);
     }
+
   }
 
   ll ans = INF;

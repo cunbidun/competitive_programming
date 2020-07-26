@@ -31,7 +31,7 @@ void cal(int x, int y, int z) {
         set<int>::iterator itx = a[x].upper_bound(i);
         if (itx == a[x].begin())
             continue;
-        itx--;
+itx--;
         ans = min(ans, calc(*itx, i, *itz));
     }
 }
@@ -51,6 +51,7 @@ int solve() {
     cal(2, 0, 1);
     cal(2, 1, 0);
 
+    // cout << tmp << "\n";
     cout << ans << "\n";
     a[0].clear();
     a[1].clear();

@@ -24,8 +24,8 @@ int solve() {
         b = n - i;
         cur = max(i, n - i);
       }
-      int pi = n / i;
-      if (max(pi, n - pi) < cur) {
+			int pi = n/i;
+			if (max(pi, n - pi) < cur) {
         a = pi,
         b = n - pi;
         cur = max(pi, n - pi);

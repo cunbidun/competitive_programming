@@ -10,16 +10,18 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 
 const int N = 2e5 + 1;
+const int INF = 2e9;
 
 struct union_find {
   vector<int> p, child, rank;
   int dsu_size;
 
-  union_find(int dsu_size) : dsu_size(dsu_size) {
-    p.assign(dsu_size + 1, 0);
-    rank.assign(dsu_size + 1, 0);
-    child.assign(dsu_size + 1, 0);
-    for (int i = 1; i <= dsu_size; i++) {
+  union_find(int N) {
+    dsu_size = N;
+    p.assign(N + 1, 0);
+    rank.assign(N + 1, 0);
+    child.assign(N + 1, 0);
+    for (int i = 1; i <= N; i++) {
       p[i] = i;
       child[i] = 1;
     }
@@ -66,7 +68,7 @@ ll ans[N], mst = 0;
 vector<pair<int, pair<int, ii>>> edge;
 vector<ii> a[N];
 
-void dfs(int u, int l) {
+int dfs(int u, int l) {
   for (ii v : a[u]) {
     if (v.first != l) {
       lvl[v.first] = lvl[u] + 1;
@@ -151,7 +153,6 @@ int main() {
       ans[id] = mst + w - lca(u, v);
     }
   }
-
   for (int i = 1; i <= m; i++) {
     cout << ans[i] << "\n";
   }

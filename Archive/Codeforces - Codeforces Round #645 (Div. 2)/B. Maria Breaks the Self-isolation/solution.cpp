@@ -24,9 +24,9 @@ int solve() {
   sort(a + 1, a + 1 + n);
   int cnt = 1;
   int ans = 0;
-  rf(i, 1, n) 
+  rf(i, 1, n) {
     if (i >= a[i]) ans = i;
-  
+  }
   cout << ans + 1 << "\n";
 }
 

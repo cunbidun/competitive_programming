@@ -22,24 +22,21 @@ int a[N], s[N];
 
 int solve() {
   cin >> n >> x;
-  for (int i = 1; i <= n; i++) {
-    cin >> a[i];
-    s[i] = s[i - 1] + a[i];
-  }
-  if (s[n] % x != 0) {
-    return cout << n << "\n", 0;
-  }
+  rf(i, 1, n) cin >> a[i], s[i] = s[i - 1] + a[i];
+ 
+  if (s[n] % x != 0) return cout << n << "\n", 0;
+ 
   int left = 0;
   int right = 0;
-  for (int i = 1; i <= n; i++) {
-    if (a[i] % x != 0) {
-      left = i;
-      break;
-    }
+ 
+  rf(i, 1, n) if (a[i] % x != 0) {
+    left = i;
+    break;
   }
+ 
   rb(j, n, 1) if (a[j] % x != 0) {
     right = n - j + 1;
-    break;
+		break;
   }
   if (left == 0 && right == 0)
     cout << "-1\n";
@@ -53,6 +50,5 @@ int main() {
   cin.tie(0);
   int t;
   cin >> t;
-  while (t--)
-    solve();
+  while (t--) solve();
 }

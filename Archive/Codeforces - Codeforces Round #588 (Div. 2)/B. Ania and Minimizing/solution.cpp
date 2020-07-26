@@ -23,7 +23,7 @@ int main() {
     string s;
     int n, k;
     cin >> n >> k;
-    if (n == 1 && k != 0) {
+    if(n == 1 && k != 0) {
         cout << 0 << "\n";
         return 0;
     }

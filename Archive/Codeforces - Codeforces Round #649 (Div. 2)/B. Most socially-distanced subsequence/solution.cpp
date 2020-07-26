@@ -21,7 +21,7 @@ int n;
 int a[N];
 int solve() {
   cin >> n;
-  rf(i, 1, n) { cin >> a[i]; }
+  rf(i, 1, n) cin >> a[i];
   vi ans;
   ans.pb(a[1]);
   int cur = a[1];
@@ -30,12 +30,10 @@ int solve() {
       i++;
     }
     ans.pb(a[i]);
-    cur = a[i];
+		cur = a[i];
   }
   cout << sz(ans) << "\n";
-  for (int i : ans) {
-    cout << i << " ";
-  }
+  for (int i : ans) cout << i << " ";
   cout << "\n";
 }
 
@@ -44,6 +42,5 @@ int main() {
   cin.tie(0);
   int t;
   cin >> t;
-  while (t--)
-    solve();
+  while (t--) solve();
 }

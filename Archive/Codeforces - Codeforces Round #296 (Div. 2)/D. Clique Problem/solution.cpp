@@ -33,11 +33,11 @@ int main() {
         a[i].second = x + y;
     }
     sort(a + 1, a + 1 + n, cmp);
-    int ans = 0;
-    int cur = -INF;
-    rf(i, 1, n) {
-        if (a[i].first >= cur) {
-            ans++;
+    int ans =0;
+    int cur = -INF; 
+    rf(i,1,n){
+          if (a[i].first >= cur){
+            ans ++;
             cur = a[i].second;
         }
     }

@@ -31,15 +31,16 @@ int main() {
         sum += s[i] - '0';
         a[i] = s[i];
     }
-    
     sort(a, a + sz(s));
 
     int ans = 0;
     rf(i, 0, sz(s)) {
-        if (sum >= k)
+        if (sum >= k) {
             break;
+        }
         ans++;
-        sum += 9 - (a[i] - '0');
+        sum -= a[i] - '0';
+        sum += 9;
     }
     cout << ans << "\n";
 }

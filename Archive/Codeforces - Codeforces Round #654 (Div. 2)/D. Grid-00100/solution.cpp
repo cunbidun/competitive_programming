@@ -15,7 +15,7 @@ int res[301][301];
 int solve() {
   int n, k;
   cin >> n >> k;
-  int K = k;
+	int K = k;
   for (int i = 1; i <= n; i++) {
     for (int j = 1; j <= n; j++) {
       res[i][j] = 0;
@@ -29,10 +29,12 @@ int solve() {
     res[x][y] = 1;
     x++;
     y++;
+
     if (y > n) {
       y = 1;
       x = cur + 1;
       cur++;
+
     }
     if (x > n) {
       x = 1;

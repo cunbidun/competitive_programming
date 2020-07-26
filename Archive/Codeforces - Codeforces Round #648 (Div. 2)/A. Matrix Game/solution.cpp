@@ -24,13 +24,11 @@ int solve() {
   rf(i, 1, n) rf(j, 1, m) {
     int x;
     cin >> x;
-    if (x == 1) {
-      sr.insert(i);
-      sc.insert(j);
-    }
+    if (x == 1) sr.insert(i);
+    if (x == 1) sc.insert(j);
   }
   int move = min(n - sz(sr), m - sz(sc));
-  if (move % 2 == 0) return cout << "Vivek\n", 0;
+  if (move % 2 == 0) return cout << "Vivek\n",0;
   cout << "Ashish\n";
 }
 

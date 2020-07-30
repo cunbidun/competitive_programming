@@ -1,0 +1,29 @@
+{
+  "numTest": 0,
+  "genParameters": "",
+  "isInteractive": false,
+  "useGeneration": false,
+  "printWrongAnswer": false,
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/767/A",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "3\n\n2 1\n",
+      "input": "3\n3 1 2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "\n5 4\n\n\n3 2 1\n",
+      "input": "5\n4 5 1 2 3\n",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "name": "A. Snacktower",
+  "truncateLongTest": false,
+  "checkerParameters": "",
+  "useLocalChecker": false,
+  "group": "Codeforces - Codeforces Round #398 (Div. 2)"
+}

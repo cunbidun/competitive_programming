@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "input": "1\n20\n2\n10 20\n",
+      "output": "20 20\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "3\n3 2 2\n5\n1 5 7 7 9\n",
+      "output": "3 1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "4\n1 3 5 7\n4\n7 5 3 1\n",
+      "output": "1 1\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "name": "A. Choose Two Numbers",
+  "group": "Codeforces - Codeforces Round #580 (Div. 2)",
+  "isInteractive": false,
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "checkerParameters": "",
+  "useGeneration": false,
+  "printWrongAnswer": false,
+  "useLocalChecker": false,
+  "url": "https://codeforces.com/contest/1206/problem/A",
+  "numTest": 0,
+  "genParameters": null,
+  "knowGenAns": false
+}

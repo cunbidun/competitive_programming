@@ -1,19 +1,15 @@
-import java.io.OutputStream;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.PrintWriter;
-import java.io.BufferedWriter;
-import java.io.Writer;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.HashMap;
 import java.util.InputMismatchException;
-import java.io.IOException;
-import java.io.InputStream;
 
 /**
- * Built using CHelper plug-in
- * Actual solution is at the top
+ * Built using CHelper plug-in Actual solution is at the top
  *
  * @author cunbidun
  */
@@ -30,12 +26,8 @@ public class Main {
 
     static class Task766D {
         private static final int NUM = (int) 1e5;
-        private InputReader in;
-        private OutputWriter out;
 
         public void solve(int testNumber, InputReader in, OutputWriter out) {
-            this.in = in;
-            this.out = out;
             int n = in.nextInt();
             int m = in.nextInt();
             int q = in.nextInt();
@@ -44,8 +36,6 @@ public class Main {
                 map.put(in.nextString(), i);
             }
             UnionFind dsu = new UnionFind(n + NUM);
-            UnionFind gr = new UnionFind(n);
-            int[] num = new int[n + 1];
             for (int i = 1; i <= m; i++) {
                 int t = in.nextInt();
                 int u = map.get(in.nextString());
@@ -61,17 +51,23 @@ public class Main {
                         dsu.mergeSet(u + NUM, v);
                     }
                 } else {
-                    if (t == 1 && dsu.isSameSet(u, v)) out.println("YES");
-                    else if (t == 2 && !dsu.isSameSet(u, v)) out.println("YES");
-                    else out.println("NO");
+                    if (t == 1 && dsu.isSameSet(u, v)) {
+                        out.println("YES");
+                    } else if (t == 2 && !dsu.isSameSet(u, v))
+                        out.println("YES");
+                    else
+                        out.println("NO");
                 }
             }
             for (int i = 1; i <= q; i++) {
                 int u = dsu.findSet(map.get(in.nextString()));
                 int v = dsu.findSet(map.get(in.nextString()));
-                if (u == v) out.println(1);
-                else if (u + NUM == v || v + NUM == u) out.println(2);
-                else out.println(3);
+                if (u == v)
+                    out.println(1);
+                else if (u + NUM == v || v + NUM == u)
+                    out.println(2);
+                else
+                    out.println(3);
             }
         }
 
@@ -128,7 +124,8 @@ public class Main {
 
         public String nextString() {
             int c;
-            while (isSpaceChar(c = read())) ;
+            while (isSpaceChar(c = read()))
+                ;
             StringBuilder result = new StringBuilder();
             result.appendCodePoint(c);
             while (!isSpaceChar(c = read()))
@@ -146,10 +143,8 @@ public class Main {
         private int[] p;
         private int[] rank;
         private int[] size;
-        private int dsuSize;
-
+        
         public UnionFind(int N) {
-            dsuSize = N;
             p = new int[N + 1];
             rank = new int[N + 1];
             size = new int[N + 1];
@@ -169,7 +164,6 @@ public class Main {
 
         public void mergeSet(int x, int y) {
             if (!isSameSet(x, y)) {
-                dsuSize--;
                 x = findSet(x);
                 y = findSet(y);
                 if (rank[x] > rank[y]) {
@@ -178,7 +172,8 @@ public class Main {
                 } else {
                     p[x] = y;
                     size[y] += size[x];
-                    if (rank[x] == rank[y]) rank[y]++;
+                    if (rank[x] == rank[y])
+                        rank[y]++;
                 }
             }
         }

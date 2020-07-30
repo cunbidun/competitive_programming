@@ -9,9 +9,18 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 
+string s, t;
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  cout << "12"
-       << "\n";
+  cin >> s >> t;
+  if (sz(s) != sz(t)) {
+    cout << max(sz(s), sz(t)) << "\n";
+  } else {
+    if (s != t) {
+      cout << sz(s) << "\n";
+    } else {
+      cout << -1 << "\n";
+    }
+  }
 }

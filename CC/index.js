@@ -31,7 +31,7 @@ app.post("/", (req, res) => {
     name: data.name.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`),
     group: data.group.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`),
     isInteractive: data.interactive,
-    timeLimit: data.timeLimit,
+    timeLimit: data.timeLimit !== null ? data.timeLimit : 5000,
     truncateLongTest: false,
     checkerParameters: "",
     useGeneration: false,

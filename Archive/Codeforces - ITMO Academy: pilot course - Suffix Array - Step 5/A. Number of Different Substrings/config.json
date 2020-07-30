@@ -1,0 +1,21 @@
+{
+  "tests": [
+    { "input": "ababba\n", "output": "15\n", "index": 0, "active": true },
+    { "input": "mmuc\n", "output": "9\n", "index": 1, "active": true },
+    { "input": "xmnnnuu\n", "output": "24\n", "index": 2, "active": true },
+    { "input": "nnnn\n", "output": "4\n", "index": 3, "active": true }
+  ],
+  "name": "A. Number of Different Substrings",
+  "group": "Codeforces - ITMO Academy: pilot course - Suffix Array - Step 5",
+  "isInteractive": false,
+  "timeLimit": 5000,
+  "truncateLongTest": false,
+  "checkerParameters": "",
+  "useGeneration": false,
+  "printWrongAnswer": false,
+  "useLocalChecker": false,
+  "url": "https://codeforces.com/edu/course/2/lesson/2/5/practice/contest/269656/problem/A",
+  "numTest": 0,
+  "genParameters": null,
+  "knowGenAns": false
+}

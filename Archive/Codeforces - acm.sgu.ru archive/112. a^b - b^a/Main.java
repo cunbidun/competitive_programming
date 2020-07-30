@@ -12,28 +12,27 @@ import java.util.concurrent.ExecutorService;
 import java.io.InputStream;
 
 /**
- * Built using CHelper plug-in
- * Actual solution is at the top
+ * Built using CHelper plug-in Actual solution is at the top
  *
  * @author cunbidun
  */
 public class Main {
-    public static void main(String[] args) {
-        InputStream inputStream = System.in;
-        OutputStream outputStream = System.out;
-        InputReader in = new InputReader(inputStream);
-        PrintWriter out = new PrintWriter(outputStream);
-        AbBa solver = new AbBa();
+    public static void main(final String[] args) {
+        final InputStream inputStream = System.in;
+        final OutputStream outputStream = System.out;
+        final InputReader in = new InputReader(inputStream);
+        final PrintWriter out = new PrintWriter(outputStream);
+        final AbBa solver = new AbBa();
         solver.solve(1, in, out);
         out.close();
     }
 
     static class AbBa {
-        public void solve(int testNumber, InputReader in, PrintWriter out) {
-            int a = in.nextInt();
-            int b = in.nextInt();
+        public void solve(final int testNumber, final InputReader in, final PrintWriter out) {
+            final int a = in.nextInt();
+            final int b = in.nextInt();
             BigInt A = new BigInt(a);
-            BigInt B = new BigInt(b);
+            final BigInt B = new BigInt(b);
             A = A.pow(b);
             A.sub(B.pow(a));
             out.print(A);
@@ -42,6 +41,10 @@ public class Main {
     }
 
     static class BigInt extends Number implements Comparable<BigInt> {
+        /**
+         *
+         */
+        private static final long serialVersionUID = 1L;
         private static final long mask = (1L << 32) - 1;
         private int sign;
         private int len;
@@ -52,7 +55,8 @@ public class Main {
         }
 
         public BigInt(final int sign, final byte[] v, int vlen) {
-            while (vlen > 1 && v[vlen - 1] == 0) --vlen;
+            while (vlen > 1 && v[vlen - 1] == 0)
+                --vlen;
             dig = new int[(vlen + 3) / 4];
             assign(sign, v, vlen);
         }
@@ -87,7 +91,8 @@ public class Main {
 
         private int parse(final char[] s, int from, final int to) {
             int res = s[from] - '0';
-            while (++from < to) res = res * 10 + s[from] - '0';
+            while (++from < to)
+                res = res * 10 + s[from] - '0';
             return res;
         }
 
@@ -98,13 +103,16 @@ public class Main {
                 dig[i] = (int) carry;
                 carry >>>= 32;
             }
-            if (carry != 0) dig[len++] = (int) carry;
+            if (carry != 0)
+                dig[len++] = (int) carry;
             carry = (dig[0] & mask) + add;
             dig[0] = (int) carry;
             if ((carry >>> 32) != 0) {
                 int i = 1;
-                for (; i < len && ++dig[i] == 0; ++i) ;
-                if (i == len) dig[len++] = 1; //Todo: realloc() for general case?
+                for (; i < len && ++dig[i] == 0; ++i)
+                    ;
+                if (i == len)
+                    dig[len++] = 1; // Todo: realloc() for general case?
             }
         }
 
@@ -125,7 +133,8 @@ public class Main {
         }
 
         private void assign(final int[] v, final int vlen) {
-            if (vlen > dig.length) dig = new int[vlen + 2];
+            if (vlen > dig.length)
+                dig = new int[vlen + 2];
             System.arraycopy(v, 0, dig, 0, len = vlen);
         }
 
@@ -137,7 +146,8 @@ public class Main {
 
         public void assign(final int sign, final byte[] v, final int vlen) {
             len = (vlen + 3) / 4;
-            if (len > dig.length) dig = new int[len + 2];
+            if (len > dig.length)
+                dig = new int[len + 2];
             this.sign = sign;
             int tmp = vlen / 4, j = 0;
             for (int i = 0; i < tmp; i++, j += 4)
@@ -146,7 +156,8 @@ public class Main {
                 tmp = v[j++] & 0xFF;
                 if (j < vlen) {
                     tmp |= (v[j++] & 0xFF) << 8;
-                    if (j < vlen) tmp |= (v[j] & 0xFF) << 16;
+                    if (j < vlen)
+                        tmp |= (v[j] & 0xFF) << 16;
                 }
                 dig[len - 1] = tmp;
             }
@@ -160,15 +171,17 @@ public class Main {
             sign = s[0] == '-' ? -1 : 1;
 
             len = s.length + (sign - 1 >> 1);
-            final int alloc = len < 10 ? 1 : (int) (len * 3402L >>> 10) + 32 >>> 5; //3402 = bits per digit * 1024
-            if (dig == null || alloc > dig.length) dig = new int[alloc];
+            final int alloc = len < 10 ? 1 : (int) (len * 3402L >>> 10) + 32 >>> 5; // 3402 = bits per digit * 1024
+            if (dig == null || alloc > dig.length)
+                dig = new int[alloc];
 
             int j = len % 9;
-            if (j == 0) j = 9;
+            if (j == 0)
+                j = 9;
             j -= (sign - 1 >> 1);
 
             dig[0] = parse(s, 0 - (sign - 1 >> 1), j);
-            for (len = 1; j < s.length; )
+            for (len = 1; j < s.length;)
                 mulAdd(1_000_000_000, parse(s, j, j += 9));
         }
 
@@ -181,10 +194,12 @@ public class Main {
         public void uassign(final int s, final long val) {
             sign = s;
             len = 2;
-            if (dig.length < 2) realloc(2);
+            if (dig.length < 2)
+                realloc(2);
             dig[0] = (int) (val & mask);
             dig[1] = (int) (val >>> 32);
-            if (dig[1] == 0) --len;
+            if (dig[1] == 0)
+                --len;
         }
 
         public void assign(final int val) {
@@ -202,45 +217,58 @@ public class Main {
         private void setToZero() {
             dig[0] = 0;
             len = 1;
-            sign = 1; //Remove?
+            sign = 1; // Remove?
         }
 
         public int compareAbsTo(final BigInt a) {
-            if (len > a.len) return 1;
-            if (len < a.len) return -1;
+            if (len > a.len)
+                return 1;
+            if (len < a.len)
+                return -1;
             for (int i = len - 1; i >= 0; i--)
                 if (dig[i] != a.dig[i])
-                    if ((dig[i] & mask) > (a.dig[i] & mask)) return 1;
-                    else return -1;
+                    if ((dig[i] & mask) > (a.dig[i] & mask))
+                        return 1;
+                    else
+                        return -1;
             return 0;
         }
 
         public int compareTo(final BigInt a) {
             if (sign < 0) {
-                if (a.sign < 0 || a.isZero()) return -compareAbsTo(a);
+                if (a.sign < 0 || a.isZero())
+                    return -compareAbsTo(a);
                 return -1;
             }
-            if (a.sign > 0 || a.isZero()) return compareAbsTo(a);
+            if (a.sign > 0 || a.isZero())
+                return compareAbsTo(a);
             return 1;
         }
 
         public boolean equals(final BigInt a) {
-            if (len != a.len) return false;
-            if (isZero() && a.isZero()) return true;
-            if ((sign ^ a.sign) < 0) return false; //In case definition of sign would change...
-            for (int i = 0; i < len; i++) if (dig[i] != a.dig[i]) return false;
+            if (len != a.len)
+                return false;
+            if (isZero() && a.isZero())
+                return true;
+            if ((sign ^ a.sign) < 0)
+                return false; // In case definition of sign would change...
+            for (int i = 0; i < len; i++)
+                if (dig[i] != a.dig[i])
+                    return false;
             return true;
         }
 
         public boolean equals(final Object o) {
-            if (o instanceof BigInt) return equals((BigInt) o);
+            if (o instanceof BigInt)
+                return equals((BigInt) o);
             return false;
         }
 
         public int hashCode() {
-            int hash = 0; //Todo: Opt and improve.
-            for (int i = 0; i < len; i++) hash = (int) (31 * hash + (dig[i] & mask));
-            return sign * hash; //relies on 0 --> hash==0.
+            int hash = 0; // Todo: Opt and improve.
+            for (int i = 0; i < len; i++)
+                hash = (int) (31 * hash + (dig[i] & mask));
+            return sign * hash; // relies on 0 --> hash==0.
         }
 
         public byte byteValue() {
@@ -252,7 +280,7 @@ public class Main {
         }
 
         public int intValue() {
-            return sign * (dig[0] & 0x7FFFFFFF); //relies on that sign always is either 1/-1.
+            return sign * (dig[0] & 0x7FFFFFFF); // relies on that sign always is either 1/-1.
         }
 
         public long longValue() {
@@ -261,34 +289,41 @@ public class Main {
 
         public float floatValue() {
             final int s = Integer.numberOfLeadingZeros(dig[len - 1]);
-            if (len == 1 && s >= 8) return sign * dig[0];
+            if (len == 1 && s >= 8)
+                return sign * dig[0];
 
-            int bits = dig[len - 1]; //Mask out the 24 MSBits.
-            if (s <= 8) bits >>>= 8 - s;
-            else bits = bits << s - 8 | dig[len - 2] >>> 32 - (s - 8); //s-8==additional bits we need.
-            bits ^= 1L << 23; //The leading bit is implicit, cancel it out.
+            int bits = dig[len - 1]; // Mask out the 24 MSBits.
+            if (s <= 8)
+                bits >>>= 8 - s;
+            else
+                bits = bits << s - 8 | dig[len - 2] >>> 32 - (s - 8); // s-8==additional bits we need.
+            bits ^= 1L << 23; // The leading bit is implicit, cancel it out.
 
             final int exp = (int) (((32 - s + 32L * (len - 1)) - 1 + 127) & 0xFF);
-            bits |= exp << 23; //Add exponent.
-            bits |= sign & (1 << 31); //Add sign-bit.
+            bits |= exp << 23; // Add exponent.
+            bits |= sign & (1 << 31); // Add sign-bit.
 
             return Float.intBitsToFloat(bits);
         }
 
         public double doubleValue() {
-            if (len == 1) return sign * (dig[0] & mask);
+            if (len == 1)
+                return sign * (dig[0] & mask);
 
             final int s = Integer.numberOfLeadingZeros(dig[len - 1]);
-            if (len == 2 && 32 - s + 32 <= 53) return sign * ((long) dig[1] << 32 | (dig[0] & mask));
+            if (len == 2 && 32 - s + 32 <= 53)
+                return sign * ((long) dig[1] << 32 | (dig[0] & mask));
 
-            long bits = (long) dig[len - 1] << 32 | (dig[len - 2] & mask); //Mask out the 53 MSBits.
-            if (s <= 11) bits >>>= 11 - s;
-            else bits = bits << s - 11 | dig[len - 3] >>> 32 - (s - 11); //s-11==additional bits we need.
-            bits ^= 1L << 52; //The leading bit is implicit, cancel it out.
+            long bits = (long) dig[len - 1] << 32 | (dig[len - 2] & mask); // Mask out the 53 MSBits.
+            if (s <= 11)
+                bits >>>= 11 - s;
+            else
+                bits = bits << s - 11 | dig[len - 3] >>> 32 - (s - 11); // s-11==additional bits we need.
+            bits ^= 1L << 52; // The leading bit is implicit, cancel it out.
 
             final long exp = ((32 - s + 32L * (len - 1)) - 1 + 1023) & 0x7FF;
-            bits |= exp << 52; //Add exponent.
-            bits |= (long) sign & (1L << 63); //Add sign-bit.
+            bits |= exp << 52; // Add exponent.
+            bits |= (long) sign & (1L << 63); // Add sign-bit.
 
             return Double.longBitsToDouble(bits);
         }
@@ -297,7 +332,7 @@ public class Main {
             if (mul == 0) {
                 setToZero();
                 return;
-            } //To be removed?
+            } // To be removed?
 
             long carry = 0;
             final long m = mul & mask;
@@ -307,7 +342,8 @@ public class Main {
                 carry >>>= 32;
             }
             if (carry != 0) {
-                if (len == dig.length) realloc();
+                if (len == dig.length)
+                    realloc();
                 dig[len++] = (int) carry;
             }
         }
@@ -317,12 +353,13 @@ public class Main {
                 setToZero();
                 return;
             }
-            if (len + 2 >= dig.length) realloc(2 * len + 1);
+            if (len + 2 >= dig.length)
+                realloc(2 * len + 1);
 
             final long mh = mul >>> 32, ml = mul & mask;
             long carry = 0, next = 0, tmp;
             for (int i = 0; i < len; i++) {
-                carry = carry + next; //Could this overflow?
+                carry = carry + next; // Could this overflow?
                 tmp = (dig[i] & mask) * ml;
                 next = (dig[i] & mask) * mh;
                 dig[i] = (int) (tmp + carry);
@@ -332,19 +369,21 @@ public class Main {
             dig[len++] = (int) carry;
             dig[len++] = (int) (carry >>> 32);
 
-            while (len > 1 && dig[len - 1] == 0) --len;
+            while (len > 1 && dig[len - 1] == 0)
+                --len;
         }
 
         private void addMag(int[] v, int vlen) {
             int ulen = len;
-            int[] u = dig; //ulen <= vlen
+            int[] u = dig; // ulen <= vlen
             if (vlen < ulen) {
                 u = v;
                 v = dig;
                 ulen = vlen;
                 vlen = len;
             }
-            if (vlen > dig.length) realloc(vlen + 1);
+            if (vlen > dig.length)
+                realloc(vlen + 1);
 
             long carry = 0;
             int i = 0;
@@ -357,22 +396,23 @@ public class Main {
                 System.arraycopy(v, len, dig, len, vlen - len);
                 len = vlen;
             }
-            if (carry != 0) //carry==1
+            if (carry != 0) // carry==1
             {
-                for (; i < len && ++dig[i] == 0; i++) ;
-                if (i == len) //vlen==len
+                for (; i < len && ++dig[i] == 0; i++)
+                    ;
+                if (i == len) // vlen==len
                 {
-                    if (len == dig.length) realloc();
+                    if (len == dig.length)
+                        realloc();
                     dig[len++] = 1;
                 }
             }
         }
 
         private void subMag(final int[] u, final int ulen) {
-            final int vlen = len;
-            final int[] v = dig; //ulen <= vlen
+            final int[] v = dig; // ulen <= vlen
 
-            //Assumes vlen=len and v=dig
+            // Assumes vlen=len and v=dig
             long dif = 0;
             int i = 0;
             for (; i < ulen; i++) {
@@ -381,10 +421,13 @@ public class Main {
                 dif >>= 32;
             }
             if (dif != 0) {
-                for (; dig[i] == 0; i++) --dig[i];
-                if (--dig[i] == 0 && i + 1 == len) len = ulen;
+                for (; dig[i] == 0; i++)
+                    --dig[i];
+                if (--dig[i] == 0 && i + 1 == len)
+                    len = ulen;
             }
-            while (len > 1 && dig[len - 1] == 0) --len;
+            while (len > 1 && dig[len - 1] == 0)
+                --len;
         }
 
         public void sub(final BigInt a) {
@@ -394,13 +437,14 @@ public class Main {
             }
             if (compareAbsTo(a) >= 0) {
                 subMag(a.dig, a.len);
-                //if(len==1 && dig[0]==0) sign = 1;
+                // if(len==1 && dig[0]==0) sign = 1;
                 return;
             }
 
             final int[] v = a.dig;
             final int vlen = a.len;
-            if (dig.length < vlen) realloc(vlen + 1);
+            if (dig.length < vlen)
+                realloc(vlen + 1);
 
             sign = -sign;
             long dif = 0;
@@ -415,35 +459,45 @@ public class Main {
                 len = vlen;
             }
             if (dif != 0) {
-                for (; i < vlen && dig[i] == 0; i++) --dig[i];
-                if (--dig[i] == 0 && i + 1 == len) --len;
+                for (; i < vlen && dig[i] == 0; i++)
+                    --dig[i];
+                if (--dig[i] == 0 && i + 1 == len)
+                    --len;
             }
-            //if(i==vlen) should be impossible
+            // if(i==vlen) should be impossible
         }
 
         public void mul(final BigInt mul) {
-            if (isZero()) return;
-            else if (mul.isZero()) setToZero();
+            if (isZero())
+                return;
+            else if (mul.isZero())
+                setToZero();
             else if (mul.len <= 2 || len <= 2) {
                 sign *= mul.sign;
-                if (mul.len == 1) umul(mul.dig[0]);
+                if (mul.len == 1)
+                    umul(mul.dig[0]);
                 else if (len == 1) {
                     final int tmp = dig[0];
                     assign(mul.dig, mul.len);
                     umul(tmp);
-                } else if (mul.len == 2) umul((long) mul.dig[1] << 32 | (mul.dig[0] & mask));
+                } else if (mul.len == 2)
+                    umul((long) mul.dig[1] << 32 | (mul.dig[0] & mask));
                 else {
                     final long tmp = (long) dig[1] << 32 | (dig[0] & mask);
                     assign(mul.dig, mul.len);
                     umul(tmp);
                 }
-            } else if (len < 128 || mul.len < 128 || (long) len * mul.len < 1_000_000) smallMul(mul); //Remove overhead?
-            else if (Math.max(len, mul.len) < 20000) karatsuba(mul, false); //Tune thresholds and remove hardcode.
-            else karatsuba(mul, true);
+            } else if (len < 128 || mul.len < 128 || (long) len * mul.len < 1_000_000)
+                smallMul(mul); // Remove overhead?
+            else if (Math.max(len, mul.len) < 20000)
+                karatsuba(mul, false); // Tune thresholds and remove hardcode.
+            else
+                karatsuba(mul, true);
         }
 
         public void smallMul(final BigInt mul) {
-            if (isZero()) return; //Remove?
+            if (isZero())
+                return; // Remove?
             if (mul.isZero()) {
                 setToZero();
                 return;
@@ -452,7 +506,7 @@ public class Main {
             sign *= mul.sign;
 
             int ulen = len, vlen = mul.len;
-            int[] u = dig, v = mul.dig; //ulen <= vlen
+            int[] u = dig, v = mul.dig; // ulen <= vlen
             if (vlen < ulen) {
                 u = v;
                 v = dig;
@@ -460,35 +514,44 @@ public class Main {
                 vlen = len;
             }
 
-            final int[] res = naiveMul(u, ulen, v, vlen); //Todo remove function overhead.
+            final int[] res = naiveMul(u, ulen, v, vlen); // Todo remove function overhead.
 
             dig = res;
             len = res.length;
-            if (res[len - 1] == 0) --len;
+            if (res[len - 1] == 0)
+                --len;
         }
 
         public void karatsuba(final BigInt mul, final boolean parallel) {
-            if (mul.dig.length < len) mul.realloc(len);
-            else if (dig.length < mul.len) realloc(mul.len);
+            if (mul.dig.length < len)
+                mul.realloc(len);
+            else if (dig.length < mul.len)
+                realloc(mul.len);
 
-            if (mul.len < len) for (int i = mul.len; i < len; i++) mul.dig[i] = 0;
-            if (len < mul.len) for (int i = len; i < mul.len; i++) dig[i] = 0;
+            if (mul.len < len)
+                for (int i = mul.len; i < len; i++)
+                    mul.dig[i] = 0;
+            if (len < mul.len)
+                for (int i = len; i < mul.len; i++)
+                    dig[i] = 0;
 
             final int mlen = Math.max(len, mul.len);
             int[] res = null;
-            if (!parallel) res = kmul(dig, mul.dig, 0, mlen);
+            if (!parallel)
+                res = kmul(dig, mul.dig, 0, mlen);
             else {
                 final ExecutorService pool = Executors.newFixedThreadPool(12);
                 try {
                     res = pmul(dig, mul.dig, 0, mlen, 1, pool);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     System.err.println(e);
                 }
                 pool.shutdown();
             }
 
             len = len + mul.len;
-            while (res[len - 1] == 0) --len;
+            while (res[len - 1] == 0)
+                --len;
             dig = res;
             sign *= mul.sign;
         }
@@ -553,24 +616,30 @@ public class Main {
                 x2[i] = (int) carry;
                 carry >>>= 32;
             }
-            if ((n & 1) != 0) x2[b] = x[off + b + b];
-            if (carry != 0) if (++x2[b] == 0) ++x2[b + 1];
+            if ((n & 1) != 0)
+                x2[b] = x[off + b + b];
+            if (carry != 0)
+                if (++x2[b] == 0)
+                    ++x2[b + 1];
             carry = 0;
             for (int i = 0; i < b; i++) {
                 carry = (y[off + b + i] & mask) + (y[off + i] & mask) + carry;
                 y2[i] = (int) carry;
                 carry >>>= 32;
             }
-            if ((n & 1) != 0) y2[b] = y[off + b + b];
-            if (carry != 0) if (++y2[b] == 0) ++y2[b + 1];
+            if ((n & 1) != 0)
+                y2[b] = y[off + b + b];
+            if (carry != 0)
+                if (++y2[b] == 0)
+                    ++y2[b + 1];
 
             final int[] z1 = kmul(x2, y2, 0, n - b + (x2[n - b] != 0 || y2[n - b] != 0 ? 1 : 0));
 
             final int[] z = new int[2 * n];
-            System.arraycopy(z0, 0, z, 0, 2 * b); //Add z0
-            System.arraycopy(z2, 0, z, b + b, 2 * (n - b)); //Add z2
+            System.arraycopy(z0, 0, z, 0, 2 * b); // Add z0
+            System.arraycopy(z2, 0, z, b + b, 2 * (n - b)); // Add z2
 
-            //Add z1
+            // Add z1
             carry = 0;
             int i = 0;
             for (; i < 2 * b; i++) {
@@ -588,17 +657,22 @@ public class Main {
                 z[i + b] = (int) carry;
                 carry >>= 32;
             }
-            if (carry != 0) while (++z[i + b] == 0) ++i;
+            if (carry != 0)
+                while (++z[i + b] == 0)
+                    ++i;
 
             return z;
         }
 
-        private static int[] pmul(final int[] x, final int[] y, final int off, final int n, final int lim, final ExecutorService pool) throws Exception {
+        private static int[] pmul(final int[] x, final int[] y, final int off, final int n, final int lim,
+                final ExecutorService pool) throws Exception {
             final int b = n >>> 1;
 
-            final Future<int[]> left = pool.submit(() -> lim == 0 ? kmul(x, y, off, b) : pmul(x, y, off, b, lim - 1, pool));
+            final Future<int[]> left = pool
+                    .submit(() -> lim == 0 ? kmul(x, y, off, b) : pmul(x, y, off, b, lim - 1, pool));
 
-            final Future<int[]> right = pool.submit(() -> lim == 0 ? kmul(x, y, off + b, n - b) : pmul(x, y, off + b, n - b, lim - 1, pool));
+            final Future<int[]> right = pool
+                    .submit(() -> lim == 0 ? kmul(x, y, off + b, n - b) : pmul(x, y, off + b, n - b, lim - 1, pool));
 
             final int[] x2 = new int[n - b + 1], y2 = new int[n - b + 1];
             long carry = 0;
@@ -607,19 +681,26 @@ public class Main {
                 x2[i] = (int) carry;
                 carry >>>= 32;
             }
-            if ((n & 1) != 0) x2[b] = x[off + b + b];
-            if (carry != 0) if (++x2[b] == 0) ++x2[b + 1];
+            if ((n & 1) != 0)
+                x2[b] = x[off + b + b];
+            if (carry != 0)
+                if (++x2[b] == 0)
+                    ++x2[b + 1];
             carry = 0;
             for (int i = 0; i < b; i++) {
                 carry = (y[off + b + i] & mask) + (y[off + i] & mask) + carry;
                 y2[i] = (int) carry;
                 carry >>>= 32;
             }
-            if ((n & 1) != 0) y2[b] = y[off + b + b];
-            if (carry != 0) if (++y2[b] == 0) ++y2[b + 1];
+            if ((n & 1) != 0)
+                y2[b] = y[off + b + b];
+            if (carry != 0)
+                if (++y2[b] == 0)
+                    ++y2[b + 1];
 
-            final Future<int[]> mid = pool.submit(() -> lim == 0 ? kmul(x2, y2, 0, n - b + (x2[n - b] != 0 || y2[n - b] != 0 ? 1 : 0)) :
-                    pmul(x2, y2, 0, n - b + (x2[n - b] != 0 || y2[n - b] != 0 ? 1 : 0), lim - 1, pool));
+            final Future<int[]> mid = pool
+                    .submit(() -> lim == 0 ? kmul(x2, y2, 0, n - b + (x2[n - b] != 0 || y2[n - b] != 0 ? 1 : 0))
+                            : pmul(x2, y2, 0, n - b + (x2[n - b] != 0 || y2[n - b] != 0 ? 1 : 0), lim - 1, pool));
 
             final int[] z = new int[2 * n];
 
@@ -647,12 +728,15 @@ public class Main {
                 z[i + b] = (int) carry;
                 carry >>= 32;
             }
-            if (carry != 0) while (++z[i + b] == 0) ++i;
+            if (carry != 0)
+                while (++z[i + b] == 0)
+                    ++i;
             return z;
         }
 
         public String toString() {
-            if (isZero()) return "0";
+            if (isZero())
+                return "0";
 
             int top = len * 10 + 1;
             final char[] buf = new char[top];
@@ -661,11 +745,14 @@ public class Main {
             while (true) {
                 final int j = top;
                 for (long tmp = toStringDiv(); tmp > 0; tmp /= 10)
-                    buf[--top] += tmp % 10; //TODO: Optimize.
-                if (len == 1 && dig[0] == 0) break;
-                else top = j - 13;
+                    buf[--top] += tmp % 10; // TODO: Optimize.
+                if (len == 1 && dig[0] == 0)
+                    break;
+                else
+                    top = j - 13;
             }
-            if (sign < 0) buf[--top] = '-';
+            if (sign < 0)
+                buf[--top] = '-';
             System.arraycopy(cpy, 0, dig, 0, len = cpy.length);
             return new String(buf, top, buf.length - top);
         }
@@ -687,7 +774,8 @@ public class Main {
             rem = rem % pow5;
             final long pow10 = (long) pow5 * pow2;
             rem = (rem - pow5 * (mod2 - rem) % pow10 * 67) % pow10;
-            if (rem < 0) rem += pow10;
+            if (rem < 0)
+                rem += pow10;
             if (dig[len - 1] == 0 && len > 1)
                 if (dig[--len - 1] == 0 && len > 1)
                     --len;
@@ -695,10 +783,11 @@ public class Main {
         }
 
         public BigInt pow(int b) {
-            BigInt res = new BigInt(1);
-            BigInt bitPow = this.copy();
+            final BigInt res = new BigInt(1);
+            final BigInt bitPow = this.copy();
             for (; b > 0; b >>>= 1) {
-                if ((b & 1) != 0) res.mul(bitPow);
+                if ((b & 1) != 0)
+                    res.mul(bitPow);
                 bitPow.mul(bitPow);
             }
             return res;
@@ -707,12 +796,12 @@ public class Main {
     }
 
     static class InputReader extends InputStream {
-        private InputStream stream;
-        private byte[] buf = new byte[1024];
+        private final InputStream stream;
+        private final byte[] buf = new byte[1024];
         private int curChar;
         private int numChars;
 
-        public InputReader(InputStream stream) {
+        public InputReader(final InputStream stream) {
             this.stream = stream;
         }
 
@@ -724,7 +813,7 @@ public class Main {
                 curChar = 0;
                 try {
                     numChars = stream.read(buf);
-                } catch (IOException e) {
+                } catch (final IOException e) {
                     throw new InputMismatchException();
                 }
                 if (numChars <= 0) {
@@ -755,7 +844,7 @@ public class Main {
             return res * sgn;
         }
 
-        private static boolean isSpaceChar(int c) {
+        private static boolean isSpaceChar(final int c) {
             return c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == -1;
         }
 

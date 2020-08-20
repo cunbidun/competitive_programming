@@ -1,6 +1,6 @@
 #!/bin/zsh
 #reset
-
+clear
 SF=$(($(date +%s%N)/1000000));
 START=$(($(date +%s%N)/1000000));
 
@@ -16,11 +16,11 @@ trap '
     echo "Test results:" 
     EF=$(($(date +%s%N)/1000000)) 
     time=$((EF - SF)) 
-    echo "\e[35;1mAll Testing finished in $time ms\e[0m"
+    echo "\e[35;1mAll Testing   finished in $time ms\e[0m"
 
     exit 0
 ' INT;
-clear;
+
 
 ulimit -s unlimited;
 
@@ -146,6 +146,8 @@ if [ "$(ls -A $DIR)" ]; then
     cd './TestCase/'
 
     cp ../solution.cpp ../../../output
+    # ../../../Script/reformat.sh ../../../output/solution.cpp
+
     for f in `ls -v *.in` 
     do
         if [ ! -f $f ]; then 

@@ -1,4 +1,4 @@
-cd ../Task/
+cd $1
 
 mkdir ___newTask
 

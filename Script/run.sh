@@ -4,11 +4,18 @@ clear
 SF=$(($(date +%s%N)/1000000));
 START=$(($(date +%s%N)/1000000));
 
-trap ' 
-    rm -rf ../TestCase 
-    rm -rf ../solution 
-    rm -f ../checker 
-    rm -f ../gen 
+ST_DIR="$1"
+function cleanup() {
+    cd "$ST_DIR"
+    rm -rf ./TestCase 
+    rm -f ./solution 
+    rm -f ./checker 
+    rm -f ./gen 
+    rm -f ./interactor
+}
+
+trap '
+    cleanup
     echo
     echo "\e[31;1mReceived SIGINT\e[0m"
     echo "--------------------------------------------------------"
@@ -20,7 +27,6 @@ trap '
 
     exit 0
 ' INT;
-
 
 ulimit -s unlimited;
 
@@ -35,10 +41,7 @@ if [ ! "$(<$1/solution.cpp)" = "$(<$1/../../Cache/solution.cpp)" ]; then
     g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o solution ./solution.cpp --std=c++17
     if [ $? -ne 0 ]; then
         echo "\e[31;1mCompile solution file failed!\e[0m" 
-        rm -rf ./TestCase 
-        rm -f ./solution 
-        rm -f ./checker 
-        rm -f ./gen  
+        cleanup
         exit 0
     fi
         cp "$1/solution.cpp" "$1/../../Cache/solution.cpp"
@@ -47,30 +50,47 @@ else
     cp "$1/../../Cache/solution" "$1/solution"
 fi
 
-useLocalChecker=$(jq -r '.useLocalChecker' config.json)
-if [ $useLocalChecker = "false" ]; then
-    cp ../../Script/checker ./
-    echo "\e[34;1mUse Global Checker!\e[0m" 
-else 
-    if [ ! "$(<$1/checker.cpp)" = "$(<$1/../../Cache/checker.cpp)" ]; then 
-        g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o checker ./checker.cpp --std=c++17;
+isInteractive=$(jq -r '.isInteractive' config.json)
+if [ $isInteractive = "true" ]; then
+    if [ ! "$(<$1/interactor.cpp)" = "$(<$1/../../Cache/interactor.cpp)" ]; then 
+        g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o interactor ./interactor.cpp --std=c++17;
     if [ $? -ne 0 ]
         then
-            echo "\e[31;1mCompile checker file failed!\e[0m" 
-            rm -rf ./TestCase 
-            rm -f ./solution 
-            rm -f ./checker 
-            rm -f ./gen  
+            echo "\e[31;1mCompile interactor file failed!\e[0m" 
+            cleanup
             exit 0
         fi
-        echo "\e[34;1mUse Local Checker!\e[0m" 
-        cp "$1/checker.cpp" "$1/../../Cache/checker.cpp"
-        cp "$1/checker" "$1/../../Cache/checker"
+        echo "\e[34;1mInteractive Task!\e[0m" 
+        cp "$1/interactor.cpp" "$1/../../Cache/interactor.cpp"
+        cp "$1/interactor" "$1/../../Cache/interactor"
     else
-        echo "\e[34;1mUse Local Checker!\e[0m" 
-        cp "$1/../../Cache/checker" "$1/checker"
+        echo "\e[34;1mInteractive Task!\e[0m" 
+        cp "$1/../../Cache/interactor" "$1/interactor"
+    fi
+else
+    useLocalChecker=$(jq -r '.useLocalChecker' config.json)
+    if [ $useLocalChecker = "false" ]; then
+        cp ../../Script/checker ./
+        echo "\e[34;1mUse Global Checker!\e[0m" 
+    else 
+        if [ ! "$(<$1/checker.cpp)" = "$(<$1/../../Cache/checker.cpp)" ]; then 
+            g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o checker ./checker.cpp --std=c++17;
+        if [ $? -ne 0 ]
+            then
+                echo "\e[31;1mCompile checker file failed!\e[0m" 
+                cleanup
+                exit 0
+            fi
+            echo "\e[34;1mUse Local Checker!\e[0m" 
+            cp "$1/checker.cpp" "$1/../../Cache/checker.cpp"
+            cp "$1/checker" "$1/../../Cache/checker"
+        else
+            echo "\e[34;1mUse Local Checker!\e[0m" 
+            cp "$1/../../Cache/checker" "$1/checker"
+        fi
     fi
 fi
+
 
 useGeneration=$(jq -r '.useGeneration' config.json)
 if [ $useGeneration = "true" ]; then
@@ -93,10 +113,7 @@ if [ $useGeneration = "true" ]; then
         if [ $? -ne 0 ]
             then
                 echo "\e[31;1mCompile generator file failed!\e[0m" 
-                rm -rf ./TestCase 
-                rm -f ./solution 
-                rm -f ./checker 
-                rm -f ./gen  
+                cleanup
                 if [ $knowGenAns = "true" ]; then
                     cp ./tmp/orig ./gen.cpp
                     rm -rf tmp 
@@ -232,10 +249,7 @@ if [ "$(ls -A $DIR)" ]; then
             export GREP_COLORS='ms=01;31' 
             grep --color -E "WA|$" "${f%.*}.res" 
             if [ $printWrongAnswer = "true" ]; then
-                rm -rf ../TestCase 
-                rm -rf ../solution 
-                rm -f ../checker 
-                rm -f ../gen 
+                cleanup
                 echo "--------------------------------------------------------"
                 echo "========================================================"
                 echo "Test results:" 
@@ -260,16 +274,9 @@ if [ "$(ls -A $DIR)" ]; then
         fi 
         echo '--------------------------------------------------------' 
     done 
-    rm -rf ../TestCase 
-    rm -f ../solution 
-    rm -f ../checker 
-    rm -f ../gen 
+    cleanup
 else 
-    cd './TestCase/'
-    rm -rf ../TestCase 
-    rm -f ../solution 
-    rm -f ../checker 
-    rm -f ../gen  
+    cleanup
 fi
 
 echo '========================================================' 

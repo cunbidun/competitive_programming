@@ -94,14 +94,11 @@ fi
 
 useGeneration=$(jq -r '.useGeneration' config.json)
 if [ $useGeneration = "true" ]; then
-    numTest=$(jq -r '.numTest' config.json) 
-    genParameters=$(jq -r '.genParameters' config.json) 
     knowGenAns=$(jq -r '.knowGenAns' config.json)
-
     if [ $knowGenAns = "true" ]; then
         mkdir tmp
         cat ./gen.cpp > ./tmp/orig    
-        awk 'NR>12' ./slow.cpp > ./tmp/tmp
+        awk 'NR>5' ./slow.cpp > ./tmp/tmp
         sed -i 's/ cin / in /g' ./tmp/tmp
         sed -i 's/ cout / out /g' ./tmp/tmp
         sed -i 's/main/___solve/g' ./tmp/tmp
@@ -149,6 +146,8 @@ java -jar ../../Script/ToTestText.jar "$1";
 #stress test
 if [ $useGeneration = "true" ];
 then 
+    numTest=$(jq -r '.numTest' config.json) 
+    genParameters=$(jq -r '.genParameters' config.json) 
     java -jar ../../Script/Gen.jar "$1" $numTest "$genParameters" 
 fi
 
@@ -163,7 +162,6 @@ if [ "$(ls -A $DIR)" ]; then
     cd './TestCase/'
 
     cp ../solution.cpp ../../../output
-    # ../../../Script/reformat.sh ../../../output/solution.cpp
 
     for f in `ls -v *.in` 
     do

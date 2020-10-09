@@ -9,51 +9,59 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 
-const int N = 100005;
-int n, a[N], ans[N], used[N];
+int n, m, q, sum[44][44], cnt[44][44][44][44], vis[44][44][44][44];
+
+int cal(int i, int j, int k, int l) {
+  if (i > k || j > l) {
+    return 0;
+  }
+  if (vis[i][j][k][l]) {
+    return cnt[i][j][k][l];
+  }
+  vis[i][j][k][l] = 1;
+
+  int v = 0;
+  v = (sum[k][l] - sum[i - 1][l] - sum[k][j - 1] + sum[i - 1][j - 1] == 0);
+  v += cal(i + 1, j, k, l) + cal(i, j + 1, k, l) + cal(i, j, k - 1, l) + cal(i, j, k, l - 1);
+
+  v -= cal(i, j + 1, k - 1, l);
+  v -= cal(i, j, k - 1, l - 1);
+  v -= cal(i + 1, j + 1, k, l);
+  v -= cal(i + 1, j, k, l - 1);
+
+  v -= cal(i + 1, j, k - 1, l);
+  v -= cal(i, j + 1, k, l - 1);
+
+  v += cal(i, j + 1, k - 1, l - 1);
+  v += cal(i + 1, j, k - 1, l - 1);
+  v += cal(i + 1, j + 1, k - 1, l);
+  v += cal(i + 1, j + 1, k, l - 1);
+
+  v -= cal(i + 1, j + 1, k - 1, l - 1);
+
+  return cnt[i][j][k][l] = v;
+}
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  cin >> n;
-  for (int i = 1; i <= n; i++) {
-    cin >> a[i];
-  }
-  sort(a + 1, a + 1 + n);
-  for (int i = 1; i <= (n - 1) / 2; i++) {
-    ans[i * 2] = a[i];
-    used[i] = 1;
-  }
-  int cur = 1;
-  for (int i = (n - 1) / 2 + 1; i <= n; i++) {
-    if (a[i] > ans[cur + 1]) {
-      ans[cur] = a[i];
-      cur += 2;
-      used[i] = 1;
-    }
-    if (cur + 1 > n) {
-      break;
+  cin >> n >> m >> q;
+  for (int i = 0; i <= n; i++) {
+    for (int j = 0; j <= m; j++) {
+      vis[i][j][i][j] == 1;
+      if (i == 0 || j == 0) {
+        sum[i][j] = 0;
+      } else {
+        char x;
+        cin >> x;
+        sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + x - '0';
+      }
     }
   }
-  int cnt = 0;
-  cur = 1;
-  for (int i = 1; i <= n; i++) {
-    while (used[cur] && cur <= n) {
-      cur++;
-    }
-    if (ans[i] == 0) {
-      ans[i] = a[cur];
-      cur++;
-    }
+  cal(1, 1, n, m);
+  while (q--) {
+    int i, j, k, l;
+    cin >> i >> j >> k >> l;
+    cout << cnt[i][j][k][l] << "\n";
   }
-  for (int i = 2; i < n; i++) {
-    if (ans[i - 1] > ans[i] && ans[i] < ans[i + 1]) {
-      cnt++;
-    }
-  }
-  cout << cnt << "\n";
-  for (int i = 1; i <= n; i++) {
-    cout << ans[i] << " ";
-  }
-  cout << "\n";
 }

@@ -25,4 +25,4 @@ With this we can apply to sovle the main problem:
 4. Repeat step 2 and 3 wth odd indexed boxes.
 5. From the small problem above, we know that both choice in 2. and 4. will guarantee we have strictly more than half the number of apples.
 6. If the number of oranges in the first choice is not greater than half, we number of oranges in second choices must be greater than half, and reverse.
-7. So we can gaurantee the answer always exists.
+7. So we can guarantee the answer always exists.

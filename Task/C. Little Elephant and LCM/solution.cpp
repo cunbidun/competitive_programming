@@ -75,7 +75,6 @@ int main() {
     int res = 1;
     int j = 0;
     for (int j = 1; j < sz(l) - 1; j++) {
-      // cout << j + 1 << " " << num[l[i][j]] << "\n";
       res = Op.mul(res, Op.pow(j + 1, num[l[j]] - num[l[j + 1]]));
     }
     res = Op.mul(res, Op.sub(Op.pow(sz(l), num[i]), Op.pow(sz(l) - 1, num[i])));

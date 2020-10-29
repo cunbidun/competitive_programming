@@ -9,59 +9,78 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 
-int n, m, q, sum[44][44], cnt[44][44][44][44], vis[44][44][44][44];
+const int N = 1e5 + 5;
 
-int cal(int i, int j, int k, int l) {
-  if (i > k || j > l) {
-    return 0;
+struct modInt {
+  int MOD;
+
+  modInt(int MOD) { this->MOD = MOD; }
+
+  int add(int x, int y) { return ((x + y) >= MOD ? x + y - MOD : x + y); }
+
+  int sub(int x, int y) { return ((x - y) < 0 ? x - y + MOD : x - y); }
+
+  int mul(int x, int y) { return (int)((1LL * x * y) % MOD); }
+
+  int pow(int x, ll p) {
+    if (p == 0) {
+      return 1;
+    }
+    int t = pow(x, p / 2);
+    if ((p & 1) == 1) {
+      return mul(mul(t, t), x);
+    }
+    return mul(t, t);
   }
-  if (vis[i][j][k][l]) {
-    return cnt[i][j][k][l];
-  }
-  vis[i][j][k][l] = 1;
 
-  int v = 0;
-  v = (sum[k][l] - sum[i - 1][l] - sum[k][j - 1] + sum[i - 1][j - 1] == 0);
-  v += cal(i + 1, j, k, l) + cal(i, j + 1, k, l) + cal(i, j, k - 1, l) + cal(i, j, k, l - 1);
+  int inv(int x) { return pow(x, MOD - 2); }
 
-  v -= cal(i, j + 1, k - 1, l);
-  v -= cal(i, j, k - 1, l - 1);
-  v -= cal(i + 1, j + 1, k, l);
-  v -= cal(i + 1, j, k, l - 1);
+  int div(int x, int y) { return mul(x, inv(y)); }
+} Op(1e9 + 7);
 
-  v -= cal(i + 1, j, k - 1, l);
-  v -= cal(i, j + 1, k, l - 1);
-
-  v += cal(i, j + 1, k - 1, l - 1);
-  v += cal(i + 1, j, k - 1, l - 1);
-  v += cal(i + 1, j + 1, k - 1, l);
-  v += cal(i + 1, j + 1, k, l - 1);
-
-  v -= cal(i + 1, j + 1, k - 1, l - 1);
-
-  return cnt[i][j][k][l] = v;
-}
+int n, a[N], num[N];
+vi l[N];
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  cin >> n >> m >> q;
-  for (int i = 0; i <= n; i++) {
-    for (int j = 0; j <= m; j++) {
-      vis[i][j][i][j] == 1;
-      if (i == 0 || j == 0) {
-        sum[i][j] = 0;
-      } else {
-        char x;
-        cin >> x;
-        sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + x - '0';
+  int mx = 0;
+  cin >> n;
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i];
+    mx = max(mx, a[i]);
+  }
+  sort(a + 1, a + n + 1);
+  a[n + 1] = 99999999;
+  int p = 0;
+  for (int i = 1; i <= mx; i++) {
+    while (a[p + 1] < i) {
+      p++;
+    }
+    num[i] = n - p;
+  }
+
+  int ans = 1;
+  for (int i = 2; i <= mx; i++) {
+    vi l;
+    for (int j = 1; j * j <= i; j++) {
+      if (i % j == 0) {
+        l.push_back(j);
+        if (j != i / j) {
+          l.push_back(i / j);
+        }
       }
     }
+    sort(all(l));
+    int res = 1;
+    int j = 0;
+    for (int j = 1; j < sz(l) - 1; j++) {
+      // cout << j + 1 << " " << num[l[i][j]] << "\n";
+      res = Op.mul(res, Op.pow(j + 1, num[l[j]] - num[l[j + 1]]));
+    }
+    res = Op.mul(res, Op.sub(Op.pow(sz(l), num[i]), Op.pow(sz(l) - 1, num[i])));
+    ans = Op.add(ans, res);
   }
-  cal(1, 1, n, m);
-  while (q--) {
-    int i, j, k, l;
-    cin >> i >> j >> k >> l;
-    cout << cnt[i][j][k][l] << "\n";
-  }
+
+  cout << ans << "\n";
 }

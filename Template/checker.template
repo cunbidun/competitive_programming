@@ -64,9 +64,9 @@ int main(int argc, char *argv[]) {
       in << text_file_to_string(string(argv[1]));
       out << text_file_to_string(string(argv[3]));
       if (check(in, out)) {
-        cout << "OK\n";
+        cout << "accepted\n";
       } else {
-        cout << "WA\n";
+        cout << "wrong answer\n";
       }
     } else {
       stringstream in, ex, ac;
@@ -74,9 +74,9 @@ int main(int argc, char *argv[]) {
       ex << text_file_to_string(string(argv[2]));
       ac << text_file_to_string(string(argv[3]));
       if (token_checker(ex.str(), ac.str())) {
-        cout << "OK\n";
+        cout << "accepted\n";
       } else {
-        cout << "WA\n";
+        cout << "wrong answer\n";
       }
     }
   }
@@ -90,9 +90,9 @@ int main(int argc, char *argv[]) {
       stringstream out;
       out << text_file_to_string(string(argv[3]));
       if (check(in, out)) {
-        cout << "OK\n";
+        cout << "accepted\n";
       } else {
-        cout << "WA\n";
+        cout << "wrong answer\n";
       }
     } else {
       // Double checker
@@ -103,12 +103,13 @@ int main(int argc, char *argv[]) {
         ac << text_file_to_string(string(argv[3]));
         pair<bool, double> res = double_checker(ex.str(), ac.str(), e);
         if (res.first) {
-          cout << "OK\nMaximal difference is " << res.second << "\n";
+          cout << "accepted\nMaximal difference is " << res.second << "\n";
         } else {
           if (res.second == -1) {
-            cout << "WA\nDifference in number of tokens";
+            cout << "wrong answer\nDifference in number of tokens";
           } else {
-            cout << "WA\nMaximal difference is " << res.second << ", which is exceed " << e << "\n";
+            cout << "wrong answer\nMaximal difference is " << res.second << ", which is exceed "
+                 << e << "\n";
           }
         }
       } else {
@@ -118,9 +119,9 @@ int main(int argc, char *argv[]) {
         ex << text_file_to_string(string(argv[2]));
         ac << text_file_to_string(string(argv[3]));
         if (token_checker(ex.str(), ac.str())) {
-          cout << "OK\n";
+          cout << "accepted\n";
         } else {
-          cout << "WA\n";
+          cout << "wrong answer\n";
         }
       }
     }

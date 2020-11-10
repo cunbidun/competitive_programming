@@ -198,7 +198,7 @@ if [ "$(ls -A $DIR)" ]; then
         ../solution < $f > "${f%.*}.actual"
         if [ $? -ne 0 ];then 
             rte=true 
-            echo "Verdict: \e[31;1mRTE\e[0m" 
+            echo "Verdict: \e[31;1mrun time error\e[0m" 
             echo '--------------------------------------------------------' 
             continue 
         fi 
@@ -228,7 +228,7 @@ if [ "$(ls -A $DIR)" ]; then
         read line < "${f%.*}.res" 
         passed=true;
         for word in $line; do
-            if [ "$word" = "WA" ]; then 
+            if [ "$word" = "wrong answer" ]; then 
                 passed=false 
                 allPassed=false 
             fi 
@@ -239,19 +239,19 @@ if [ "$(ls -A $DIR)" ]; then
         if $passed; then 
             if [ $timeLimit -ge $time ]; then 
                 export GREP_COLORS='ms=01;32' 
-                grep --color -E "OK|$" "${f%.*}.res" 
+                grep --color -E "accepted|$" "${f%.*}.res" 
             else 
-                echo "\e[31;1mTLE\e[0m" 
+                echo "\e[31;1mtime limit exceed\e[0m" 
             fi 
         else 
             export GREP_COLORS='ms=01;31' 
-            grep --color -E "WA|$" "${f%.*}.res" 
+            grep --color -E "wrong answer|$" "${f%.*}.res" 
             if [ $printWrongAnswer = "true" ]; then
                 cleanup
                 echo "--------------------------------------------------------"
                 echo "========================================================"
                 echo "Test results:" 
-                echo "\e[31;1mWA Detected!\e[0m"
+                echo "\e[31;1mwrong answer detected!\e[0m"
                 EF=$(($(date +%s%N)/1000000)) 
                 time=$((EF - SF)) 
                 echo "\e[35;1mAll Testing finished in $time ms\e[0m"

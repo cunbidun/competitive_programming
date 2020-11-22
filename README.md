@@ -21,7 +21,7 @@ This project is in the early stage of development, so there is a lot of room for
 3. `code .` to start vscode.
 4. open workspace if prompted.
 5. add keyboard shortcut (as below)
-6. precompiled header (`cd Script/precompiled/gen.sh && ./gen.sh`)
+6. precompiled header (`cd Script/precompiled/ && ./gen.sh`)
 7. create new task and start solving problems.
 
 ## Concept

@@ -2,9 +2,6 @@
 
 using namespace std;
 
-// edit this method to check
-bool check(stringstream &in, stringstream &out) { return true; }
-
 string text_file_to_string(string filename) {
   ostringstream dosString(ios::out | ios::binary); // *** binary
   ifstream inFile(filename.c_str());
@@ -56,6 +53,15 @@ pair<bool, double> double_checker(string expected, string actual, double e) {
   return {1, maxDiff};
 }
 
+// edit this method to check
+// check without expected output
+bool check(stringstream &in, stringstream &out) { return true; }
+
+// check with expected output
+bool check(stringstream &in, stringstream &ac, stringstream &ex) {
+  return token_checker(ac.str(), ex.str());
+}
+
 int main(int argc, char *argv[]) {
   // don't have checker parameters
   if (argc == 4) {
@@ -73,7 +79,7 @@ int main(int argc, char *argv[]) {
       in << text_file_to_string(string(argv[1]));
       ex << text_file_to_string(string(argv[2]));
       ac << text_file_to_string(string(argv[3]));
-      if (token_checker(ex.str(), ac.str())) {
+      if (check(in, ac, ex)) {
         cout << "accepted\n";
       } else {
         cout << "wrong answer\n";

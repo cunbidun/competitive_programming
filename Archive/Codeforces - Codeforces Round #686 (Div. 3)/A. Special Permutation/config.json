@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "input": "2\n2\n5\n",
+      "output": "2 1\n2 1 5 3 4\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "name": "A. Special Permutation",
+  "group": "Codeforces - Codeforces Round #686 (Div. 3)",
+  "isInteractive": false,
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "checkerParameters": "",
+  "useGeneration": false,
+  "printWrongAnswer": false,
+  "useLocalChecker": false,
+  "url": "https://codeforces.com/contest/1454/problem/0",
+  "numTest": 0,
+  "genParameters": null,
+  "knowGenAns": false
+}

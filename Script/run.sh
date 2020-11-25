@@ -272,6 +272,12 @@ if [ "$(ls -A $DIR)" ]; then
         fi 
         echo '--------------------------------------------------------' 
     done 
+
+    # generate testcase    
+    # cd ..
+    # ../../Script/convert.sh
+    # cd './TestCase'
+
     cleanup
 else 
     cleanup

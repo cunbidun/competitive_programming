@@ -4,13 +4,13 @@
 	"isInteractive": false,
 	"name": "",
 	"truncateLongTest": false,
-	"checkerParameters": "",
 	"useGeneration": false,
-	"printWrongAnswer": false,
 	"useLocalChecker": false,
 	"url": null,
 	"group": "",
 	"numTest": 0,
 	"genParameters": "",
-	"knowGenAns": false
+	"knowGenAns": false,
+	"checker": "token_checker",
+  "stopAtWrongAnswer": false
 }

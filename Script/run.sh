@@ -23,12 +23,14 @@ trap '
     echo "Test results:" 
     EF=$(($(date +%s%N)/1000000)) 
     time=$((EF - SF)) 
-    echo "\e[35;1mAll Testing   finished in $time ms\e[0m"
+    echo "\e[35;1mAll Testing finished in $time ms\e[0m"
 
     exit 0
 ' INT;
 
 ulimit -s unlimited;
+
+cleanup
 
 cd "$1";
 
@@ -60,18 +62,18 @@ if [ $isInteractive = "true" ]; then
             cleanup
             exit 0
         fi
-        echo "\e[34;1mInteractive Task!\e[0m" 
+        echo "\e[36;1mInteractive Task!\e[0m" 
         cp "$1/interactor.cpp" "$1/../../Cache/interactor.cpp"
         cp "$1/interactor" "$1/../../Cache/interactor"
     else
-        echo "\e[34;1mInteractive Task!\e[0m" 
+        echo "\e[36;1mInteractive Task!\e[0m" 
         cp "$1/../../Cache/interactor" "$1/interactor"
     fi
 else
-    useLocalChecker=$(jq -r '.useLocalChecker' config.json)
-    if [ $useLocalChecker = "false" ]; then
-        cp ../../Script/checker ./
-        echo "\e[34;1mUse Global Checker!\e[0m" 
+    checkerType=$(jq -r '.checker' config.json)
+    if [ $checkerType != "custom" ]; then
+        cp ../../Script/checkers/compiled/$checkerType ./checker
+        echo "\e[36;1mUsing $checkerType!\e[0m" 
     else 
         if [ ! "$(<$1/checker.cpp)" = "$(<$1/../../Cache/checker.cpp)" ]; then 
             g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o checker ./checker.cpp --std=c++17;
@@ -81,11 +83,11 @@ else
                 cleanup
                 exit 0
             fi
-            echo "\e[34;1mUse Local Checker!\e[0m" 
+            echo "\e[36;1mUse Local Checker!\e[0m" 
             cp "$1/checker.cpp" "$1/../../Cache/checker.cpp"
             cp "$1/checker" "$1/../../Cache/checker"
         else
-            echo "\e[34;1mUse Local Checker!\e[0m" 
+            echo "\e[36;1mUse Local Checker!\e[0m" 
             cp "$1/../../Cache/checker" "$1/checker"
         fi
     fi
@@ -133,7 +135,7 @@ fi
 END=$(($(date +%s%N)/1000000))
 time=$((END-START))
 echo "\e[35;1mCompilations finished in $time ms\e[0m" 
-echo '--------------------------------------------------------' 
+echo '\e[34;1m--------------------------------------------------------\e[0m' 
 
 timeLimit=$(jq -r '.timeLimit' config.json);
 allPassed=true;
@@ -141,7 +143,7 @@ tle=false;
 rte=false;
 maxTime=0;
 
-java -jar ../../Script/ToTestText.jar "$1";
+../../Script/tc_parser $1$
 
 #stress test
 if [ $useGeneration = "true" ];
@@ -154,8 +156,7 @@ fi
 
 #test
 truncateLongTest=$(jq -r '.truncateLongTest' config.json) 
-checkerParameters=$(jq -r '.checkerParameters' config.json)
-printWrongAnswer=$(jq -r '.printWrongAnswer' config.json)
+stopAtWrongAnswer=$(jq -r '.stopAtWrongAnswer' config.json)
 
 DIR="./TestCase/" 
 if [ "$(ls -A $DIR)" ]; then
@@ -199,7 +200,7 @@ if [ "$(ls -A $DIR)" ]; then
         if [ $? -ne 0 ];then 
             rte=true 
             echo "Verdict: \e[31;1mrun time error\e[0m" 
-            echo '--------------------------------------------------------' 
+            echo '\e[34;1m--------------------------------------------------------\e[0m' 
             continue 
         fi 
         END=$(($(date +%s%N)/1000000)) 
@@ -211,42 +212,41 @@ if [ "$(ls -A $DIR)" ]; then
             echo $out 
         fi
 
-        if [ "$checkerParameters" = "" ]; then 
-            if test -f "${f%.*}.out"; then
-                ../checker "$f" "${f%.*}.out" "${f%.*}.actual" > "${f%.*}.res" 
-            else
-                ../checker "$f" "" "${f%.*}.actual" > "${f%.*}.res" 
-            fi 
-        else 
-            if test -f "${f%.*}.out"; then
-                ../checker "$f" "${f%.*}.out" "${f%.*}.actual" "$checkerParameters" > "${f%.*}.res" 
-            else 
-                ../checker "$f" "" "${f%.*}.actual" "$checkerParameters" > "${f%.*}.res" 
-            fi 
-        fi
+
+        touch "${f%.*}.out"
+        ../checker "$f" "${f%.*}.actual" "${f%.*}.out" "${f%.*}.res" > /dev/null 2>&1 
 
         read line < "${f%.*}.res" 
         passed=true;
+        undecided=false
         for word in $line; do
             if [ "$word" = "wrong answer" ]; then 
                 passed=false 
                 allPassed=false 
             fi 
-                break 
+            if [ "$word" = "undecided" ]; then 
+                undecided=true
+            fi 
+            break 
         done
 
         printf "Verdict: " 
         if $passed; then 
             if [ $timeLimit -ge $time ]; then 
-                export GREP_COLORS='ms=01;32' 
-                grep --color -E "accepted|$" "${f%.*}.res" 
+                if $undecided; then
+                    export GREP_COLORS='ms=01;33' 
+                    grep --color -E "undecided|$" "${f%.*}.res" 
+                else
+                    export GREP_COLORS='ms=01;32' 
+                    grep --color -E "accepted|$" "${f%.*}.res" 
+                fi
             else 
                 echo "\e[31;1mtime limit exceed\e[0m" 
             fi 
         else 
             export GREP_COLORS='ms=01;31' 
             grep --color -E "wrong answer|$" "${f%.*}.res" 
-            if [ $printWrongAnswer = "true" ]; then
+            if [ $stopAtWrongAnswer = "true" ]; then
                 cleanup
                 echo "--------------------------------------------------------"
                 echo "========================================================"
@@ -270,7 +270,7 @@ if [ "$(ls -A $DIR)" ]; then
         if [ $time -gt $maxTime ]; then 
             maxTime=$time 
         fi 
-        echo '--------------------------------------------------------' 
+        echo '\e[34;1m--------------------------------------------------------\e[0m' 
     done 
 
     # generate testcase    

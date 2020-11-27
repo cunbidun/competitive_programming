@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "input": "4\n22\n9999\n1\n777\n",
+      "output": "13\n90\n1\n66\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "name": "A. Boring Apartments",
+  "group": "Codeforces - Codeforces Round #677 (Div. 3)",
+  "isInteractive": false,
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "useGeneration": false,
+  "useLocalChecker": false,
+  "url": "https://codeforces.com/problemset/problem/1433/A",
+  "numTest": 0,
+  "genParameters": null,
+  "knowGenAns": false,
+  "checker": "token_checker",
+  "stopAtWrongAnswer": false
+}

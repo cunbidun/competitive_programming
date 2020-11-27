@@ -10,15 +10,19 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 
 void solve() {
-  int n;
-  cin >> n;
-  int d,cnt =0;
-  while(n ){
-    d= n%10;
-    n/=10;
-    cnt ++;
+  int n, m;
+  cin >> n >> m;
+  int s = 0;
+  while (n--) {
+    int x;
+    cin >> x;
+    s += x;
   }
-  cout << 10*(d-1)+ cnt*(cnt+1)/2 << "\n";
+  if (s == m) {
+    cout << "YES\n";
+  } else {
+    cout << "NO\n";
+  }
 }
 
 int main() {

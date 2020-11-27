@@ -12,13 +12,13 @@ typedef pair<int, int> ii;
 void solve() {
   int n;
   cin >> n;
-  int d,cnt =0;
-  while(n ){
-    d= n%10;
-    n/=10;
-    cnt ++;
+  int d, cnt = 0;
+  while (n) {
+    d = n % 10;
+    n /= 10;
+    cnt++;
   }
-  cout << 10*(d-1)+ cnt*(cnt+1)/2 << "\n";
+  cout << 10 * (d - 1) + cnt * (cnt + 1) / 2 << "\n";
 }
 
 int main() {

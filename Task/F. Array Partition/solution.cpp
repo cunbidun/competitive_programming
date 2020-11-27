@@ -13,7 +13,7 @@ const int N = 2e5 + 5;
 int n, a[N], mx[N], rmq[N][20];
 
 int cal(int l, int r) {
-  int k = log2(r - l + 1);
+  int k = log2(r - l + 1); 
   return min(rmq[l][k], rmq[r - (1 << k) + 1][k]);
 }
 
@@ -23,6 +23,7 @@ void solve() {
     cin >> a[i];
   }
   mx[n + 1] = 0;
+   
   for (int i = 1; i <= n; i++) {
     mx[i] = 0;
     for (int j = 0; j <= 18; j++) {

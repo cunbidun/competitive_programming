@@ -8,7 +8,10 @@ app.use(bodyParser.json());
 
 app.post("/", (req, res) => {
   const data = req.body;
-  const path = `../Task/${data.name.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`)}`;
+  const path = `../Task/${data.name
+    .replace(/"/g, `'`)
+    .replace(/!/g, ``)
+    .replace(/\//g, `-`)}`;
   mkdirp(path, function (err) {});
   let tests = [];
 
@@ -33,14 +36,14 @@ app.post("/", (req, res) => {
     isInteractive: data.interactive,
     timeLimit: data.timeLimit !== null ? data.timeLimit : 5000,
     truncateLongTest: false,
-    checkerParameters: "",
     useGeneration: false,
-    printWrongAnswer: false,
     useLocalChecker: false,
     url: data.url,
     numTest: 0,
     genParameters: null,
     knowGenAns: false,
+    checker: "token_checker",
+    stopAtWrongAnswer: false,
   };
   fs.writeFile(`${path}/config.json`, JSON.stringify(obj), function (err) {});
   res.sendStatus(200);

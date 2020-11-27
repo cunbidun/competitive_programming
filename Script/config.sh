@@ -5,8 +5,8 @@ prename=$(jq -r '.name' config.json)
 
 java -jar ../../Script/TaskConfigDialog.jar ./
 
-useLocalChecker=$(jq -r '.useLocalChecker' config.json)
-if [ $useLocalChecker = "true" ]
+useLocalChecker=$(jq -r '.checker' config.json)
+if [ $useLocalChecker = "custom" ]
 then
     FILE=./checker.cpp
     if [ ! -f "$FILE" ]; 

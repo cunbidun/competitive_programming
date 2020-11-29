@@ -12,6 +12,16 @@ typedef pair<int, int> ii;
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  cout << fixed << setprecision(15);
-  cout << 1.0 << "\n";
+  ll s, p;
+  cin >> s >> p;
+  for (ll i = 1; i * i <= p; i++) {
+    if (p % i == 0) {
+      if (p / i + i == s) {
+        cout << "Yes\n";
+        return 0;
+      }
+    }
+  }
+  cout << "No\n";
+  return 0;
 }

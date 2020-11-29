@@ -73,7 +73,7 @@ else
     checkerType=$(jq -r '.checker' config.json)
     if [ $checkerType != "custom" ]; then
         cp ../../Script/checkers/compiled/$checkerType ./checker
-        echo "\e[36;1mUsing $checkerType!\e[0m" 
+        echo "\e[36;1mUsing $checkerType checker!\e[0m" 
     else 
         if [ ! "$(<$1/checker.cpp)" = "$(<$1/../../Cache/checker.cpp)" ]; then 
             g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o checker ./checker.cpp --std=c++17;

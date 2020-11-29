@@ -21,15 +21,8 @@
 			"path": "Template"
 		},
 		{
-			"name": "Cache",
-			"path": "Cache"
-		},
-		{
 			"name": "Docs",
 			"path": "Docs"
-		},
-		{
-			"path": "output"
 		}
 	],
 	"settings": {

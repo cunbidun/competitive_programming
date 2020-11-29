@@ -25,11 +25,11 @@
 			"path": "Cache"
 		},
 		{
-			"name": "output",
-			"path": "output"
+			"name": "Docs",
+			"path": "Docs"
 		},
 		{
-			"path": "Docs"
+			"path": "output"
 		}
 	],
 	"settings": {

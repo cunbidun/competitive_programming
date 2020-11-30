@@ -143,7 +143,7 @@ tle=false;
 rte=false;
 maxTime=0;
 
-../../Script/tc_parser $1$
+../../Script/testcases_parser/tc_parser $1$
 
 #stress test
 if [ $useGeneration = "true" ];

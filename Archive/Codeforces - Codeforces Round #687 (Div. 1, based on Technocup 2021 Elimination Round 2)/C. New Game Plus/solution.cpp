@@ -10,7 +10,7 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 
 const int N = 5e5 + 5;
-int n, k, a[N];
+int n, k, a[N], cnt[N];
 ll ans = 0;
 vector<ll> l;
 
@@ -42,9 +42,9 @@ int main() {
   }
   sort(all(l));
   reverse(all(l));
-  cout << ans << "\n";
-  for (ll i : l) {
-    cout << i << " ";
+  for (int i = 0; i < sz(l); i++) {
+    ans -= 1LL * cnt[i % (k + 1)] * l[i];
+    cnt[i % (k + 1)] += 1;
   }
-  cout << "\n";
+  cout << ans << "\n";
 }

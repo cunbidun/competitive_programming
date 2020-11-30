@@ -84,19 +84,9 @@ The name of the contest, used for archive.
 
 Test cases could be really long, so there is high chance that they will cause performance problem. This option is for truncation the test's content when printing. Truncated test will only print the first and the last 50 characters.
 
-##### 6. `useLocalChecker` (boolean)
+##### 6. `checker` (string)
 
-We have 2 type of checker, `global` and `local`.
-
-`global` is a generic checker (a `token checker`). It determine the correctness of solution by first break 2 output files into tokens, and then, compares them one by one.
-
-`local` is an user-defined checker. The output of `local` checker is based on how users compare output files.
-
-##### 7. `checkerParameters` (string)
-
-Sometimes we need compare 2 double value, and the global can't really help us with that (it will only compare 2 tokens for exact match: `1.0000000` and `1.00000` are 2 different value).
-
-However, implement a custom checker for only this task would not be time efficient. To address this issue, the `checkerParameters` comes in handy. It's a argument for global checker to activate some functionality other than `token checker`. For now, the `global checker` only receive 1 additional argument: the error for double number (for example: `D9` for `1e-9`).
+Name of the checker (default is `token_checker`)
 
 ##### 8. `useGeneration` (boolean)
 
@@ -106,11 +96,9 @@ For most of problems, sample cases are not enough. This is a tool for generater 
 
 For `interactive` problems. Not yet ready.
 
-##### 9. `printWrongAnswer` (boolean)
+##### 9. `stopAtWrongAnswer` (boolean)
 
 If this option is set to true, the testing process will stop after encounter a `wrong answer` testcase.
-
-Deprecated
 
 ### Archive Structure
 
@@ -122,7 +110,7 @@ Please take a look at the `Archive` folder for more information.
 
 ### Supported Verdics
 
-1. ok
+1. accepted 
 2. wrong answer
 3. time limited exceed
 4. runtime error
@@ -210,3 +198,5 @@ Please take a look at the `Archive` folder for more information.
 1. The project is heavily inspired by [Egor Kulikov](https://github.com/EgorKulikov)'s [CHelper](https://github.com/EgorKulikov/idea-chelper).
 
 2. The precompiled header script is [dush1729](https://github.com/dush1729/Speed-Up-GCC-Compile-Time)'s.
+
+3. Checker use `testlib.h`

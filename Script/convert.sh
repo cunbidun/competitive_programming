@@ -1,6 +1,6 @@
 #!/bin/zsh
-p="CAU1"
-dir="/mnt/c/Users/cunbidun/Documents/CVA/11-22-2020/homework/problems/"
+p="TWOSUM"
+dir="/home/cunbidun/Documents/"
 
 mkdir $p 
 

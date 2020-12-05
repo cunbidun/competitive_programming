@@ -274,9 +274,9 @@ if [ "$(ls -A $DIR)" ]; then
     done 
 
     # generate testcase    
-    # cd ..
-    # ../../Script/convert.sh
-    # cd './TestCase'
+    cd ..
+    ../../Script/convert.sh
+    cd './TestCase'
 
     cleanup
 else 

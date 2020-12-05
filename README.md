@@ -27,7 +27,7 @@ This project is in the early stage of development, so there is a lot of room for
 ## Concept
 
 1. Each problem has its own folder, which can contains files like: `solution.cpp`, `checker.cpp`, `gen.cpp`.
-2. Every configuration(include testcases) is stored in a single `config.json` file.
+2. Every configuration (including testcases) is stored in a single `config.json` file.
 
 ### Procedure to test a program
 
@@ -38,27 +38,34 @@ This project is in the early stage of development, so there is a lot of room for
 
 ### Task Configuration
 
-Here is an example: problem [A - Plus Minus](https://atcoder.jp/contests/arc104/tasks/arc104_a) has the configuration:
+Here is an example: problem [B. Jumps](https://codeforces.com/contest/1455/problem/B) has the following configuration:
 
 ```
 {
-  "tests": [
-    { "input": "2 -2\n", "output": "0 2\n", "index": 0, "active": true },
-    { "input": "3 1\n", "output": "2 1\n", "index": 1, "active": true }
-  ],
-  "name": "A - Plus Minus",
-  "group": "AtCoder - AtCoder Regular Contest 104",
-  "isInteractive": false,
-  "timeLimit": 2000,
-  "truncateLongTest": false,
-  "checkerParameters": "",
-  "useGeneration": false,
-  "printWrongAnswer": false,
-  "useLocalChecker": false,
-  "url": "https://atcoder.jp/contests/arc104/tasks/arc104_a",
   "numTest": 0,
-  "genParameters": null,
-  "knowGenAns": false
+  "genParameters": "",
+  "isInteractive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1455/problem/B",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "1\n3\n2\n3\n4\n",
+      "input": "5\n1\n2\n3\n4\n5\n",
+      "index": 0,
+      "active": true
+    },
+    { "output": "4", "input": "1\n5", "index": 1, "active": true },
+    { "output": "4", "input": "1\n10", "index": 2, "active": true },
+    { "output": null, "input": "1\n11", "index": 3, "active": true }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B. Jumps",
+  "truncateLongTest": false,
+  "useLocalChecker": false,
+  "group": "Codeforces - Educational Codeforces Round 99 (Rated for Div. 2)"
 }
 ```
 
@@ -92,28 +99,28 @@ Name of the checker (default is `token_checker`)
 
 For most of problems, sample cases are not enough. This is a tool for generater more testcase.
 
-##### 3. `isInteractive` (boolean)
+##### 9. `isInteractive` (boolean)
 
 For `interactive` problems. Not yet ready.
 
-##### 9. `stopAtWrongAnswer` (boolean)
+##### 10. `stopAtWrongAnswer` (boolean)
 
 If this option is set to true, the testing process will stop after encounter a `wrong answer` testcase.
 
 ### Archive Structure
 
-The Archive folder is on the same level with `Script` folder. The `A - Plus Minus` above will be archive at:
+The Archive folder is on the same level with `Script` folder. For example, problem `A - Plus Minus` will be archive at:
 
-`Archive` / `AtCoder - AtCoder Regular Contest 104` / `A - Plus Minus`
+`Archive` / `AtCoder - AtCoder Regular Contest 104` / `A - Plus Minus` /
 
 Please take a look at the `Archive` folder for more information.
 
 ### Supported Verdics
 
-1. accepted 
-2. wrong answer
-3. time limited exceed
-4. runtime error
+1. `accepted` 
+2. `wrong answer`
+3. `time limited exceed`
+4. `runtime error`
 
 ### Sample key blind for vscode
 

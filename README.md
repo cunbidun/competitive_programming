@@ -14,8 +14,10 @@ This project is in the early stage of development, so there is a lot of room for
 2. [jq](https://www.archlinux.org/packages/community/x86_64/jq/)
 3. [optional] [clang](https://www.archlinux.org/packages/extra/x86_64/clang/)
 4. [optional] [astyle](https://www.archlinux.org/packages/community/x86_64/astyle/)
+5. [optional] [dev] [nlohmann-json] (https://www.archlinux.org/packages/community/any/nlohmann-json/files/)
 
 ### Step by step installation (with vscode)
+
 1. clone the repo
 2. `cd` to the directory
 3. `code .` to start vscode.
@@ -117,7 +119,7 @@ Please take a look at the `Archive` folder for more information.
 
 ### Supported Verdics
 
-1. `accepted` 
+1. `accepted`
 2. `wrong answer`
 3. `time limited exceed`
 4. `runtime error`
@@ -198,6 +200,16 @@ Please take a look at the `Archive` folder for more information.
     "when": "resourceExtname == .cpp"
   }
 ]
+```
+
+## Todos:
+
+1. Add option for only print tests' status. Something like:
+
+```
+Test #0: wrong answer
+Test #1: accepted
+...
 ```
 
 ## Credits

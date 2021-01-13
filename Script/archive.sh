@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 clear
 cd "$1"
 name=$(jq -r '.name' config.json)

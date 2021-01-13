@@ -7,12 +7,13 @@ const port = 8080;
 app.use(bodyParser.json());
 
 app.post("/", (req, res) => {
+  console.log(req.body);
   const data = req.body;
   const path = `../Task/${data.name
     .replace(/"/g, `'`)
     .replace(/!/g, ``)
     .replace(/\//g, `-`)}`;
-  mkdirp(path, function (err) {});
+  mkdirp(path, function () {});
   let tests = [];
 
   for (let i = 0; i < data.tests.length; i++) {
@@ -27,7 +28,7 @@ app.post("/", (req, res) => {
   fs.copyFile(
     `../Template/solution.template`,
     `${path}/solution.cpp`,
-    function (err) {}
+    function () {}
   );
   obj = {
     tests: tests,
@@ -45,7 +46,7 @@ app.post("/", (req, res) => {
     checker: "token_checker",
     stopAtWrongAnswer: false,
   };
-  fs.writeFile(`${path}/config.json`, JSON.stringify(obj), function (err) {});
+  fs.writeFile(`${path}/config.json`, JSON.stringify(obj), function () {});
   res.sendStatus(200);
 });
 

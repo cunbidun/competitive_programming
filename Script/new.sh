@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 cd $1
 
 mkdir ___newTask

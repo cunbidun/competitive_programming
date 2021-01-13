@@ -1,5 +1,6 @@
 #!/bin/zsh
-p="TWOSUM"
+
+p="NUMBER"
 dir="/home/cunbidun/Documents/"
 
 mkdir $p 

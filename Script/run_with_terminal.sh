@@ -1,4 +1,5 @@
 #!/bin/zsh
+
 # reset
 clear
 

@@ -13,7 +13,7 @@ const int N = 2e5 + 5;
 int n, a[N], mx[N], rmq[N][20];
 
 int cal(int l, int r) {
-  int k = log2(r - l + 1); 
+  int k = log2(r - l + 1);
   return min(rmq[l][k], rmq[r - (1 << k) + 1][k]);
 }
 
@@ -23,7 +23,7 @@ void solve() {
     cin >> a[i];
   }
   mx[n + 1] = 0;
-   
+
   for (int i = 1; i <= n; i++) {
     mx[i] = 0;
     for (int j = 0; j <= 18; j++) {
@@ -44,7 +44,6 @@ void solve() {
   int tar = 0;
   for (int x = 1; x <= n - 2; x++) {
     tar = max(tar, a[x]);
-
     int l = x + 2, r = n;
     while (l < r) {
       int m = (l + r) / 2;
@@ -58,7 +57,6 @@ void solve() {
     if (mx[f] != tar) {
       continue;
     }
-
     l = x + 2, r = n;
     while (l < r) {
       int m = (l + r + 1) / 2;
@@ -69,7 +67,6 @@ void solve() {
       }
     }
     int s = l;
-
     l = f - 1;
     r = s - 1;
     while (l < r) {

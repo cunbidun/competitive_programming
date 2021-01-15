@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-# reset
 clear
 
 SF=$(($(date +%s%N)/1000000))

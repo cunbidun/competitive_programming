@@ -24,7 +24,6 @@ int main() {
     ll res = 1;
     ll cur = 1;
     for (int j = 1; j <= cnt; j++) {
-      cur *= i;
       res += cur;
     }
     ans *= res;

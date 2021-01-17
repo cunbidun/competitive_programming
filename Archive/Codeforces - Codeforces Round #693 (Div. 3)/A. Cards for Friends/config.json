@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "input": "5\n2 2 3\n3 3 2\n5 10 2\n11 13 1\n1 4 4\n",
+      "output": "YES\nNO\nYES\nYES\nYES\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "name": "A. Cards for Friends",
+  "group": "Codeforces - Codeforces Round #693 (Div. 3)",
+  "isInteractive": false,
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "useGeneration": false,
+  "useLocalChecker": false,
+  "url": "https://codeforces.com/problemset/problem/1472/A",
+  "numTest": 0,
+  "genParameters": null,
+  "knowGenAns": false,
+  "checker": "token_checker",
+  "stopAtWrongAnswer": false
+}

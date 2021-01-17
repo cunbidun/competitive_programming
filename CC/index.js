@@ -2,20 +2,21 @@ const app = require("express")();
 const bodyParser = require("body-parser");
 var mkdirp = require("mkdirp");
 const fs = require("fs");
-const port = 8080;
+
+const PORT = 8080;
 
 app.use(bodyParser.json());
+
+function reformat(s) {
+  return s.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`);
+}
 
 app.post("/", (req, res) => {
   console.log(req.body);
   const data = req.body;
-  const path = `../Task/${data.name
-    .replace(/"/g, `'`)
-    .replace(/!/g, ``)
-    .replace(/\//g, `-`)}`;
+  const path = `../Task/${reformat(data.name)}`;
   mkdirp(path, function () {});
   let tests = [];
-
   for (let i = 0; i < data.tests.length; i++) {
     let test = {
       input: data.tests[i].input,
@@ -32,9 +33,9 @@ app.post("/", (req, res) => {
   );
   obj = {
     tests: tests,
-    name: data.name.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`),
-    group: data.group.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`),
-    isInteractive: data.interactive,
+    name: reformat(data.name),
+    group: reformat(data.group),
+    isInteractive: false,
     timeLimit: data.timeLimit !== null ? data.timeLimit : 5000,
     truncateLongTest: false,
     useGeneration: false,
@@ -50,10 +51,10 @@ app.post("/", (req, res) => {
   res.sendStatus(200);
 });
 
-app.listen(port, (err) => {
+app.listen(PORT, (err) => {
   if (err) {
     console.error(err);
     process.exit(1);
   }
-  console.log(`Listening on port ${port}`);
+  console.log(`Listening on PORT ${PORT}`);
 });

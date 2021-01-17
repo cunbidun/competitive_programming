@@ -6,7 +6,20 @@ SF=$(($(date +%s%N)/1000000))
 
 cd "$1"
 
-g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o solution ./solution.cpp --std=c++17 && ./solution
+if [ ! "$(<$1/solution.cpp)" = "$(<$1/../../Cache/solution.cpp)" ]; then 
+    g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o solution ./solution.cpp --std=c++17
+    if [ $? -ne 0 ]; then
+        echo "\e[31;1mCompile solution file failed!\e[0m" 
+        cleanup
+        exit 0
+    fi
+        cp "$1/solution.cpp" "$1/../../Cache/solution.cpp"
+        cp "$1/solution" "$1/../../Cache/solution"
+else
+    cp "$1/../../Cache/solution" "$1/solution"
+fi
+
+./solution
 
 rm -f ./solution
 

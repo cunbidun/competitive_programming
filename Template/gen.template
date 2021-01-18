@@ -1,38 +1,43 @@
-#include "bits/stdc++.h"
+#include "../../Script/testlib.h"
+#include <vector>
 
 using namespace std;
 
-ofstream out;
-stringstream in;
+typedef long long ll;
 
-string text_file_to_string(string filename) {
-  ostringstream dosString(ios::out | ios::binary); // *** binary
-  ifstream inFile(filename.c_str());
-  string line;
-  while (getline(inFile, line)) {
-    dosString << line << "\r\n";
+const int NUM_TEST = 10;
+
+template <class T> vector<T> gen_array(int n, T min_val, T max_val, int print = 1) {
+  vector<T> array;
+  for (int i = 0; i < n; i++) {
+    array.push_back(rnd.next(min_val, max_val));
   }
-  return dosString.str();
+  if (print) {
+    for (int i = 0; i < n; i++) {
+      cout << rnd.next(min_val, max_val) << " ";
+    }
+    cout << "\n";
+  }
+  return array;
 }
 
-// get correct input format from rawInput
-void get(string name) { in << text_file_to_string(name); }
+void writeTest(int test) {
+  startTest(test);
+  int n = rnd.next(2, 10);
+  int t = rnd.next(2, 10);
+  cout << 1 << "\n";
+  cout << n << "\n";
+  gen_array(n, 2, 10);
 
-int ___solve(){};
+  char number_str[10];
+  sprintf(number_str, "%d", test);
+  std::rename(number_str, ('S' + to_string(test) + ".in").c_str());
+}
 
 int main(int argc, char *argv[]) {
-  string name = string(argv[1]);
-  get(name);
-  out.open(name);
-  out << in.str();
-  out.close();
-  if (argv[2][0] == 't') {
-    name.pop_back();
-    name.pop_back();
-    name.pop_back();
-    out.open(name + ".out");
-    out << fixed << setprecision(10);
-    ___solve();
-    out.close();
+  registerGen(argc, argv, 1);
+  for (int i = 0; i < NUM_TEST; i++) {
+    writeTest(i);
   }
+  return 0;
 }

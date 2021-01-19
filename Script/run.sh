@@ -3,15 +3,18 @@
 clear
 ulimit -s unlimited;
 
-compact=false
 ROOT="$1"
 CACHE="$1/../../Cache/"
 SCRIPT="$1/../../Script/"
 
 DASH_SEPERATOR="\e[34;1m--------------------------------------------------------\e[0m"
 EQUAL_SEPERATOR="========================================================"
-GENERATOR_TOKEN=""
 
+
+cd "$ROOT"
+compact=$(jq -r '.compact' config.json)
+hideAcceptedTest=$(jq -r '.hideAcceptedTest' config.json)
+generator_seed=$(jq -r '.generatorSeed' config.json)
 
 if $compact; then
     DASH_SEPERATOR="\e[34;1m---------------------------\e[0m"
@@ -56,7 +59,6 @@ trap '
 
 TESTING_START=$(($(date +%s%N)/1000000));
 
-cd "$ROOT"
 
 if [ $compact = "false" ]; then
     echo "$(jq -r '.group' config.json)"
@@ -74,7 +76,7 @@ COMPILE_START=$(($(date +%s%N)/1000000))
 compile solution
 
 if [ $checkerType != "custom" ]; then
-    cp ../../Script/checkers/compiled/$checkerType ./checker
+    cp $SCRIPT/checkers/compiled/$checkerType ./checker
     echo "\e[36;1mUsing $checkerType checker!\e[0m" 
 else 
     compile checker
@@ -82,14 +84,14 @@ else
 fi
 
 if [ $useGeneration = "true" ]; then
-    if [[ -z $GENERATOR_TOKEN ]]; then
-        GENERATOR_TOKEN="$RANDOM$RANDOM"
+    if [[ -z $generator_seed ]]; then
+        generator_seed="$RANDOM$RANDOM"
     fi
     if [ $knowGenAns = "true" ]; then
         compile slow
     fi
     compile gen
-    echo "\e[34;1mStress Test with token: '$GENERATOR_TOKEN'\e[0m" 
+    echo "\e[34;1mStress Test with token: '$generator_seed'\e[0m" 
 fi
 # ----------------------------- COMPILE -----------------------------
 
@@ -107,7 +109,7 @@ tle=false;
 rte=false;
 maxTime=0;
 
-../../Script/testcases_parser/tc_parser $1$
+$SCRIPT/testcases_parser/tc_parser $1$
 
 truncateLongTest=$(jq -r '.truncateLongTest' config.json) 
 stopAtWrongAnswer=$(jq -r '.stopAtWrongAnswer' config.json)
@@ -117,7 +119,7 @@ cp ./solution.cpp ../../output
 cd './TestCase/'
 
 if [ $useGeneration = "true" ]; then
-    ../gen "$GENERATOR_TOKEN" "$numTest" 
+    ../gen "$generator_seed" "$numTest" 
 fi
 
 #test
@@ -161,7 +163,7 @@ do
         fi 
         break 
     done
-    if [[ $compact = "true" ]] && [[ $passed = "true" ]] && [[ $timeLimit -ge $time ]] && [[ $undecided = "false" ]]; then
+    if [[ $hideAcceptedTest = "true" ]] && [[ $passed = "true" ]] && [[ $timeLimit -ge $time ]] && [[ $undecided = "false" ]]; then
         echo "\e[32;1maccepted\e[0m" 
     else 
         echo  

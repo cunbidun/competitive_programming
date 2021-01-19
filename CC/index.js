@@ -35,17 +35,19 @@ app.post("/", (req, res) => {
     tests: tests,
     name: reformat(data.name),
     group: reformat(data.group),
-    isInteractive: false,
+    interactive: false,
     timeLimit: data.timeLimit !== null ? data.timeLimit : 5000,
     truncateLongTest: false,
     useGeneration: false,
-    useLocalChecker: false,
     url: data.url,
     numTest: 0,
-    genParameters: null,
+    genParameters: "",
     knowGenAns: false,
     checker: "token_checker",
     stopAtWrongAnswer: false,
+    compact: false,
+    generatorSeed: "",
+    hideAcceptedTest: false,
   };
   fs.writeFile(`${path}/config.json`, JSON.stringify(obj), function () {});
   res.sendStatus(200);

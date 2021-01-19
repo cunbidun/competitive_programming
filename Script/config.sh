@@ -5,17 +5,7 @@ cd "$1"
 
 prename=$(jq -r '.name' config.json)
 
-java -jar ../../Script/TaskConfigDialog.jar ./
-
-useLocalChecker=$(jq -r '.checker' config.json)
-if [ $useLocalChecker = "custom" ]
-then
-    FILE=./checker.cpp
-    if [ ! -f "$FILE" ]; 
-    then
-        cp ../../Template/checker.template ./checker.cpp
-    fi  
-fi
+java -jar ../../Script/Test.jar ./
 
 useGeneration=$(jq -r '.useGeneration' config.json)
 if [ $useGeneration = "true" ]
@@ -27,7 +17,29 @@ then
     fi  
 fi
 
+knowGenAns=$(jq -r '.knowGenAns' config.json)
+if [ $knowGenAns = "true" ]
+then
+    FILE=./slow.cpp
+    if [ ! -f "$FILE" ]; 
+    then
+        cp ../../Template/slow.template ./slow.cpp
+    fi  
+fi
+
+checker=$(jq -r '.checker' config.json)
+if [ $checker = "custom" ]
+then
+    FILE=./checker.cpp
+    if [ ! -f "$FILE" ]; 
+    then
+        cp ../../Template/checker.template ./checker.cpp
+    fi  
+fi
+
 name=$(jq -r '.name' config.json)
+
+jq . config.json > tmp && mv tmp config.json
 
 cd ..
 if [ ! "$prename" = "" ]; then

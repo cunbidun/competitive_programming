@@ -120,16 +120,29 @@ cd './TestCase/'
 
 if [ $useGeneration = "true" ]; then
     ../gen "$generator_seed" "$numTest" 
+    if [ $? -ne 0 ];then 
+        rte=true 
+        echo "\e[31;1mGenerator run time error!\e[0m" 
+        cleanup
+        exit 0
+    fi 
 fi
 
 #test
 for f in `ls -v *.in` 
 do
     if [ ${f:0:1} = "S" ]; then
+        printf "\e[33;1mTest #${f%.*}: \e[0m" 
         if [ $knowGenAns = "true" ]; then
             ../slow < $f > "${f%.*}.out" 
+            if [ $? -ne 0 ];then 
+                cat "${f%.*}.out" 
+                rte=true 
+                echo "\e[31;1mSlow solution run time error!\e[0m" 
+                cleanup
+                exit 0
+            fi 
         fi
-        printf "\e[33;1mTest #${f%.*}: \e[0m" 
     else 
         printf "\e[36;1mTest #${f%.*}: \e[0m" 
     fi

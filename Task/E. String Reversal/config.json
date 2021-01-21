@@ -1,0 +1,49 @@
+{
+  "numTest": 5,
+  "compact": false,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/problemset/problem/1430/E",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "2\n",
+      "input": "5\naaaza\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "0\n",
+      "input": "6\ncbaabc\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "30\n",
+      "input": "9\nicpcsguru\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "6\naaccbb",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "5\nxaaxa\n",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. String Reversal",
+  "truncateLongTest": false,
+  "hideAcceptedTest": false,
+  "group": "Codeforces - Educational Codeforces Round 96 (Rated for Div. 2)"
+}

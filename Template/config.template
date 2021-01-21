@@ -1,6 +1,6 @@
 {
   "numTest": 0,
-  "compact": false,
+  "compact": true,
   "genParameters": "",
   "generatorSeed": "",
   "interactive": false,
@@ -13,6 +13,6 @@
   "stopAtWrongAnswer": false,
   "name": "",
   "truncateLongTest": false,
-  "hideAcceptedTest": false,
+  "hideAcceptedTest": true,
   "group": ""
 }

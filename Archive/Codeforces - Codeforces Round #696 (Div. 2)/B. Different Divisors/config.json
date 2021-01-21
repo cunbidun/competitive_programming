@@ -1,0 +1,37 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1474/problem/B",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "6\n15\n",
+      "input": "2\n1\n2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "294527",
+      "input": "1\n381",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "56279",
+      "input": "1\n165",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B. Different Divisors",
+  "truncateLongTest": false,
+  "hideAcceptedTest": false,
+  "group": "Codeforces - Codeforces Round #696 (Div. 2)"
+}

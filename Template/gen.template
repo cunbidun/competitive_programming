@@ -1,3 +1,4 @@
+#include "../../Script/genlib.h"
 #include "../../Script/testlib.h"
 #include <vector>
 
@@ -5,29 +6,8 @@ using namespace std;
 
 typedef long long ll;
 
-const int NUM_TEST = 10;
-
-template <class T> vector<T> gen_array(int n, T min_val, T max_val, int print = 1) {
-  vector<T> array;
-  for (int i = 0; i < n; i++) {
-    array.push_back(rnd.next(min_val, max_val));
-  }
-  if (print) {
-    for (int i = 0; i < n; i++) {
-      cout << rnd.next(min_val, max_val) << " ";
-    }
-    cout << "\n";
-  }
-  return array;
-}
-
 void writeTest(int test) {
   startTest(test);
-  int n = rnd.next(2, 10);
-  int t = rnd.next(2, 10);
-  cout << 1 << "\n";
-  cout << n << "\n";
-  gen_array(n, 2, 10);
 
   char number_str[10];
   sprintf(number_str, "%d", test);
@@ -36,6 +16,7 @@ void writeTest(int test) {
 
 int main(int argc, char *argv[]) {
   registerGen(argc, argv, 1);
+  int NUM_TEST = opt<int>(2);
   for (int i = 0; i < NUM_TEST; i++) {
     writeTest(i);
   }

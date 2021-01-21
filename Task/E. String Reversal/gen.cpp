@@ -8,18 +8,17 @@ typedef long long ll;
 
 void writeTest(int test) {
   startTest(test);
-  int n = rnd.next(2, 10);
-  int t = rnd.next(2, 10);
-  cout << 1 << "\n";
+  int n = rnd.next(10, 10);
   cout << n << "\n";
-  gen_array(n, 2, 10);
+  gen_string(n, 0, 0, 0, "abd", 1);
 
   char number_str[10];
   sprintf(number_str, "%d", test);
   std::rename(number_str, ('S' + to_string(test) + ".in").c_str());
 }
+
 int main(int argc, char *argv[]) {
-  registerGen(argc, argv, 1); 
+  registerGen(argc, argv, 1);
   int NUM_TEST = opt<int>(2);
   for (int i = 0; i < NUM_TEST; i++) {
     writeTest(i);

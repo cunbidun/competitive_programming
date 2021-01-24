@@ -8,10 +8,10 @@ typedef long long ll;
 
 void writeTest(int test) {
   startTest(test);
-  int n = rnd.next(6, 6);
+  cout << 1 << "\n";
+  int n = rnd.next(2, 5);
   cout << n << "\n";
-  gen_string(n, 0, 0, 0, "abc", 1);
-
+  gen_array(n, 1, 10);
   char number_str[10];
   sprintf(number_str, "%d", test);
   std::rename(number_str, ('S' + to_string(test) + ".in").c_str());

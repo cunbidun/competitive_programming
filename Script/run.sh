@@ -23,7 +23,7 @@ fi
 
 function cleanup() {
     cd "$ROOT"
-    rm -rf TestCase solution checker gen slow
+    rm -rf TestCase solution checker gen slow printer interactor
 }
 
 function compile() {
@@ -68,19 +68,25 @@ fi
 checkerType=$(jq -r '.checker' config.json)
 useGeneration=$(jq -r '.useGeneration' config.json)
 knowGenAns=$(jq -r '.knowGenAns' config.json)
-isInteractive=$(jq -r '.isInteractive' config.json)
+interactive=$(jq -r '.interactive' config.json)
 
 # ----------------------------- COMPILE ----------------------------
 COMPILE_START=$(($(date +%s%N)/1000000))
 
 compile solution
 
-if [ $checkerType != "custom" ]; then
-    cp $SCRIPT/checkers/compiled/$checkerType ./checker
-    echo "\e[36;1mUsing $checkerType checker!\e[0m" 
+if [ $interactive = "true" ]; then 
+    compile interactor 
+    cp "$SCRIPT/interactive_printer/printer" ./printer
+    echo "\e[36;1mInteractive Task!\e[0m" 
 else 
-    compile checker
-    echo "\e[36;1mUse Local Checker!\e[0m" 
+    if [ $checkerType != "custom" ]; then
+        cp "$SCRIPT/checkers/compiled/$checkerType" ./checker
+        echo "\e[36;1mUsing $checkerType checker!\e[0m" 
+    else 
+        compile checker
+        echo "\e[36;1mUse Local Checker!\e[0m" 
+    fi
 fi
 
 if [ $useGeneration = "true" ]; then
@@ -128,128 +134,152 @@ if [ $useGeneration = "true" ]; then
     fi 
 fi
 
+cd .. 
+
+if [ $interactive = "true" ]; then
+    mv solution './TestCase'
+fi
 #test
-for f in `ls -v *.in` 
-do
-    if [ ${f:0:1} = "S" ]; then
-        printf "\e[33;1mTest #${f%.*}: \e[0m" 
-        if [ $knowGenAns = "true" ]; then
-            ../slow < $f > "${f%.*}.out" 
+
+DIR="./TestCase/" 
+if [ "$(ls -A $DIR)" ]; then
+    cd './TestCase/'
+    for f in `ls -v *.in` 
+    do
+        if  [ ${f:0:1} = "S" ]; then
+            printf "\e[33;1mTest #${f%.*}: \e[0m" 
+            if [[ $interactive = "false" ]] && [[ $knowGenAns = "true" ]]; then
+                ../slow < $f > "${f%.*}.out" 
+                if [ $? -ne 0 ];then 
+                    echo "\e[31;1mSlow solution run time error!\e[0m" 
+                    cleanup
+                    exit 0
+                fi 
+            fi
+        else 
+            printf "\e[36;1mTest #${f%.*}: \e[0m" 
+        fi
+
+        expected_output=false
+        if [ $interactive = "true" ]; then 
+            START=$(($(date +%s%N)/1000000))
+            ../interactor "$f" "${f%.*}.actual" "${f%.*}.res"
             if [ $? -ne 0 ];then 
-                cat "${f%.*}.out" 
                 rte=true 
-                echo "\e[31;1mSlow solution run time error!\e[0m" 
-                cleanup
-                exit 0
-            fi 
-        fi
-    else 
-        printf "\e[36;1mTest #${f%.*}: \e[0m" 
-    fi
-
-    START=$(($(date +%s%N)/1000000))
-    ../solution < $f > "${f%.*}.actual"
-    if [ $? -ne 0 ];then 
-        rte=true 
-        echo "Verdict: \e[31;1mrun time error\e[0m" 
-        echo "$DASH_SEPERATOR"
-        continue 
-    fi 
-    END=$(($(date +%s%N)/1000000)) 
-    time=$((END - START)) 
-    expected_output=false
-    if test -f "${f%.*}.out"; then
-        expected_output=true
-    fi
-    touch "${f%.*}.out"
-    ../checker "$f" "${f%.*}.actual" "${f%.*}.out" "${f%.*}.res" > /dev/null 2>&1 
-    read line < "${f%.*}.res" 
-    passed=true;
-    undecided=false
-    for word in $line; do
-        if [ "$word" = "wrong answer" ]; then 
-            passed=false 
-            allPassed=false 
-        fi 
-        if [ "$word" = "undecided" ]; then 
-            undecided=true
-        fi 
-        break 
-    done
-    if [[ $hideAcceptedTest = "true" ]] && [[ $passed = "true" ]] && [[ $timeLimit -ge $time ]] && [[ $undecided = "false" ]]; then
-        echo "\e[32;1maccepted\e[0m" 
-    else 
-        echo  
-        in=$(<$f) 
-        echo "Input:" 
-        if [ $truncateLongTest = "true" ] && [ ${#in} -gt 71 ]; then 
-            echo "${in:0:35}...${in:$((${#in} - 35)):$((${#in} - 1))}" 
-        else 
-            echo $in 
-        fi
-
-        if $expected_output; then 
-            echo "Expected output:" 
-            out=$(<${f%.*}.out) 
-            if [ $truncateLongTest = "true" ] && [ ${#out} -gt 71 ]; then
-                echo "${out:0:35}...${out:$((${#out} - 35)):$((${#out} - 1))}" 
-            else 
-                echo $out 
-            fi
-        fi
-
-        echo "Execution output:" 
-        out=$(<${f%.*}.actual) 
-        if [ $truncateLongTest = "true" ] && [ ${#out} -gt 71 ]; then 
-            echo "${out:0:35}...${out:$((${#out} - 35)):$((${#out} - 1))}"
-        else 
-            echo $out 
-        fi
-
-        printf "Verdict: " 
-
-        if $passed; then 
-            if [ $timeLimit -ge $time ]; then 
-                if $undecided; then
-                    export GREP_COLORS='ms=01;33' 
-                    grep --color -E "undecided|$" "${f%.*}.res" 
-                else
-                    export GREP_COLORS='ms=01;32' 
-                    grep --color -E "accepted|$" "${f%.*}.res" 
-                fi
-            else 
-                echo "\e[31;1mtime limit exceed\e[0m" 
-            fi 
-        else 
-            export GREP_COLORS='ms=01;31' 
-            grep --color -E "wrong answer|$" "${f%.*}.res" 
-            if [ $stopAtWrongAnswer = "true" ]; then
-                cleanup
+                echo "Verdict: \e[31;1mrun time error\e[0m" 
                 echo "$DASH_SEPERATOR"
-                echo "$EQUAL_SEPERATOR"
-                echo "Test results:" 
-                echo "\e[31;1mwrong answer detected!\e[0m"
-                TESTING_END=$(($(date +%s%N)/1000000)) 
-                time=$((TESTING_END - TESTING_START)) 
-                echo "\e[35;1mAll Testing finished in $time ms\e[0m"
-                exit 0
+                continue 
+            fi 
+            END=$(($(date +%s%N)/1000000)) 
+            time=$((END - START)) 
+        else
+            START=$(($(date +%s%N)/1000000))
+            ../solution < $f > "${f%.*}.actual"
+            if [ $? -ne 0 ];then 
+                rte=true 
+                echo "Verdict: \e[31;1mrun time error\e[0m" 
+                echo "$DASH_SEPERATOR"
+                continue 
+            fi 
+            END=$(($(date +%s%N)/1000000)) 
+            time=$((END - START)) 
+            if test -f "${f%.*}.out"; then
+                expected_output=true
+            fi
+            touch "${f%.*}.out"
+            ../checker "$f" "${f%.*}.actual" "${f%.*}.out" "${f%.*}.res" > /dev/null 2>&1 
+        fi
+        read line < "${f%.*}.res" 
+        passed=true;
+        undecided=false
+        for word in $line; do
+            if [ "$word" = "wrong answer" ]; then 
+                passed=false 
+                allPassed=false 
+            fi 
+            if [ "$word" = "undecided" ]; then 
+                undecided=true
+            fi 
+            break 
+        done
+        if [[ $hideAcceptedTest = "true" ]] && [[ $passed = "true" ]] && [[ $timeLimit -ge $time ]] && [[ $undecided = "false" ]]; then
+            echo "\e[32;1maccepted\e[0m" 
+        else 
+            echo  
+            in=$(<$f) 
+            echo "Input:" 
+            if [ $truncateLongTest = "true" ] && [ ${#in} -gt 71 ]; then 
+                echo "${in:0:35}...${in:$((${#in} - 35)):$((${#in} - 1))}" 
+            else 
+                echo $in 
+            fi
+
+            if $expected_output; then 
+                echo "Expected output:" 
+                out=$(<${f%.*}.out) 
+                if [ $truncateLongTest = "true" ] && [ ${#out} -gt 71 ]; then
+                    echo "${out:0:35}...${out:$((${#out} - 35)):$((${#out} - 1))}" 
+                else 
+                    echo $out 
+                fi
+            fi
+
+            echo "Execution output:" 
+            if [ $interactive = "true" ]; then
+                ../printer "${f%.*}.actual"
+            else
+                out=$(<${f%.*}.actual) 
+                if [ $truncateLongTest = "true" ] && [ ${#out} -gt 71 ]; then 
+                    echo "${out:0:35}...${out:$((${#out} - 35)):$((${#out} - 1))}"
+                else 
+                    echo $out 
+                fi
+            fi
+
+            printf "Verdict: " 
+            if $passed; then 
+                if [ $timeLimit -ge $time ]; then 
+                    if $undecided; then
+                        export GREP_COLORS='ms=01;33' 
+                        grep --color -E "undecided|$" "${f%.*}.res" 
+                    else
+                        export GREP_COLORS='ms=01;32' 
+                        grep --color -E "accepted|$" "${f%.*}.res" 
+                    fi
+                else 
+                    echo "\e[31;1mtime limit exceed\e[0m" 
+                fi 
+            else 
+                export GREP_COLORS='ms=01;31' 
+                grep --color -E "wrong answer|$" "${f%.*}.res" 
+                if [ $stopAtWrongAnswer = "true" ]; then
+                    cleanup
+                    echo "$DASH_SEPERATOR"
+                    echo "$EQUAL_SEPERATOR"
+                    echo "Test results:" 
+                    echo "\e[31;1mwrong answer detected!\e[0m"
+                    TESTING_END=$(($(date +%s%N)/1000000)) 
+                    time=$((TESTING_END - TESTING_START)) 
+                    echo "\e[35;1mAll Testing finished in $time ms\e[0m"
+                    exit 0
+                fi
+            fi
+
+            printf "Run Time: " 
+            if [ $time -gt $timeLimit ]; then 
+                tle=true 
+                echo "\e[31;1m$time\e[0m ms" 
+            else 
+                echo "\e[32;1m$time\e[0m ms" 
             fi
         fi
 
-        printf "Run Time: " 
-        if [ $time -gt $timeLimit ]; then 
-            tle=true 
-            echo "\e[31;1m$time\e[0m ms" 
-        else 
-            echo "\e[32;1m$time\e[0m ms" 
-        fi
-    fi
-
-    if [ $time -gt $maxTime ]; then 
-        maxTime=$time 
-    fi 
-    echo "$DASH_SEPERATOR"
-done 
+        if [ $time -gt $maxTime ]; then 
+            maxTime=$time 
+        fi 
+        echo "$DASH_SEPERATOR"
+    done 
+fi
 
 cleanup
 

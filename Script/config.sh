@@ -17,6 +17,17 @@ then
     fi  
 fi
 
+interactive=$(jq -r '.interactive' config.json)
+if [ $interactive = "true" ]
+then
+    FILE=./interactor.cpp
+    if [ ! -f "$FILE" ]; 
+    then
+        cp ../../Template/interactor.template ./interactor.cpp
+    fi  
+fi
+
+
 knowGenAns=$(jq -r '.knowGenAns' config.json)
 if [ $knowGenAns = "true" ]
 then

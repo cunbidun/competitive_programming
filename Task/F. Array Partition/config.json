@@ -1,6 +1,6 @@
 {
   "numTest": 4,
-  "compact": true,
+  "compact": false,
   "genParameters": "",
   "generatorSeed": "",
   "interactive": false,

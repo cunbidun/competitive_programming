@@ -1,0 +1,79 @@
+{
+  "numTest": 1000,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/problemset/problem/1474/D",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "YES\nYES\nYES\nYES\nNO\n",
+      "input": "5\n3\n1 2 1\n3\n1 1 2\n5\n2 2 2 1 3\n5\n2100 1900 1600 3000 1600\n2\n2443 2445\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "NO",
+      "input": "1\n4\n3 2 1 2",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "YES",
+      "input": "1\n3\n1 1 2",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "YES",
+      "input": "1\n4\n5 3 5 3",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "NO",
+      "input": "1\n4\n9 6 7 8",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "YES",
+      "input": "1\n5\n5 5 7 6 3\n",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "YES",
+      "input": "1\n4\n8 9 6 7",
+      "index": 6,
+      "active": true
+    },
+    {
+      "output": "YES",
+      "input": "1\n5\n2100 1900 1600 3000 1600",
+      "index": 7,
+      "active": true
+    },
+    {
+      "output": "YES",
+      "input": "1\n4\n7 3 10 6\n",
+      "index": 8,
+      "active": true
+    },
+    {
+      "output": "NO",
+      "input": "1\n3\n10 10 3",
+      "index": 9,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D. Cleaning",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #696 (Div. 2)"
+}

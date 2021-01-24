@@ -1,10 +1,10 @@
 {
-  "numTest": 5,
-  "compact": false,
+  "numTest": 100,
+  "compact": true,
   "genParameters": "",
   "generatorSeed": "",
   "interactive": false,
-  "useGeneration": true,
+  "useGeneration": false,
   "checker": "token_checker",
   "knowGenAns": true,
   "url": "https://codeforces.com/problemset/problem/1430/E",
@@ -20,28 +20,34 @@
       "output": "0\n",
       "input": "6\ncbaabc\n",
       "index": 1,
-      "active": true
+      "active": false
     },
     {
       "output": "30\n",
       "input": "9\nicpcsguru\n",
       "index": 2,
-      "active": true
+      "active": false
     },
     {
       "output": null,
       "input": "6\naaccbb",
       "index": 3,
-      "active": true
+      "active": false
     },
     {
       "output": "2",
       "input": "5\nxaaxa\n",
       "index": 4,
-      "active": true
+      "active": false
+    },
+    {
+      "output": null,
+      "input": "5\nbbcaa",
+      "index": 5,
+      "active": false
     }
   ],
-  "stopAtWrongAnswer": false,
+  "stopAtWrongAnswer": true,
   "name": "E. String Reversal",
   "truncateLongTest": false,
   "hideAcceptedTest": false,

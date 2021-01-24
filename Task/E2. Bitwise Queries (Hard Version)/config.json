@@ -1,0 +1,25 @@
+{
+  "numTest": 10,
+  "compact": false,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": true,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/problemset/problem/1451/E2",
+  "timeLimit": 4000,
+  "tests": [
+    {
+      "output": "",
+      "input": "8\n0 2 5 2 6 3 6 8\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E2. Bitwise Queries (Hard Version)",
+  "truncateLongTest": false,
+  "hideAcceptedTest": false,
+  "group": "Codeforces - Codeforces Round #685 (Div. 2)"
+}

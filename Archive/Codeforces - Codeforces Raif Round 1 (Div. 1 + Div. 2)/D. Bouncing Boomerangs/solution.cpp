@@ -54,7 +54,7 @@ struct debug {
   }
 #endif
 };
-#define imie(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] " 0
+#define imie(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] " 
 
 const int N = 1e5 + 5;
 int n, a[N], use[N];

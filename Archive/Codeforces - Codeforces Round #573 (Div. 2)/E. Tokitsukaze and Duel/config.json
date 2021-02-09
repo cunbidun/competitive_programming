@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1191/problem/E",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "quailty\n",
+      "input": "4 2\n0101\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "once again\n",
+      "input": "6 1\n010101\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "tokitsukaze\n",
+      "input": "6 5\n010101\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "once again\n",
+      "input": "4 1\n0011\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Tokitsukaze and Duel",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #573 (Div. 2)"
+}

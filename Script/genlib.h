@@ -1,11 +1,10 @@
 #ifndef _GENLIB_H_
 #define _GENLIB_H_
-#include <iostream>
 #include "testlib.h"
+#include <iostream>
 using namespace std;
 
-string gen_string(int n, bool lower, bool upper, bool number, string custom, bool p = true,
-                  char e = '\n')
+string gen_string(int n, bool lower, bool upper, bool number, string custom, bool p = true)
 {
   string s = "";
   if (custom == "")
@@ -27,13 +26,12 @@ string gen_string(int n, bool lower, bool upper, bool number, string custom, boo
   if (p)
   {
     cout << s;
-    cout << e;
   }
   return s;
 }
 
 template <class T>
-vector<T> gen_array(int n, T min_val, T max_val, bool p = true, char e = '\n')
+vector<T> gen_array(int n, T min_val, T max_val, bool p = true)
 {
   vector<T> array;
   for (int i = 0; i < n; i++)
@@ -50,7 +48,6 @@ vector<T> gen_array(int n, T min_val, T max_val, bool p = true, char e = '\n')
       }
       cout << rnd.next(min_val, max_val);
     }
-    cout << e;
   }
   return array;
 }

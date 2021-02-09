@@ -18,7 +18,7 @@ void WA(int num = 1) {
   }
 }
 
-void OK() { res << "accecpted" << endl; }
+void OK() { res << "accepted" << endl; }
 
 void interactor() {
   int n;

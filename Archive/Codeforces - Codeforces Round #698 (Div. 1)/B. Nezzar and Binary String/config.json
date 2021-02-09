@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1477/problem/B",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "YES\nNO\nYES\nNO\n",
+      "input": "4\n5 2\n00000\n00111\n1 5\n1 3\n2 1\n00\n01\n1 2\n10 6\n1111111111\n0110001110\n1 10\n5 9\n7 10\n1 7\n3 5\n6 10\n5 2\n10000\n11000\n2 5\n1 3\n",
+      "index": 0,
+      "active": false
+    },
+    {
+      "output": "YES",
+      "input": "1\n5 2\n00000\n00111\n1 5\n1 3",
+      "index": 1,
+      "active": false
+    },
+    {
+      "output": "NO",
+      "input": "1\n2 1\n00\n01\n1 2",
+      "index": 2,
+      "active": false
+    },
+    {
+      "output": "YES",
+      "input": "1\n10 10\n1101111010\n1101101010\n1 1\n6 6\n6 7\n7 7\n6 6\n3 3\n4 4\n9 9\n8 8\n4 6",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B. Nezzar and Binary String",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #698 (Div. 1)"
+}

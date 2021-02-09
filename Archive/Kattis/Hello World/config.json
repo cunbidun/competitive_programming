@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://open.kattis.com/problems/hello",
+  "timeLimit": 5000,
+  "tests": [
+    {
+      "output": "Hello World!",
+      "input": "",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "Hello World",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Kattis"
+}

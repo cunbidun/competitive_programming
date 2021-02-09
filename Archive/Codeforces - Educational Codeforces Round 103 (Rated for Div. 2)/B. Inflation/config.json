@@ -1,0 +1,31 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1476/problem/B",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "99\n0\n",
+      "input": "2\n4 1\n20100 1 202 202\n3 100\n1 1 1\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "99",
+      "input": "1\n2 1\n1 1",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B. Inflation",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 103 (Rated for Div. 2)"
+}

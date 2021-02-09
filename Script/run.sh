@@ -177,6 +177,16 @@ if [ "$(ls -A $DIR)" ]; then
             ../solution < $f > "${f%.*}.actual"
             if [ $? -ne 0 ];then 
                 rte=true 
+
+                # print the input when rte happend
+                in=$(<$f) 
+                echo "Input:" 
+                if [ $truncateLongTest = "true" ] && [ ${#in} -gt 71 ]; then 
+                    echo "${in:0:35}...${in:$((${#in} - 35)):$((${#in} - 1))}" 
+                else 
+                    echo $in 
+                fi
+
                 echo "Verdict: \e[31;1mrun time error\e[0m" 
                 echo "$DASH_SEPERATOR"
                 continue 
@@ -203,7 +213,8 @@ if [ "$(ls -A $DIR)" ]; then
             break 
         done
         if [[ $hideAcceptedTest = "true" ]] && [[ $passed = "true" ]] && [[ $timeLimit -ge $time ]] && [[ $undecided = "false" ]]; then
-            echo "\e[32;1maccepted\e[0m" 
+            export GREP_COLORS='ms=01;32' 
+            grep --color -E "accepted|$" "${f%.*}.res" 
         else 
             echo  
             in=$(<$f) 

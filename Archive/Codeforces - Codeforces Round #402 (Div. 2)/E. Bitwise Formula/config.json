@@ -1,0 +1,61 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/779/problem/E",
+  "timeLimit": 3000,
+  "tests": [
+    {
+      "output": "011\n100\n",
+      "input": "3 3\na := 101\nb := 011\nc := ? XOR b\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "0\n0\n",
+      "input": "5 1\na := 1\nbb := 0\ncx := ? OR a\nd := ? XOR ?\ne := d AND bb\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "0\n1",
+      "input": "3 1\na := 1\nb := 0\nc := ? XOR b\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "0\n0",
+      "input": "3 1\na := 1\nb := 0\nc := ? XOR ?\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "00\n11",
+      "input": "4 2\na := 11\nb := 00\nc := b AND a\nd := c XOR ?",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "00\n00",
+      "input": "4 2\na := 11\nb := 00\nc := b AND a\nd := c XOR b",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "0\n1",
+      "input": "4 1\na := 1\nb := 0\nc := b AND a\nd := c XOR ?",
+      "index": 6,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Bitwise Formula",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #402 (Div. 2)"
+}

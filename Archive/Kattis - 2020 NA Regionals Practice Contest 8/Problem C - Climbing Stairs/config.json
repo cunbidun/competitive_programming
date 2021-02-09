@@ -1,0 +1,37 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://open.kattis.com/contests/nar20practice8/problems/climbingstairs",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "30\n",
+      "input": "20 10 5\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "1 0 0",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "5 2 0",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "Problem C - Climbing Stairs",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Kattis - 2020 NA Regionals Practice Contest 8"
+}

@@ -1,6 +1,6 @@
 {
   "numTest": 4,
-  "compact": false,
+  "compact": true,
   "genParameters": "",
   "generatorSeed": "",
   "interactive": false,
@@ -20,6 +20,6 @@
   "stopAtWrongAnswer": false,
   "name": "F. Array Partition",
   "truncateLongTest": false,
-  "hideAcceptedTest": false,
+  "hideAcceptedTest": true,
   "group": "Codeforces - Codeforces Round #686 (Div. 3)"
 }

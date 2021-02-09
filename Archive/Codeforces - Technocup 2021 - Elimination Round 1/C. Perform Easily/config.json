@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1413/C",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "0\n",
+      "input": "1 4 100 10 30 5\n6\n101 104 105 110 130 200\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "7\n",
+      "input": "1 1 2 2 3 3\n7\n13 4 11 12 11 13 12\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "1 2 3 4 5 6\n10\n4 8 8 8 2 5 7 6 3 4",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "200",
+      "input": "10000 10000 10000 10000 10000 10000\n3\n500 600 700",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. Perform Easily",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Technocup 2021 - Elimination Round 1"
+}

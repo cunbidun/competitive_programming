@@ -158,6 +158,15 @@ if [ "$(ls -A $DIR)" ]; then
             fi
         else 
             printf "\e[36;1mTest #${f%.*}: \e[0m" 
+            # TODO change this !!!
+            if [[ $interactive = "false" ]] && [[ $knowGenAns = "true" ]] && [[ $useGeneration == true ]]; then
+                ../slow < $f > "${f%.*}.out" 
+                if [ $? -ne 0 ];then 
+                    echo "\e[31;1mSlow solution run time error!\e[0m" 
+                    cleanup
+                    exit 0
+                fi 
+            fi
         fi
 
         expected_output=false

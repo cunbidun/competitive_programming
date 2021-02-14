@@ -8,17 +8,10 @@ typedef long long ll;
 
 void writeTest(int test) {
   startTest(test);
-  int n = rnd.next((int)1e5, (int)1e5);
-  cout << n << "\n";
-  vector<int> a;
-  for (int i = 1; i <= n; i++) {
-    a.push_back(i);
-  }
-  // shuffle(a.begin(), a.end());
-  for (int i : a) {
-    cout << i << " ";
-  }
-  cout << "\n";
+  int n = rnd.next(2, 7);
+  int m = rnd.next(1, min(10, n * (n - 1)));
+  cout << n << " " << m << "\n";
+  gen_directed_graph(n, m);
   char number_str[10];
   sprintf(number_str, "%d", test);
   std::rename(number_str, ('S' + to_string(test) + ".in").c_str());

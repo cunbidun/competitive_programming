@@ -209,9 +209,10 @@ Please take a look at the `Archive` folder for more information.
 ```
 Test #0: wrong answer
 Test #1: accepted
-...
 ```
 
+2. precomiled problem
+3. slow solution independent of use generation
 ## Credits
 
 1. The project is heavily inspired by [Egor Kulikov](https://github.com/EgorKulikov)'s [CHelper](https://github.com/EgorKulikov/idea-chelper).

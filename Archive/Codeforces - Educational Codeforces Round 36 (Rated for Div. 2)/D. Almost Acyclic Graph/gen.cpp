@@ -8,9 +8,10 @@ typedef long long ll;
 
 void writeTest(int test) {
   startTest(test);
-  int n = rnd.next(1, 10);
-  cout << n << "\n";
-  gen_array(n, 1, (n + 1) / 2);
+  int n = rnd.next(2, 7);
+  int m = rnd.next(1, min(10, n * (n - 1)));
+  cout << n << " " << m << "\n";
+  gen_directed_graph(n, m);
   char number_str[10];
   sprintf(number_str, "%d", test);
   std::rename(number_str, ('S' + to_string(test) + ".in").c_str());

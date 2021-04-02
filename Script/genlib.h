@@ -24,7 +24,8 @@ string gen_string(int n, bool lower, bool upper, bool number, string custom, boo
   return s;
 }
 
-template <class T> vector<T> gen_array(int n, T min_val, T max_val, bool p = true) {
+template <class T>
+vector<T> gen_array(int n, T min_val, T max_val, bool p = true) {
   vector<T> array;
   for (int i = 0; i < n; i++) {
     array.push_back(rnd.next(min_val, max_val));
@@ -63,4 +64,26 @@ vector<vector<int>> gen_directed_graph(int n, int m, int st = 1, bool p = true) 
   return g;
 }
 
+vector<vector<int>> gen_weighted_graph(int n, int m, int min_wt, int max_wt, int st = 1, bool p = true) {
+  vector<vector<int>> g(n);
+  set<pair<int, int>> s;
+  vector<pair<int, int>> edges;
+  for (int i = 0; i < m; i++) {
+    int u = rnd.next(0, n - 1);
+    int v = rnd.next(0, n - 1);
+    if (u == v || s.find({u, v}) != s.end()) {
+      i--;
+    } else {
+      edges.push_back({u, v});
+      s.insert({u, v});
+      s.insert({v, u});
+    }
+  }
+  if (p) {
+    for (auto [i, j] : edges) {
+      cout << i + st << " " << j + st << " " << rnd.next(min_wt, max_wt) << "\n";
+    }
+  }
+  return g;
+}
 #endif

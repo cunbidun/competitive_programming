@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/contest/1498/problem/D",
+  "timeLimit": 3000,
+  "tests": [
+    {
+      "output": "-1 -1 1 -1 -1 1 -1 -1 -1 3 -1 2 3 -1 -1 3 -1 -1 -1 3\n",
+      "input": "3 20\n1 300000 2\n2 400000 2\n1 1000000 3\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "-1 -1 -1 1 -1 -1 -1 1 -1 -1 3 -1 -1 -1 3 -1 2 -1 3 -1\n",
+      "input": "3 20\n1 399999 2\n2 412345 2\n1 1000001 3\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "-1 -1 1",
+      "input": "1 3\n1 300000 2\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "2 12\n1 300000 2\n2 400000 2\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D. Bananas in a Microwave",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - CodeCraft-21 and Codeforces Round #711 (Div. 2)"
+}

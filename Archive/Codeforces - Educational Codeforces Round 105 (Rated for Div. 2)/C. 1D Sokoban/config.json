@@ -1,0 +1,55 @@
+{
+  "numTest": 100,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/problemset/problem/1494/C",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "4\n2\n0\n3\n1\n",
+      "input": "5\n5 6\n-1 1 5 11 15\n-4 -3 -2 6 7 15\n2 2\n-1 1\n-1000000000 1000000000\n2 2\n-1000000000 1000000000\n-1 1\n3 5\n-1 1 2\n-2 -1 1 2 5\n2 1\n1 2\n10\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "4",
+      "input": "1\n5 6\n-1 1 5 11 15\n-4 -3 -2 6 7 15",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "1\n2 1\n1 2\n10\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "3\n2",
+      "input": "2\n4 5\n1 2 3 4 \n7 8 10 11 12\n4 5\n-1 -2 -3 -4 \n-7 -8 10 11 12",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "1\n3 4\n2 5 6\n5 6 7 100",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "1\n4 4\n1 5 9 10\n1 4 9 10\n",
+      "index": 5,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. 1D Sokoban",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 105 (Rated for Div. 2)"
+}

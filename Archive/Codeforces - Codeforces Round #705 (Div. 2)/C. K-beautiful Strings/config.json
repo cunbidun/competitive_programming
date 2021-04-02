@@ -1,0 +1,79 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1493/C",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "acac\nabc\n-1\nabaabaaab\n",
+      "input": "4\n4 2\nabcd\n3 1\nabc\n4 3\naaaa\n9 3\nabaabaaaa\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "bbbb",
+      "input": "1\n4 4\naxxx\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "acac",
+      "input": "1\n4 2\nabxx\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "abba",
+      "input": "1\n4 2\nabax",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "abc",
+      "input": "1\n3 1\nabc",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "zzzzzzzzz\naaazzzzzz",
+      "input": "2\n9 3\nzzzzzzzzz\n9 3\naaazzzzzz",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "zzz",
+      "input": "1\n3 1\nzzz",
+      "index": 6,
+      "active": true
+    },
+    {
+      "output": "azzaaz",
+      "input": "1\n6 3\nazxzaa",
+      "index": 7,
+      "active": true
+    },
+    {
+      "output": "a\nbb",
+      "input": "2\n1 1\na\n2 2\nab",
+      "index": 8,
+      "active": true
+    },
+    {
+      "output": "bbaa",
+      "input": "1\n4 2\nbaxx",
+      "index": 9,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. K-beautiful Strings",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #705 (Div. 2)"
+}

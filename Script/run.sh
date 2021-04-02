@@ -136,13 +136,12 @@ fi
 
 cd .. 
 
-if [ $interactive = "true" ]; then
-    mv solution './TestCase'
-fi
 #test
-
 DIR="./TestCase/" 
 if [ "$(ls -A $DIR)" ]; then
+    if [ $interactive = "true" ]; then # because for execl in the interactor
+        mv solution './TestCase'
+    fi
     cd './TestCase/'
     for f in `ls -v *.in` 
     do

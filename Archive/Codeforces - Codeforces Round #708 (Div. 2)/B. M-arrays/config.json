@@ -1,0 +1,37 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1497/problem/B",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "3\n6\n1\n1\n",
+      "input": "4\n6 4\n2 2 8 6 9 4\n10 8\n1 1 1 5 2 4 4 8 6 7\n1 1\n666\n2 2\n2 4\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "1\n1",
+      "input": "2\n1 3\n3\n4 5\n5 5 5 5 5",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "1\n2 3\n1 2",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B. M-arrays",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #708 (Div. 2)"
+}

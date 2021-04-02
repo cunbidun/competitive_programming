@@ -1,0 +1,37 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codingcompetitions.withgoogle.com/codejam/round/000000000043580a/00000000006d12d7",
+  "timeLimit": 10000,
+  "tests": [
+    {
+      "output": "Case #1: 4 2 1 3\nCase #2: 1 2\nCase #3: 7 6 5 4 3 2 1\nCase #4: IMPOSSIBLE\nCase #5: IMPOSSIBLE\n",
+      "input": "5\n4 6\n2 1\n7 12\n7 2\n2 1000\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "1\n4 6",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1\n2 1",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "Reversort Engineering",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Google Coding Competitions - Qualification Round 2021 - Code Jam 2021"
+}

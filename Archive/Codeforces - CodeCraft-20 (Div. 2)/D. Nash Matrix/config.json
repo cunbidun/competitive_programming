@@ -1,0 +1,67 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1316/D",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "VALID\nXL\nRX\n",
+      "input": "2\n1 1 1 1\n2 2 2 2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "VALID\nRRD\nUXD\nULL\n",
+      "input": "3\n-1 -1 -1 -1 -1 -1\n-1 -1 2 2 -1 -1\n-1 -1 -1 -1 -1 -1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "INVALID",
+      "input": "2 2\n1 1 1 2\n2 1 1 1",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "INVALID",
+      "input": "3\n1 1 1 2 1 3\n2 1 -1 -1 2 3\n3 1 3 2 3 3",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "3\n-1 -1 1 2 -1 -1\n-1 -1 2 2 -1 -1\n-1 -1 3 2 -1 -1\n",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "INVALID",
+      "input": "3\n3 3 1 2 -1 -1\n-1 -1 2 2 -1 -1\n-1 -1 3 2 3 3\n",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "INVALID",
+      "input": "3\n3 2 1 2 -1 -1\n-1 -1 2 2 -1 -1\n3 2 3 2 -1 -1\n",
+      "index": 6,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "3\n3 2 1 2 -1 -1\n3 2 2 2 -1 -1\n3 2 3 2 -1 -1\n",
+      "index": 7,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D. Nash Matrix",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - CodeCraft-20 (Div. 2)"
+}

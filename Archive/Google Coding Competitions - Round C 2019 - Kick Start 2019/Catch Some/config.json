@@ -1,0 +1,73 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050ff2/0000000000150a0d",
+  "timeLimit": 30000,
+  "tests": [
+    {
+      "output": "Case #1: 8\nCase #2: 6\nCase #3: 10028\n",
+      "input": "3\n4 3\n1 2 4 9\n3 3 2 3\n4 3\n1 2 3 4\n1 8 1 8\n6 6\n4 3 3 1 3 10000\n1 2 8 9 5 7\n",
+      "index": 0,
+      "active": false
+    },
+    {
+      "output": "Case #1: 100000",
+      "input": "1\n1 1\n100000\n1000\n",
+      "index": 1,
+      "active": false
+    },
+    {
+      "output": "Case #1: 12\nCase #2: 100024\nCase #3: 100000",
+      "input": "3\n2 1\n12 100000\n500 1000\n2 2\n12 100000\n500 1000\n2 2\n12 100000\n500 500",
+      "index": 2,
+      "active": false
+    },
+    {
+      "output": "Case #1: 9\nCase #2: 7\nCase #3: 1\n",
+      "input": "3\n10 5\n1 1 1 1 1 1 1 1 1 1\n1 2 3 4 5 6 7 8 9 10\n10 5\n1 1 1 1 1 1 1 1 1 1\n1 2 2 4 5 6 7 8 9 10\n10 10\n1 1 1 1 1 1 1 1 1 1\n1 1 1 1 1 1 1 1 1 1",
+      "index": 3,
+      "active": false
+    },
+    {
+      "output": "Case #1: 4\nCase #2: 4",
+      "input": "2\n2 2\n1 2\n1 1000\n2 2\n1 2\n1000 1",
+      "index": 4,
+      "active": false
+    },
+    {
+      "output": "Case #1: 2\nCase #2: 12\nCase #3: 14",
+      "input": "3\n5 2\n2 3 2 4 1\n1 2 1 5 3\n4 3\n1 15 1 10\n1 1 2 2\n4 3\n1 15 1 10\n1 2 3 4",
+      "index": 5,
+      "active": false
+    },
+    {
+      "output": "Case #1: 18",
+      "input": "1\n4 3\n5 1 9 6\n1 7 7 4\n",
+      "index": 6,
+      "active": false
+    },
+    {
+      "output": "Case #1: 5",
+      "input": "1\n3 2\n5 1 5\n1 1 3\n",
+      "index": 7,
+      "active": false
+    },
+    {
+      "output": "Case #1: 11\n",
+      "input": "1\n3 3\n2 7 6\n3 1000 1000\n",
+      "index": 8,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "Catch Some",
+  "truncateLongTest": true,
+  "hideAcceptedTest": true,
+  "group": "Google Coding Competitions - Round C 2019 - Kick Start 2019"
+}

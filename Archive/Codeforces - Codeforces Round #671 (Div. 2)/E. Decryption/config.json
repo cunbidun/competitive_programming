@@ -1,0 +1,55 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1419/problem/E",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "2 3 6\n1\n2 4\n0\n2 30 6 3 15 5 10\n0\n",
+      "input": "3\n6\n4\n30\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1\n12",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1\n36",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1\n125",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "7 49\n0",
+      "input": "1\n49",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1\n998863322",
+      "index": 5,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Decryption",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #671 (Div. 2)"
+}

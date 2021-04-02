@@ -1,0 +1,127 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codingcompetitions.withgoogle.com/codejam/round/00000000000516b9/0000000000134cdf",
+  "timeLimit": 30000,
+  "tests": [
+    {
+      "output": "Case #1: 0\nCase #2: 0\nCase #3: 7\nCase #4: 2\nCase #5: 0\n",
+      "input": "5\n2 2\n..\n.#\n4 4\n.#..\n..#.\n#...\n...#\n3 4\n#.##\n....\n#.##\n1 1\n.\n1 2\n##\n",
+      "index": 0,
+      "active": false
+    },
+    {
+      "output": "Case #1: 0",
+      "input": "1\n1 2\n##",
+      "index": 1,
+      "active": false
+    },
+    {
+      "output": "Case #1: 0",
+      "input": "1\n2 2\n..\n.#",
+      "index": 2,
+      "active": false
+    },
+    {
+      "output": "Case #1: 0\nCase #2: 6",
+      "input": "2\n2 2\n..\n..\n3 3\n...\n...\n...",
+      "index": 3,
+      "active": false
+    },
+    {
+      "output": "Case #1: 0\nCase #2: 0\nCase #3: 2",
+      "input": "3\n3 3\n...\n###\n...\n3 3\n.#.\n#.#\n.#.\n2 2\n..\n##\n",
+      "index": 4,
+      "active": false
+    },
+    {
+      "output": "Case #1: 0",
+      "input": "1\n4 4\n....\n..#.\n.#.#\n..#.",
+      "index": 5,
+      "active": false
+    },
+    {
+      "output": "Case #1: 13",
+      "input": "1\n4 5\n.....\n..#..\n.#.#.\n..#..",
+      "index": 6,
+      "active": false
+    },
+    {
+      "output": "Case #1: 3\nCase #2: 1\nCase #3: 0\nCase #4: 0\nCase #5: 0",
+      "input": "5\n1 4\n..#.\n1 2\n#.\n1 4\n####\n1 1\n#\n2 2\n.#\n#.",
+      "index": 7,
+      "active": false
+    },
+    {
+      "output": "Case #1: 3\nCase #2: 3\nCase #3: 2\nCase #4: 2",
+      "input": "4\n1 4\n..#.\n1 4\n.#..\n1 4\n#...\n1 4\n...#",
+      "index": 8,
+      "active": false
+    },
+    {
+      "output": "Case #1: 1\nCase #2: 1\nCase #3: 1\nCase #4: 1",
+      "input": "4\n1 2\n#.\n1 2\n.#\n2 1\n.\n#\n2 1\n#\n.",
+      "index": 9,
+      "active": false
+    },
+    {
+      "output": "Case #1: 0\nCase #2: 12",
+      "input": "2\n3 3\n#..\n...\n...\n4 4\n....\n.#.#\n..#.\n....",
+      "index": 10,
+      "active": false
+    },
+    {
+      "output": "Case #1: 4\nCase #2: 4\nCase #3: 6\nCase #4: 7",
+      "input": "4\n3 1\n.\n.\n.\n1 3\n...\n2 3\n...\n...\n2 3\n...\n.#.",
+      "index": 11,
+      "active": false
+    },
+    {
+      "output": "Case #1: 18",
+      "input": "1\n3 4\n....\n....\n....\n",
+      "index": 12,
+      "active": false
+    },
+    {
+      "output": "Case #1: 0",
+      "input": "1\n2 4\n....\n.#..",
+      "index": 13,
+      "active": false
+    },
+    {
+      "output": "Case #1: 0",
+      "input": "1\n2 4\n....\n....\n",
+      "index": 14,
+      "active": false
+    },
+    {
+      "output": "Case #1: 4\nCase #2: 0\nCase #3: 0",
+      "input": "3\n4 4\n####\n#...\n#...\n....\n4 4\n###.\n#...\n#...\n....\n4 4\n.#..\n#...\n....\n....",
+      "index": 15,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n2 2\n..\n..",
+      "index": 16,
+      "active": false
+    },
+    {
+      "output": null,
+      "input": "1\n2 2\n..\n##",
+      "index": 17,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "Bacterial Tactics",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Google Coding Competitions - Round 1C 2019 - Code Jam 2019"
+}

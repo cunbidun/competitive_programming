@@ -1,0 +1,31 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef2/00000000002d5b64",
+  "timeLimit": 30000,
+  "tests": [
+    {
+      "output": "Case #1: 1\n2 1\nCase #2: 2\n3 2\n2 1\nCase #3: 2\n2 3\n2 2\n",
+      "input": "3\n2 2\n3 2\n2 3\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1\n3 3",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "Join the Ranks",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Google Coding Competitions - Round 1B 2020 - Code Jam 2020"
+}

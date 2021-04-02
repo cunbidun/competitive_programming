@@ -1,0 +1,37 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050ff2/0000000000150aae",
+  "timeLimit": 15000,
+  "tests": [
+    {
+      "output": "Case #1: 2\nCase #2: 2\nCase #3: 6\n",
+      "input": "3\n1 4 0\n3 1 3 3\n2 3 0\n4 4 5\n7 6 6\n4 5 0\n2 2 4 4 20\n8 3 3 3 12\n6 6 3 3 3\n1 6 8 6 4\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "Case #1: 4\nCase #2: 3\nCase #3: 4\n",
+      "input": "3\n1 4 2\n3 1 3 3\n3 3 2\n0 5 0\n8 12 3\n7 10 1\n4 4 8\n20 10 20 10\n10 4 5 20\n20 5 4 10\n10 20 10 20\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "Case #1: 1",
+      "input": "1\n1 1 0\n12",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "Circuit Board",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Google Coding Competitions - Round C 2019 - Kick Start 2019"
+}

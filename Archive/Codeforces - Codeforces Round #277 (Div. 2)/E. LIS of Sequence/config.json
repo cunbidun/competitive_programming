@@ -1,0 +1,61 @@
+{
+  "numTest": 1,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/486/problem/E",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "3\n",
+      "input": "1\n4\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "3223\n",
+      "input": "4\n1 3 2 5\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "3133\n",
+      "input": "4\n1 5 2 3\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "222222",
+      "input": "6\n1 2 3 1 2 3",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "223122",
+      "input": "6\n3 2 4 1 6 5",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "33333",
+      "input": "5\n1 2 3 4 5",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "3333333333",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10",
+      "index": 6,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "E. LIS of Sequence",
+  "truncateLongTest": true,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #277 (Div. 2)"
+}

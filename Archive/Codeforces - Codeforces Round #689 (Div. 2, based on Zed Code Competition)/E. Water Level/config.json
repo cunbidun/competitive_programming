@@ -1,0 +1,61 @@
+{
+  "numTest": 100,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/contest/1461/problem/E",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "No\n",
+      "input": "8 1 10 2 6 4\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "Yes\n",
+      "input": "8 1 10 2 6 5\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "No\n",
+      "input": "9 1 10 9 2 9\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "Yes\n",
+      "input": "20 15 25 3 5 7\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "No",
+      "input": "2 1 9 3 3 7",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "Yes",
+      "input": "2 1 9 2 3 7",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "",
+      "index": 6,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Water Level",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #689 (Div. 2, based on Zed Code Competition)"
+}

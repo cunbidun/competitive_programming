@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": null,
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "4\n5\n32\n18\n18432",
+      "input": "",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "PowersOfTwo",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Topcoder SRM #612"
+}

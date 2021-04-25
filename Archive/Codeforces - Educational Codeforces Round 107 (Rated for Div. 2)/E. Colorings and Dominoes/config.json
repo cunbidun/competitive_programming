@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1511/problem/E",
+  "timeLimit": 3000,
+  "tests": [
+    {
+      "output": "144\n",
+      "input": "3 4\n**oo\noo*o\n**oo\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "48\n",
+      "input": "3 4\n**oo\noo**\n**oo\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "4\n",
+      "input": "2 2\noo\no*\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "9\n",
+      "input": "1 4\noooo\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Colorings and Dominoes",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 107 (Rated for Div. 2)"
+}

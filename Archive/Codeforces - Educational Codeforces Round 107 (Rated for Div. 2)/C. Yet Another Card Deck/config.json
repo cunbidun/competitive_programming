@@ -1,0 +1,31 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1511/problem/C",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "5 2 3 1 5\n",
+      "input": "7 5\n2 1 1 4 3 3 1\n3 2 1 1 4\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "7 2\n2 1 1 4 3 3 1\n3 2",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. Yet Another Card Deck",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 107 (Rated for Div. 2)"
+}

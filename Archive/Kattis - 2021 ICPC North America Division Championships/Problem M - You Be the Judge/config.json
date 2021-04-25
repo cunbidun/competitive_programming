@@ -1,0 +1,73 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://nadc21.kattis.com/problems/nadc21.youbethejudge",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "1\n",
+      "input": "10 3 7\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "1\n",
+      "input": "10   3   7\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "0\n",
+      "input": "314\n159 265\n358\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "1\n",
+      "input": "22 19 3\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "1\n",
+      "input": "   60\n\n  29\n\n      31\n",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "0\n",
+      "input": "fred!\nsam!\ngeorge!\n",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "3 1 2",
+      "index": 6,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "1000000002 3 7",
+      "index": 7,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "5 3 2",
+      "index": 8,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "Problem M - You Be the Judge",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Kattis - 2021 ICPC North America Division Championships"
+}

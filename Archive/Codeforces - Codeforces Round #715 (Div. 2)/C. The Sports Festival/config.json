@@ -1,0 +1,49 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1509/problem/C",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "3\n",
+      "input": "3\n3 1 2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "0\n",
+      "input": "1\n5\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "11\n",
+      "input": "6\n1 6 3 3 6 3\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "2833800505\n",
+      "input": "6\n104 943872923 6589 889921234 1000000000 69\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "5734409263",
+      "input": "20\n293434130 567534945 339132630 291152695 959629878 416618095 149341899 479358017 509348379 335313693 386003521 360528367 387150541 724271523 741417449 63831275 308645820 457460287 716709394 977143845",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. The Sports Festival",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #715 (Div. 2)"
+}

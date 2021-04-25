@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": null,
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "1\n-1\n1\n1\n24\n5",
+      "input": "",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "MonsterFarm",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "TopCoder SRM #531"
+}

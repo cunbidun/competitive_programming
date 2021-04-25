@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1409/F",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "3\n",
+      "input": "4 2\nbbaa\nab\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "10\n",
+      "input": "7 3\nasddsaf\nsd\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "16\n",
+      "input": "15 6\nqwertyhgfdsazxc\nqa\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "15\n",
+      "input": "7 2\nabacaba\naa\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "F. Subsequences of Length Two",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #667 (Div. 3)"
+}

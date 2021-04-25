@@ -1,0 +1,31 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1513/problem/C",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "5\n2\n6\n4\n2115\n",
+      "input": "5\n1912 1\n5 6\n999 1\n88 2\n12 100\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "1\n1 1",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. Add One",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Divide by Zero 2021 and Codeforces Round #714 (Div. 2)"
+}

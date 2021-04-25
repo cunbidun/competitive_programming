@@ -89,12 +89,13 @@ else
     fi
 fi
 
+if [ $knowGenAns = "true" ]; then
+    compile slow
+fi
+
 if [ $useGeneration = "true" ]; then
     if [[ -z $generator_seed ]]; then
         generator_seed="$RANDOM$RANDOM"
-    fi
-    if [ $knowGenAns = "true" ]; then
-        compile slow
     fi
     compile gen
     echo "\e[34;1mStress Test with token: '$generator_seed'\e[0m" 
@@ -158,7 +159,7 @@ if [ "$(ls -A $DIR)" ]; then
         else 
             printf "\e[36;1mTest #${f%.*}: \e[0m" 
             # TODO change this !!!
-            if [[ $interactive = "false" ]] && [[ $knowGenAns = "true" ]] && [[ $useGeneration == true ]]; then
+            if [[ $interactive = "false" ]] && [[ $knowGenAns = "true" ]]; then
                 ../slow < $f > "${f%.*}.out" 
                 if [ $? -ne 0 ];then 
                     echo "\e[31;1mSlow solution run time error!\e[0m" 

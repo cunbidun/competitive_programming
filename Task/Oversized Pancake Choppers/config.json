@@ -4,9 +4,9 @@
   "genParameters": "",
   "generatorSeed": "",
   "interactive": false,
-  "useGeneration": true,
+  "useGeneration": false,
   "checker": "token_checker",
-  "knowGenAns": true,
+  "knowGenAns": false,
   "url": "https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4/00000000003172d1",
   "timeLimit": 20000,
   "tests": [
@@ -29,9 +29,9 @@
       "active": true
     }
   ],
-  "stopAtWrongAnswer": false,
+  "stopAtWrongAnswer": true,
   "name": "Oversized Pancake Choppers",
   "truncateLongTest": false,
-  "hideAcceptedTest": false,
+  "hideAcceptedTest": true,
   "group": "Google Coding Competitions - Round 1C 2020 - Code Jam 2020"
 }

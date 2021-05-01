@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": null,
+  "timeLimit": 10000,
+  "tests": [
+    {
+      "output": "7\n16081",
+      "input": "",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "BlackBoxDiv2",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": ""
+}

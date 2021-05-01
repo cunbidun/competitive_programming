@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://atcoder.jp/contests/agc026/tasks/agc026_c",
+  "timeLimit": 3000,
+  "tests": [
+    {
+      "output": "4\n",
+      "input": "4\ncabaacba\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "504\n",
+      "input": "11\nmippiisssisssiipsspiim\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "0\n",
+      "input": "4\nabcdefgh\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "9075135300\n",
+      "input": "18\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C - String Coloring",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "AtCoder - AtCoder Grand Contest 026"
+}

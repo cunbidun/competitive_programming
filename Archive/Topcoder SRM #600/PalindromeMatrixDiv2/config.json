@@ -1,0 +1,109 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": null,
+  "timeLimit": 10000,
+  "tests": [
+    {
+      "output": "0",
+      "input": "2\n0001\n0101\n0 3",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "8",
+      "input": "8\n01010101\n01010101\n01010101\n01010101\n01010101\n01010101\n01010101\n01010101\n2\n2",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "4\n0000\n0110\n0110\n0000\n4 4",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "4\n0000\n0110\n0100\n0000\n4 4",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "2\n0000\n0110\n1 0",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "7",
+      "input": "4\n0100\n1010\n1010\n1100\n4 4",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "6",
+      "input": "4\n0100\n1110\n1010\n1100\n4 4",
+      "index": 6,
+      "active": true
+    },
+    {
+      "output": "4",
+      "input": "8\n00\n00\n01\n00\n10\n00\n11\n00\n8 2",
+      "index": 7,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "4\n0000\n1010\n1001\n0100\n3 3",
+      "index": 8,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "4\n0000\n1010\n1001\n0100\n3 2",
+      "index": 9,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "2\n10\n10\n2 2",
+      "index": 10,
+      "active": true
+    },
+    {
+      "output": "32",
+      "input": "8\n01010101\n01010101\n01010101\n01010101\n01010101\n01010101\n01010101\n01010101\n8 8 ",
+      "index": 11,
+      "active": true
+    },
+    {
+      "output": "4",
+      "input": "2\n000111\n001101\n2 6",
+      "index": 12,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "4\n0110\n1001\n1011\n1111\n3 2",
+      "index": 13,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "2\n1000\n0001\n2 4",
+      "index": 14,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "PalindromeMatrixDiv2",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Topcoder SRM #600"
+}

@@ -8,13 +8,6 @@ typedef long long ll;
 
 void writeTest(int test) {
   startTest(test);
-  int n = rnd.next(1, 5);
-  cout << 1 << ' ' << n << '\n';
-  gen_string(2 * n, 0, 0, 0, "01");
-  cout << '\n';
-  gen_string(2 * n, 0, 0, 0, "01");
-  cout << '\n';
-  gen_string(2 * n, 0, 0, 0, "01");
   char number_str[10];
   sprintf(number_str, "%d", test);
   std::rename(number_str, ('S' + to_string(test) + ".in").c_str());

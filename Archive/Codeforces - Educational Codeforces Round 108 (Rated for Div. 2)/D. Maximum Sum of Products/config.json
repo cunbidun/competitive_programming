@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1519/problem/D",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "29\n",
+      "input": "5\n2 3 2 1 3\n1 3 2 4 2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "174\n",
+      "input": "2\n13 37\n2 4\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "235\n",
+      "input": "6\n1 8 7 6 3 6\n5 9 6 8 8 6\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "50\n14 69 33 38 83 65 21 66 89 3 93 60 31 16 61 20 42 64 13 1 50 50 74 58 67 61 52 22 69 68 18 33 28 59 4 8 96 32 84 85 87 87 61 89 2 47 15 64 88 18\n58 100 38 69 55 7 52 29 85 72 71 51 69 46 89 26 19 74 96 43 38 64 47 44 28 1 83 62 43 68 4 49 33 20 93 60 98 44 19 90 29 99 91 87 59 80 60 32 31 92\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D. Maximum Sum of Products",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 108 (Rated for Div. 2)"
+}

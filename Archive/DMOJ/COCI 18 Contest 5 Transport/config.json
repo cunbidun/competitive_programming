@@ -1,0 +1,49 @@
+{
+  "numTest": 100,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://dmoj.ca/problem/coci18c5p5",
+  "timeLimit": 600,
+  "tests": [
+    {
+      "output": "1\n",
+      "input": "2\n3 1\n1 2 2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "5\n",
+      "input": "5\n3 1 2 4 5\n1 2 3\n3 2 2\n4 2 6\n5 4 3\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "29\n",
+      "input": "8\n5 2 4 7 8 3 3 6\n6 5 5\n1 4 5\n3 1 2\n8 6 5\n1 2 3\n4 5 3\n4 7 5\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "8\n326575445 2 4346234 324521343 8 324521343 333333333 6\n6 5 10000000\n1 4 5\n3 1 2\n8 6 5\n1 2 3\n4 5 3\n4 7 5\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "1\n1",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "COCI 18 Contest 5 Transport",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "DMOJ"
+}

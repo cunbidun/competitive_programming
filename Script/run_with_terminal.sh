@@ -19,6 +19,8 @@ else
     cp "$1/../../Cache/solution" "$1/solution"
 fi
 
+cp ./solution.cpp ../../output
+
 ./solution
 
 rm -f ./solution

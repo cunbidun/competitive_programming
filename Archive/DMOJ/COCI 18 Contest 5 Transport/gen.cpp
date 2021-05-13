@@ -1,6 +1,7 @@
+#include <vector>
+
 #include "../../Script/genlib.h"
 #include "../../Script/testlib.h"
-#include <vector>
 
 using namespace std;
 
@@ -8,14 +9,14 @@ typedef long long ll;
 
 void writeTest(int test) {
   startTest(test);
+  int n = rnd.next(3, 100);
+  cout << n << '\n';
+  gen_array(n, 1, (int)1e9);
+  cout << '\n';
+  gen_weighted_tree(n, 1, (int)1e9);
+  cout << '\n';
 
   char number_str[10];
-  int N = rnd.next(1, 100);
-  int A = rnd.next(1, 100);
-  int R = rnd.next(1, 100);
-  int M = rnd.next(1, 100);
-  cout << N << ' ' << A << ' ' << R << ' ' << M << '\n';
-  gen_array(N, 1, 100);
   sprintf(number_str, "%d", test);
   std::rename(number_str, ('S' + to_string(test) + ".in").c_str());
 }

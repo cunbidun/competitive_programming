@@ -1,0 +1,73 @@
+{
+  "numTest": 100,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/problemset/problem/1355/E",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "12\n",
+      "input": "3 1 100 100\n1 3 8\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "9\n",
+      "input": "3 100 1 100\n1 3 8\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "4\n",
+      "input": "3 100 100 1\n1 3 8\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "4\n",
+      "input": "5 1 2 4\n5 5 3 6 5\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "3\n",
+      "input": "5 1 2 2\n5 5 3 6 5\n",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "100",
+      "input": "3 100 100 100\n1 2 3",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "100",
+      "input": "3 100 100 100\n1 2 2",
+      "index": 6,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "3 100 100 100\n2 2 2",
+      "index": 7,
+      "active": true
+    },
+    {
+      "output": "8",
+      "input": "2 8 10 4\n6 2\n",
+      "index": 8,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Restorer Distance",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #643 (Div. 2)"
+}

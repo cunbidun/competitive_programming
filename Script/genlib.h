@@ -1,7 +1,8 @@
 #ifndef _GENLIB_H_
 #define _GENLIB_H_
-#include "testlib.h"
 #include <iostream>
+
+#include "testlib.h"
 using namespace std;
 
 string gen_string(int n, bool lower, bool upper, bool number, string custom, bool p = true) {
@@ -85,5 +86,23 @@ vector<vector<int>> gen_weighted_graph(int n, int m, int min_wt, int max_wt, int
     }
   }
   return g;
+}
+
+vector<vector<array<int, 2>>> gen_weighted_tree(int n, int min_wt, int max_wt, int st = 1, bool p = true) {
+  vector<array<int, 3>> edge;
+  vector<vector<array<int, 2>>> tree(n);
+  for (int i = 1; i < n; i++) {
+    int pre = rnd.next(0, i - 1);
+    int k = rnd.next(min_wt, max_wt);
+    edge.push_back({i, pre, k});
+    tree[i].push_back({pre, k});
+    tree[pre].push_back({i, k});
+  }
+  if (p) {
+    for (auto [i, j, k] : edge) {
+      cout << i + st << " " << j + st << " " << k << "\n";
+    }
+  }
+  return tree;
 }
 #endif

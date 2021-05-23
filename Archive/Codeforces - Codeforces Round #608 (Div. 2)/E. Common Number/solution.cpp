@@ -24,8 +24,6 @@ using namespace std;
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  // how many numbers in range (1 -> n) start with prefix s in binary?
-  // all combination except those > n
   long long N, K;
   cin >> N >> K;
   auto len = [](long long x) {

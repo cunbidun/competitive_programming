@@ -1,0 +1,49 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "double_9",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1299/C",
+  "timeLimit": 3000,
+  "tests": [
+    {
+      "output": "5.666666667\n5.666666667\n5.666666667\n7.000000000\n",
+      "input": "4\n7 5 5 7\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "7.000000000\n8.000000000\n8.000000000\n10.000000000\n12.000000000\n",
+      "input": "5\n7 8 8 10 12\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "3.000000000\n5.000000000\n5.000000000\n5.000000000\n5.000000000\n5.000000000\n5.000000000\n5.000000000\n7.500000000\n7.500000000\n",
+      "input": "10\n3 9 5 5 1 7 5 3 8 7\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "12\n8 10 4 6 6 4 1 2 2 6 9 5",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "4.777777778\n4.777777778\n4.777777778\n4.777777778\n4.777777778\n4.777777778\n4.777777778\n4.777777778\n4.777777778\n6.000000000\n7.000000000\n7.000000000",
+      "input": "12\n8 10 4 6 6 4 1 2 2 6 9 5",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. Water Balance",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #618 (Div. 1)"
+}

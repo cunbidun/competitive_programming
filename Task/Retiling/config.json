@@ -1,0 +1,55 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codingcompetitions.withgoogle.com/codejam/round/0000000000435915/00000000007dc2de",
+  "timeLimit": 40000,
+  "tests": [
+    {
+      "output": "Case #1: 3\nCase #2: 4\n",
+      "input": "2\n2 4 1 1\nMGMG\nMMMG\nGMGM\nMMMM\n3 3 1 1\nMGG\nGMG\nMMM\nMMM\nMGM\nMMG\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "Case #1: 1003\n",
+      "input": "1\n1 5 1000 1\nMGGGG\nGGGMM\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "Case #1: 1\n",
+      "input": "1\n1 1 1 1\nG\nM",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "Case #1: 0\n",
+      "input": "1\n1 1 1 1\nG\nG",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "Case #1: 2",
+      "input": "1\n1 3 1 1\nGMG\nMGM",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "Case #1: 3",
+      "input": "1\n2 3 1 1\nMMM\nMGM\n\nMGM\nGMG",
+      "index": 5,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "Retiling",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Google Coding Competitions - Round 2 2021 - Code Jam 2021"
+}

@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1333/D",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "1 1\n",
+      "input": "2 1\nRL\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "-1\n",
+      "input": "2 1\nLR\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "2 1 3\n1 2\n",
+      "input": "4 2\nRLRL\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "6 6\nRRRLLL",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D. Challenges in school №41",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #632 (Div. 2)"
+}

@@ -1,0 +1,31 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1525/C",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "1 1 1 1 2 -1 2\n-1 -1\n2 2\n-1\n-1 2 7 3 2 7 3\n",
+      "input": "5\n7 12\n1 2 3 4 9 10 11\nR R L L R R R\n2 10\n1 6\nR R\n2 10\n1 3\nL L\n1 10\n5\nR\n7 8\n6 1 7 2 3 5 4\nR L R L L L L\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "7 7 ",
+      "input": "1\n2 8\n3 5\nL R",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. Robot Collisions",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 109 (Rated for Div. 2)"
+}

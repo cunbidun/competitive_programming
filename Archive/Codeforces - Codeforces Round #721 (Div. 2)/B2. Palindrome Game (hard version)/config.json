@@ -1,0 +1,37 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1527/problem/B2",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "ALICE\nBOB\nALICE\n",
+      "input": "3\n3\n110\n2\n00\n4\n1010\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "ALICE",
+      "input": "1\n5\n10110",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "DRAW",
+      "input": "1\n5\n10011",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B2. Palindrome Game (hard version)",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #721 (Div. 2)"
+}

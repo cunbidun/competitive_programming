@@ -1,25 +1,37 @@
 #!/bin/zsh
 
 clear
+ulimit -s unlimited;
+
+ROOT="$1"
+source "$CPS_CONFIG_PATH"
 
 SF=$(($(date +%s%N)/1000000))
+cd "$ROOT"
 
-cd "$1"
-
-if [ ! "$(<$1/solution.cpp)" = "$(<$1/../../Cache/solution.cpp)" ]; then 
-    g++ -DLOCAL -static -O2 -include ../../Script/stdc++.h -o solution ./solution.cpp --std=c++17
-    if [ $? -ne 0 ]; then
-        echo "\e[31;1mCompile solution file failed!\e[0m" 
-        cleanup
-        exit 0
+function compile() {
+  mkdir -p "$CACHE_PATH" 
+  if [ ! -f "$CACHE_PATH/$1.cpp" ] || [ ! "$(<$ROOT/$1.cpp)" = "$(<$CACHE_PATH/$1.cpp)" ]; then # $1 in this case is a local variable
+    if [ $USE_PRECOMPILED_HEADER = "1" ]; then
+      g++ $CPP_COMPILE_FLAG -include "$PRECOMPILED_HEADER_PATH/stdc++.h" -o "$1" "./$1.cpp"
+    else
+      g++ $CPP_COMPILE_FLAG -o "$1" "./$1.cpp"
     fi
-        cp "$1/solution.cpp" "$1/../../Cache/solution.cpp"
-        cp "$1/solution" "$1/../../Cache/solution"
-else
-    cp "$1/../../Cache/solution" "$1/solution"
-fi
+    if [ $? -ne 0 ]; then
+      echo "\e[31;1mCompile $1 file failed!\e[0m" 
+      cleanup
+      exit 0
+    fi
+      cp "$ROOT/$1.cpp" "$CACHE_PATH/$1.cpp"
+      cp "$ROOT/$1" "$CACHE_PATH/$1"
+  else
+    cp "$CACHE_PATH/$1" "$ROOT/$1"
+  fi
+}
 
-cp ./solution.cpp ../../output
+compile solution
+
+cp ./solution "$OUTPUT_PATH"
 
 ./solution
 
@@ -27,4 +39,5 @@ rm -f ./solution
 
 EF=$(($(date +%s%N)/1000000))
 time=$((EF-SF))
+echo
 echo "\e[35;1mTesting finished in $time ms\e[0m"

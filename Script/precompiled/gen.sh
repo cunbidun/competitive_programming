@@ -1,22 +1,18 @@
 #!/bin/zsh
 
+source "$CPS_CONFIG_PATH"
+
 rm -rf bits
 
-x=$(g++ -DLOCAL -static -O2 --std=c++17 file.cpp -H 2>&1 | grep bits/stdc++.h)
-directory=`echo $x | awk '{ print $NF }'`
-
-if [ -f "$directory" ]; then
-    echo "$directory exists."
-else 
-    echo "$directory does not exist."
-fi
+x=$(g++ $CPP_COMPILE_FLAG "$PRECOMPILED_HEADER_PATH/file.cpp" -H 2>&1 | grep bits/stdc++.h)
+directory=`echo $x | awk 'END{ print $NF }'`
 
 mkdir bits
-cp $directory bits/
+cp "$directory" bits/
 cd bits
-g++ -DLOCAL -static -O2 --std=c++17 stdc++.h
+g++ $CPP_COMPILE_FLAG stdc++.h
 
-mv stdc++.h.gch ../../
+mv stdc++.h.gch "$PRECOMPILED_HEADER_PATH"
 
 cd ..
 

@@ -1,0 +1,18 @@
+{
+  "numTest": 1,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1529/problem/E",
+  "timeLimit": 3000,
+  "tests": [],
+  "stopAtWrongAnswer": false,
+  "name": "E. Trees of Tranquillity",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #722 (Div. 2)"
+}

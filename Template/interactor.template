@@ -7,71 +7,42 @@ using namespace std;
 ofstream screen, res;
 ifstream in;
 
-void WA(int num = 1) {
+void WA(int num = 0, string message = "") {
   res << "wrong answer\n";
-  if (num == 1) {
+  if (message != "") {
+    res << message << endl;
+  } else if (num == 1) {
     res << "too many questions" << endl;
   } else if (num == 2) {
     res << "incorrect format" << endl;
-  } else {
-    res << "extra tokens" << endl;
   }
 }
 
 void OK() { res << "accepted" << endl; }
 
 void interactor() {
-  int n;
-  in >> n;
-  vector<int> a(n + 1);
-  for (int i = 1; i <= n; i++) {
-    in >> a[i];
-  }
-  cout << n << endl;
-  screen << "G" << n << endl;
-  int limit = n + 1;
-  while (limit--) {
+  int LIMIT = 6e4;
+  int q_count = 0;
+
+  int N;
+  in >> N;  // read from input file
+
+  cout << N << endl;           // print to stdout (to solution)
+  screen << "G" << N << endl;  // print to screen
+
+  while (1) {
     string type;
-    cin >> type;
+    cin >> type;  // get from stdin (from solution)
     screen << type << " ";
-    vector<int> b(n + 1);
-    if (type == "!") {
-      for (int i = 1; i <= n; i++) {
-        cin >> b[i];
-        screen << b[i] << " ";
-      }
-      screen << endl;
-      for (int i = 1; i <= n; i++) {
-        if (b[i] != a[i]) {
-          WA(0);
-        }
-      }
-      OK();
-      return;
-    } else {
-      int i, j;
-      cin >> i >> j;
-      screen << i << " " << j << endl;
-      if (i < 1 || j < 1 || n < i || n < j) {
-        WA(2);
-        return;
-      }
-      if (type == "AND") {
-        cout << (a[i] & a[j]) << endl;
-        screen << "G" << (a[i] & a[j]) << endl;
-      } else if (type == "OR") {
-        cout << (a[i] | a[j]) << endl;
-        screen << "G" << (a[i] | a[j]) << endl;
-      } else if (type == "XOR") {
-        cout << (a[i] ^ a[j]) << endl;
-        screen << "G" << (a[i] ^ a[j]) << endl;
-      } else {
-        WA(2);
+    if (type == "!") {  // answer
+    } else {            // ask
+      if (++q_count > LIMIT) {
+        WA(1);  // too many questions
         return;
       }
     }
   }
-  WA(1);
+  OK();
 }
 
 int main(int argc, char *argv[]) {
@@ -79,7 +50,6 @@ int main(int argc, char *argv[]) {
   char *ans = "/tmp/ans";
   mkfifo(que, 0777);
   mkfifo(ans, 0777);
-
   pid_t pid = fork();
   if (pid < 0) {
     return 1;
@@ -95,13 +65,10 @@ int main(int argc, char *argv[]) {
     int fd_read = open(que, O_RDONLY);
     dup2(fd_read, 0);
     dup2(fd_write, 1);
-
     in.open(argv[1]);
     screen.open(argv[2]);
     res.open(argv[3]);
-
     interactor();
-
     in.close();
     screen.close();
     res.close();

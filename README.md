@@ -4,7 +4,7 @@
 
 This project provides a set of tools for testing the correctness of solutions in coding competitions. Because scripts are all command-line interface (CLI), the project is independent of text editors/ IDEs. [vscode](https://code.visualstudio.com/) is the recommended text editors.
 
-This project is in the early stage of development, so there is a lot of room for improvement. Nevertheless, it is mature enough for any coding competition.
+This project is in the early stage of development, so there is a lot of room for improvement. Nevertheless, it is mature enough for casual coding competition.
 
 ## Install
 

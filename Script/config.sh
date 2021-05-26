@@ -1,51 +1,55 @@
 #!/bin/zsh
 
 clear
-cd "$1"
+
+ROOT="$1"
+source "$CPS_CONFIG_PATH"
+
+cd "$ROOT" 
 
 prename=$(jq -r '.name' config.json)
 
-java -jar ../../Script/Test.jar ./
+java -jar "$FRONTEND_PATH" "$ROOT/" 
 
 useGeneration=$(jq -r '.useGeneration' config.json)
 if [ $useGeneration = "true" ]
 then
-    FILE=./gen.cpp
-    if [ ! -f "$FILE" ]; 
-    then
-        cp ../../Template/gen.template ./gen.cpp
-    fi  
+  FILE=./gen.cpp
+  if [ ! -f "$FILE" ]; 
+  then
+    cp "$TEMPLATE_PATH/gen.template" ./gen.cpp
+  fi  
 fi
 
 interactive=$(jq -r '.interactive' config.json)
 if [ $interactive = "true" ]
 then
-    FILE=./interactor.cpp
-    if [ ! -f "$FILE" ]; 
-    then
-        cp ../../Template/interactor.template ./interactor.cpp
-    fi  
+  FILE=./interactor.cpp
+  if [ ! -f "$FILE" ]; 
+  then
+    cp "$TEMPLATE_PATH/interactor.template" ./interactor.cpp
+  fi  
 fi
 
 
 knowGenAns=$(jq -r '.knowGenAns' config.json)
 if [ $knowGenAns = "true" ]
 then
-    FILE=./slow.cpp
-    if [ ! -f "$FILE" ]; 
-    then
-        cp ../../Template/slow.template ./slow.cpp
-    fi  
+  FILE=./slow.cpp
+  if [ ! -f "$FILE" ]; 
+  then
+    cp "$TEMPLATE_PATH/slow.template" ./slow.cpp
+  fi  
 fi
 
 checker=$(jq -r '.checker' config.json)
 if [ $checker = "custom" ]
 then
-    FILE=./checker.cpp
-    if [ ! -f "$FILE" ]; 
-    then
-        cp ../../Template/checker.template ./checker.cpp
-    fi  
+  FILE=./checker.cpp
+  if [ ! -f "$FILE" ]; 
+  then
+    cp "$TEMPLATE_PATH/checker.template" ./checker.cpp
+  fi  
 fi
 
 name=$(jq -r '.name' config.json)
@@ -54,7 +58,7 @@ jq . config.json > tmp && mv tmp config.json
 
 cd ..
 if [ ! "$prename" = "" ]; then
-    if [ ! "$name" = "$prename" ];then
-        mv "$prename" "$name"
-    fi
+  if [ ! "$name" = "$prename" ];then
+    mv "$prename" "$name"
+  fi
 fi

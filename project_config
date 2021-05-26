@@ -1,0 +1,10 @@
+SCRIPT_PATH=~/competitive_programming/Script/
+CACHE_PATH=~/competitive_programming/cache/
+OUTPUT_PATH=~/competitive_programming/output/
+TEMPLATE_PATH=~/competitive_programming/Template/
+FRONTEND_PATH=~/competitive_programming/Script/Test.jar
+
+CPP_COMPILE_FLAG=(-DLOCAL -Wall -Wextra -Wshadow -O2 -std=c++17 -g -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector -D_GLIBCXX_DEBUG)
+
+USE_PRECOMPILED_HEADER=1
+PRECOMPILED_HEADER_PATH=~/competitive_programming/Script/precompiled

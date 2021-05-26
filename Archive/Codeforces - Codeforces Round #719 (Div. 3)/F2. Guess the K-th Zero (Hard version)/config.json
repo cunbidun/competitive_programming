@@ -1,0 +1,61 @@
+{
+  "numTest": 100,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": true,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1520/problem/F2",
+  "timeLimit": 4000,
+  "tests": [
+    {
+      "output": null,
+      "input": "2 2\n00\n1\n1",
+      "index": 0,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "6 2\n101101\n2 1",
+      "index": 1,
+      "active": false
+    },
+    {
+      "output": null,
+      "input": "4 3\n0001\n2\n2\n1",
+      "index": 2,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "10 5\n0100010000\n8 1 2 3 4",
+      "index": 3,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "5 3\n10100\n1\n2\n1",
+      "index": 4,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "20 10\n00000000000000000000\n1 2 3 4 5 6 7 9 10 ",
+      "index": 5,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "89 2\n11011110001100111110001111010000011110110001100000010001111100110101111010000001110111100\n2 1\n",
+      "index": 6,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "F2. Guess the K-th Zero (Hard version)",
+  "truncateLongTest": false,
+  "hideAcceptedTest": false,
+  "group": "Codeforces - Codeforces Round #719 (Div. 3)"
+}

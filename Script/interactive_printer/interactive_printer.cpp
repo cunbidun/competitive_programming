@@ -6,9 +6,9 @@ int main(int argc, char *argv[]) {
   string line;
   while (getline(cin, line)) {
     if (line[0] == 'G') {
-      cout << "\033[1;32m" << line.substr(1) << "\033[0m\n";
+      cout << "\033[0;32m" << line.substr(1) << "\033[0m\n";
     } else if (line[0] == 'R') {
-      cout << "\033[1;31m" << line.substr(1) << "\033[0m\n";
+      cout << "\033[0;31m" << line.substr(1) << "\033[0m\n";
     } else {
       cout << line << "\n";
     }

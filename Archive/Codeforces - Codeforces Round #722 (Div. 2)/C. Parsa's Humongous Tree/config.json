@@ -1,0 +1,37 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1529/problem/C",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "7\n8\n62\n",
+      "input": "3\n2\n1 6\n3 8\n1 2\n3\n1 3\n4 6\n7 9\n1 2\n2 3\n6\n3 14\n12 20\n12 19\n2 12\n10 17\n3 17\n3 2\n6 5\n1 5\n2 6\n4 6\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "7",
+      "input": "1\n2\n1 6\n3 8\n1 2",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "13",
+      "input": "1\n4\n10 10\n4 5\n1 1 \n1 1\n1 2\n2 3\n2 4",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. Parsa's Humongous Tree",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #722 (Div. 2)"
+}

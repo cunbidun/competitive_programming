@@ -20,7 +20,7 @@ int main() {
       v.push_back(N % i);
       N /= i;
     }
-    auto cal = [&](vector<int> v) -> long long {
+    auto cal = [&]() -> long long {
       int n = (int)v.size();
       sort(v.begin(), v.end());
       vector<int> cnt(21);
@@ -35,10 +35,10 @@ int main() {
       return res;
     };
     sort(v.begin(), v.end());
-    long long ans = cal(v);
+    long long ans = cal();
     if (v[0] == 0) {
       v.erase(v.begin());
-      ans -= cal(v);
+      ans -= cal();
     }
     cout << ans - 1 << '\n';
   }

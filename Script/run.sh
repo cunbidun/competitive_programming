@@ -3,6 +3,7 @@ clear
 ulimit -s unlimited;
 
 ROOT="$1"
+CPS_DEBUG="$2"
 source "$CPS_CONFIG_PATH"
 
 DASH_SEPERATOR="\e[34;1m--------------------------------------------------------\e[0m"
@@ -24,22 +25,36 @@ function cleanup() {
 }
 
 function compile() {
-  mkdir -p "$CACHE_PATH" 
-  if [ ! -f "$CACHE_PATH/$1.cpp" ] || [ ! "$(<$ROOT/$1.cpp)" = "$(<$CACHE_PATH/$1.cpp)" ]; then # $1 in this case is a local variable
-    if [ $USE_PRECOMPILED_HEADER = "1" ]; then
-      g++ $CPP_COMPILE_FLAG -include "$PRECOMPILED_HEADER_PATH/stdc++.h" -o "$1" "./$1.cpp"
-    else
-      g++ $CPP_COMPILE_FLAG -o "$1" "./$1.cpp"
+  FLAG=("${CPP_COMPILE_FLAG[@]}")
+  USE_CACHE_LOCAL=$USE_CACHE
+  if [ "$1" = "slow" ] || [ "$1" = "solution" ] || [ "$1" = "interactor" ]; then 
+    if [ "$CPS_DEBUG" = "1" ]; then
+      FLAG=("${CPP_DEBUG_FLAG[@]}")
+      USE_CACHE_LOCAL="0"
     fi
+  fi
+
+  if [ $USE_CACHE_LOCAL = "1" ]; then
+    mkdir -p "$CACHE_PATH" 
+    if [ ! -f "$CACHE_PATH/$1.cpp" ] || [ ! "$(<$ROOT/$1.cpp)" = "$(<$CACHE_PATH/$1.cpp)" ]; then # $1 in this case is a local variable
+      g++ $FLAG -o "$1" "./$1.cpp"
+      if [ $? -ne 0 ]; then
+        echo "\e[31;1mCompile $1 file failed!\e[0m" 
+        cleanup
+        exit 0
+      fi
+      cp "$ROOT/$1.cpp" "$CACHE_PATH/$1.cpp"
+      cp "$ROOT/$1" "$CACHE_PATH/$1"
+    else
+      cp "$CACHE_PATH/$1" "$ROOT/$1"
+    fi
+  else 
+    g++ $FLAG -o "$1" "./$1.cpp"
     if [ $? -ne 0 ]; then
       echo "\e[31;1mCompile $1 file failed!\e[0m" 
       cleanup
       exit 0
     fi
-    cp "$ROOT/$1.cpp" "$CACHE_PATH/$1.cpp"
-    cp "$ROOT/$1" "$CACHE_PATH/$1"
-  else
-    cp "$CACHE_PATH/$1" "$ROOT/$1"
   fi
 }
 
@@ -73,7 +88,12 @@ interactive=$(jq -r '.interactive' config.json)
 # ----------------------------- COMPILE ----------------------------
 COMPILE_START=$(($(date +%s%N)/1000000))
 
-compile solution
+if [ $USE_PRECOMPILED_HEADER = "1" ]; then
+  CPP_COMPILE_FLAG+=("-include" "$PRECOMPILED_HEADER_PATH/stdc++.h") 
+  CPP_DEBUG_FLAG+=("-include" "$PRECOMPILED_HEADER_PATH/debug/stdc++.h") 
+fi 
+
+compile solution  
 
 if [ $interactive = "true" ]; then 
   compile interactor 
@@ -90,7 +110,7 @@ else
 fi
 
 if [ $knowGenAns = "true" ]; then
-  compile slow
+  compile slow 
 fi
 
 if [ $useGeneration = "true" ]; then

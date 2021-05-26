@@ -9,7 +9,7 @@ typedef long long ll;
 void writeTest(int test) {
   startTest(test);
 
-  cout << 1 << '\n';
+  cout << 2 << '\n';
   char number_str[10];
   sprintf(number_str, "%d", test);
   std::rename(number_str, ('S' + to_string(test) + ".in").c_str());

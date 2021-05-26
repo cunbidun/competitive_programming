@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
   registerTestlibCmd(argc, argv);
   vector<string> v_ans, v_ouf;
 
+
   if (ans.seekEof()) {
     undecided();
   }

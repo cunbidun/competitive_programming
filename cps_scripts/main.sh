@@ -5,6 +5,15 @@ clear
 ROOT=$1:A
 source "$CPS_PATH/project_config"
 
+if [ ! -f "$ROOT/config.json" ]; then
+  echo "[CPS] Error, no config.json file found. Please create one" 
+  if [ -f "$TEMPLATE_PATH/config.template" ]; then
+    echo "Sample config: "
+    cat "$TEMPLATE_PATH/config.template"
+  fi
+  exit
+fi
+
 cd $CPS_PATH
 
 case $2 in

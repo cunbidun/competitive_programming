@@ -2,6 +2,7 @@
 
 source "$CPS_PATH/project_config"
 
+mkdir -p "$TASK_PATH" # create directory if not exist
 cd "$TASK_PATH"
 
 mkdir -p ___newTask

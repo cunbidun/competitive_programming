@@ -12,6 +12,7 @@ name=$(jq -r '.name' config.json)
 group=$(jq -r '.group' config.json)
 
 cd $TASK_PATH 
+mkdir -p "$ARCHIVE_PATH"
 
 if [ "$group" = "" ]; then
     mv "$name" "$ARCHIVE_PATH/Unsorted/"

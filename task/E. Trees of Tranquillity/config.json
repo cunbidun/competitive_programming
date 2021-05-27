@@ -1,10 +1,10 @@
 {
-  "numTest": 1,
-  "compact": true,
+  "numTest": 10,
+  "compact": false,
   "genParameters": "",
   "generatorSeed": "",
   "interactive": false,
-  "useGeneration": false,
+  "useGeneration": true,
   "checker": "custom",
   "knowGenAns": true,
   "url": "https://codeforces.com/contest/1529/problem/E",

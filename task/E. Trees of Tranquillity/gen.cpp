@@ -1,5 +1,5 @@
-#include "../../Script/genlib.h"
-#include "../../Script/testlib.h"
+#include "../libs/genlib.h"
+#include "../libs/testlib.h"
 #include <vector>
 
 using namespace std;

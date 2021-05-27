@@ -4,7 +4,7 @@
   "genParameters": "",
   "generatorSeed": "",
   "interactive": false,
-  "useGeneration": true,
+  "useGeneration": false,
   "checker": "custom",
   "knowGenAns": true,
   "url": "https://codeforces.com/contest/1529/problem/E",
@@ -14,6 +14,12 @@
       "output": "1",
       "input": "1",
       "index": 0,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "2",
+      "index": 1,
       "active": true
     }
   ],

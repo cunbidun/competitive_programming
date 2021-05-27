@@ -3,9 +3,9 @@
 clear
 ulimit -s unlimited;
 
-ROOT="$1"
+ROOT=$1:A
 CPS_DEBUG="$2"
-source "$CPS_CONFIG_PATH"
+source "$CPS_PATH/project_config"
 
 SF=$(($(date +%s%N)/1000000))
 cd "$ROOT"

@@ -1,24 +1,24 @@
 {
 	"folders": [
 		{
-			"name": "Task",
-			"path": "Task"
+			"name": "task",
+			"path": "task"
 		},
 		{
-			"name": "Archive",
-			"path": "Archive"
+			"name": "template",
+			"path": "template"
+		},
+		{
+			"name": "archive",
+			"path": "archive"
 		},
 		{
 			"name": "CC",
 			"path": "CC"
 		},
 		{
-			"name": "Script",
-			"path": "Script"
-		},
-		{
-			"name": "Template",
-			"path": "Template"
+			"name": "cps_scripts",
+			"path": "cps_scripts"
 		}
 	],
 	"settings": {

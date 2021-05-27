@@ -2,9 +2,9 @@
 clear
 ulimit -s unlimited;
 
-ROOT="$1"
+ROOT=$1:A
 CPS_DEBUG="$2"
-source "$CPS_CONFIG_PATH"
+source "$CPS_PATH/project_config"
 
 DASH_SEPERATOR="\e[34;1m--------------------------------------------------------\e[0m"
 EQUAL_SEPERATOR="========================================================"
@@ -30,7 +30,7 @@ function compile() {
   if [ "$1" = "slow" ] || [ "$1" = "solution" ] || [ "$1" = "interactor" ]; then 
     if [ "$CPS_DEBUG" = "1" ]; then
       FLAG=("${CPP_DEBUG_FLAG[@]}")
-      USE_CACHE_LOCAL="0"
+      USE_CACHE_LOCAL="0" # disable cache when run with CPS_DEBUG in solution and slow file
     fi
   fi
 

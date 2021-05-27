@@ -2,10 +2,11 @@
 
 clear
 
-ROOT="$1"
-source "$CPS_CONFIG_PATH"
+ROOT=$1:A
+source "$CPS_PATH/project_config"
 
 cd "$ROOT" 
+
 
 prename=$(jq -r '.name' config.json)
 

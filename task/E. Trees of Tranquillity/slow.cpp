@@ -3,5 +3,6 @@
 using namespace std;
 
 int main() {
-  cout << 1 << '\n';
+  cout << 0 << '\n';
+  vector<int> a(10);
 }

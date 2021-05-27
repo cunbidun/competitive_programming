@@ -118,7 +118,7 @@ Here is an example: problem [E. Trees of Tranquillity](https://codeforces.com/co
 }
 ```
 
-#### There are 16 configurations:
+There are 16 configurations:
 
 | Num  | Attribute           | Type                    | Description                                                                                                                                                                                                                             | Default value   |
 | ---- | ------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
@@ -139,7 +139,7 @@ Here is an example: problem [E. Trees of Tranquillity](https://codeforces.com/co
 | 15   | `compact`           | `boolean`               | Only print the most important information (test results)                                                                                                                                                                                | `true`          |
 | 16   | `hideAcceptedTest`  | `boolean`               | Hide accepted test cases information                                                                                                                                                                                                    | `true`          |
 
-- Others included:
+Others `checker` included:
 
 1. `double_4`: checking up to 4 decimals digit
 2. `double_6`: checking up to 6 decimals digit

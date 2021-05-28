@@ -1,8 +1,8 @@
-#!/bin/zsh
+#!/bin/bash
 
 clear
 
-ROOT=$1:A
+ROOT=$(realpath "$1")
 source "$CPS_PATH/project_config"
 
 if [ ! -f "$ROOT/config.json" ]; then
@@ -14,7 +14,7 @@ if [ ! -f "$ROOT/config.json" ]; then
   exit
 fi
 
-cd $CPS_PATH
+cd "$CPS_PATH" || exit
 
 case $2 in
 

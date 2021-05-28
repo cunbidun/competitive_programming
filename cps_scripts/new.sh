@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 source "$CPS_PATH/project_config"
 
@@ -18,7 +18,7 @@ name=$(jq -r '.name' config.json)
 
 cd ..
 if [ "$name" = "" ]; then
-    rm -rf ___newTask
-else 
-    mv ___newTask "$name"
+	rm -rf ___newTask
+else
+	mv ___newTask "$name"
 fi

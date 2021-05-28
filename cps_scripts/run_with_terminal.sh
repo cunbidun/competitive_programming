@@ -3,7 +3,7 @@
 clear
 ulimit -s unlimited;
 
-ROOT=$1:A
+ROOT=$(realpath "$1")
 CPS_DEBUG="$2"
 source "$CPS_PATH/project_config"
 
@@ -22,10 +22,10 @@ function compile() {
 
   if [ $USE_CACHE_LOCAL = "1" ]; then
     mkdir -p "$CACHE_PATH" 
-    if [ ! -f "$CACHE_PATH/$1.cpp" ] || [ ! "$(<$ROOT/$1.cpp)" = "$(<$CACHE_PATH/$1.cpp)" ]; then # $1 in this case is a local variable
+    if [ ! -f "$CACHE_PATH/$1.cpp" ] || [ $(cmp --silent "$ROOT/$1.cpp" "$CACHE_PATH/$1.cpp"; echo $?) -ne 0 ]; then # $1 in this case is a local variable
       g++ $FLAG -o "$1" "./$1.cpp"
       if [ $? -ne 0 ]; then
-        echo "\e[31;1mCompile $1 file failed!\e[0m" 
+        echo -e "\e[31;1mCompile $1 file failed!\e[0m" 
         cleanup
         exit 0
       fi
@@ -37,7 +37,7 @@ function compile() {
   else 
     g++ $FLAG -o "$1" "./$1.cpp"
     if [ $? -ne 0 ]; then
-      echo "\e[31;1mCompile $1 file failed!\e[0m" 
+      echo -e "\e[31;1mCompile $1 file failed!\e[0m" 
       cleanup
       exit 0
     fi
@@ -59,4 +59,4 @@ rm -f ./solution
 EF=$(($(date +%s%N)/1000000))
 time=$((EF-SF))
 echo
-echo "\e[35;1mTesting finished in $time ms\e[0m"
+echo -e "\e[35;1mTesting finished in $time ms\e[0m"

@@ -7,25 +7,25 @@
   "useGeneration": false,
   "checker": "token_checker",
   "knowGenAns": false,
-  "url": "https://open.kattis.com/problems/hello",
-  "timeLimit": 5000,
+  "url": "https://codeforces.com/problemset/problem/1256/F",
+  "timeLimit": 1000,
   "tests": [
     {
-      "output": "Hello World!",
-      "input": "",
+      "output": "NO\nYES\nNO\nYES\n",
+      "input": "4\n4\nabcd\nabdc\n5\nababa\nbaaba\n4\nasdf\nasdg\n4\nabcd\nbadc\n",
       "index": 0,
       "active": true
     },
     {
-      "output": "",
-      "input": "2 2",
+      "output": "YES",
+      "input": "1\n7\naabbbbb\nbaabbbb",
       "index": 1,
       "active": true
     }
   ],
   "stopAtWrongAnswer": false,
-  "name": "Hello World",
+  "name": "F. Equalizing Two Strings",
   "truncateLongTest": false,
   "hideAcceptedTest": true,
-  "group": "Kattis"
+  "group": "Codeforces - Codeforces Round #598 (Div. 3)"
 }

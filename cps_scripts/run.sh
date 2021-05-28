@@ -13,6 +13,7 @@ cd "$ROOT" || exit
 compact=$(jq -r '.compact' config.json) # compact mode
 hideAcceptedTest=$(jq -r '.hideAcceptedTest' config.json)
 generator_seed=$(jq -r '.generatorSeed' config.json)
+truncateLongTest=$(jq -r '.truncateLongTest' config.json)
 
 if $compact; then
 	DASH_SEPERATOR="\e[1;34m---------------------------\e[0m"
@@ -22,6 +23,14 @@ fi
 function cleanup() {
 	cd "$ROOT" || exit
 	rm -rf TestCase solution checker gen slow printer interactor
+}
+
+function p() {
+	if [ "$truncateLongTest" = "true" ] && [ ${#1} -gt 71 ]; then
+		printf "${1:0:35}...${1:$((${#1} - 35)):$((${#1} - 1))}\n"
+	else
+		printf "$1\n"
+	fi
 }
 
 function compile() {
@@ -67,7 +76,7 @@ trap '
   cleanup
   echo
   echo -e "\e[31;1mReceived SIGINT\e[0m"
-  echo "$DASH_SEPERATOR"
+  echo -e "$DASH_SEPERATOR"
   echo "$EQUAL_SEPERATOR"
   echo "Test results:"
   TESTING_END=$(($(date +%s%N)/1000000))
@@ -123,6 +132,7 @@ if [ $useGeneration = "true" ]; then
 	compile gen
 	echo -e "\e[34;1mStress Test with token: '$generator_seed'\e[0m"
 fi
+
 # ----------------------------- COMPILE -----------------------------
 
 if [ $compact = "false" ]; then
@@ -141,7 +151,6 @@ maxTime=0
 
 $SCRIPT_PATH/testcases_parser/tc_parser $1$
 
-truncateLongTest=$(jq -r '.truncateLongTest' config.json)
 stopAtWrongAnswer=$(jq -r '.stopAtWrongAnswer' config.json)
 numTest=$(jq -r '.numTest' config.json)
 cp ./solution.cpp "$OUTPUT_PATH"
@@ -160,16 +169,20 @@ fi
 cd ..
 DIR="./TestCase/"
 if [ "$(ls -A $DIR)" ]; then
-	if [ $interactive = "true" ]; then # because for execl in the interactor
+	if [ "$interactive" = "true" ]; then # because for execl in the interactor
 		mv solution './TestCase'
 	fi
 	cd './TestCase/' || exit
 	for f in $(ls -v *.in); do
+
+		# print test num based on test type
 		if [ ${f:0:1} = "S" ]; then
 			printf "\e[33;1mTest #${f%.*}: \e[0m"
 		else
 			printf "\e[36;1mTest #${f%.*}: \e[0m"
 		fi
+
+		# if there is brute force solution, run it
 		if [[ $interactive == "false" ]] && [[ $knowGenAns == "true" ]]; then
 			../slow <$f >"${f%.*}.out"
 			if [ $? -ne 0 ]; then
@@ -178,8 +191,9 @@ if [ "$(ls -A $DIR)" ]; then
 				exit 0
 			fi
 		fi
-		expected_output=false
-		if [ $interactive = "true" ]; then
+
+		# if this is interactive task
+		if [ "$interactive" = "true" ]; then
 			START=$(($(date +%s%N) / 1000000))
 			../interactor "$f" "${f%.*}.actual" "${f%.*}.res"
 			if [ $? -ne 0 ]; then
@@ -190,18 +204,14 @@ if [ "$(ls -A $DIR)" ]; then
 			fi
 			END=$(($(date +%s%N) / 1000000))
 			time=$((END - START))
-		else # not interactive task
+		else                   # not interactive task
+			expected_output=false # variable to check if the ouput file is empty or not
 			START=$(($(date +%s%N) / 1000000))
 			../solution <$f >"${f%.*}.actual"
-			if [ $? -ne 0 ]; then
+			if [ $? -ne 0 ]; then # if there is run time error
 				rte=true
-				in=$(<$f)
 				echo "Input:" # print the input when rte happen
-				if [ $truncateLongTest = "true" ] && [ ${#in} -gt 71 ]; then
-					echo "${in:0:35}...${in:$((${#in} - 35)):$((${#in} - 1))}"
-				else
-					echo $in
-				fi
+				p "$(<$f)"
 				echo -e "Verdict: \e[31;1mrun time error\e[0m"
 				echo -e "$DASH_SEPERATOR"
 				continue
@@ -214,7 +224,6 @@ if [ "$(ls -A $DIR)" ]; then
 			touch "${f%.*}.out"
 			../checker "$f" "${f%.*}.actual" "${f%.*}.out" "${f%.*}.res" >/dev/null 2>&1
 		fi
-
 		word=$(cat "${f%.*}.res" | head -n1 | awk '{print $1;}')
 		passed=true
 		undecided=false
@@ -229,33 +238,18 @@ if [ "$(ls -A $DIR)" ]; then
 			export GREP_COLORS='ms=01;32'
 			grep --color -E "accepted|$" "${f%.*}.res"
 		else
-			echo
-			in=$(<$f)
+      echo
 			echo "Input:"
-			if [ $truncateLongTest = "true" ] && [ ${#in} -gt 71 ]; then
-				echo "${in:0:35}...${in:$((${#in} - 35)):$((${#in} - 1))}"
-			else
-				echo $in
-			fi
+			p "$(<$f)"
 			if $expected_output; then
 				echo "Expected output:"
-				out=$(<${f%.*}.out)
-				if [ $truncateLongTest = "true" ] && [ ${#out} -gt 71 ]; then
-					echo "${out:0:35}...${out:$((${#out} - 35)):$((${#out} - 1))}"
-				else
-					echo $out
-				fi
+				p "$(<${f%.*}.out)"
 			fi
 			echo "Execution output:"
-			if [ $interactive = "true" ]; then
+			if [ "$interactive" = "true" ]; then
 				../printer "${f%.*}.actual"
 			else
-				out=$(<${f%.*}.actual)
-				if [ $truncateLongTest = "true" ] && [ ${#out} -gt 71 ]; then
-					echo "${out:0:35}...${out:$((${#out} - 35)):$((${#out} - 1))}"
-				else
-					echo $out
-				fi
+				p "$(<${f%.*}.actual)"
 			fi
 			printf "Verdict: "
 			if $passed; then

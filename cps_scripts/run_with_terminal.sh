@@ -50,7 +50,7 @@ fi
 
 compile solution
 
-cp ./solution "$OUTPUT_PATH"
+cp "$ROOT/solution.cpp" "$OUTPUT_PATH"
 
 ./solution
 

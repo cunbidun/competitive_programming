@@ -1,0 +1,49 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1263/E",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "-1 -1 -1 -1 -1 -1 1 1 -1 -1 2\n",
+      "input": "11\n(RaRbR)L)L(\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "-1 -1 1 1 -1 -1 1 1 1 -1 1\n",
+      "input": "11\n(R)R(R)Ra)c\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "-1 -1 1",
+      "input": "3\n(R)",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "0 0 0 -1",
+      "input": "4\nRRR)",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "0 0 -1 -1 1",
+      "input": "5\nLL(R)",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Editor",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #603 (Div. 2)"
+}

@@ -41,19 +41,19 @@ This project is in the early stage of development, so there is a lot of room for
 ### Project Configuration
 
 Here is an example project configuration (for this repo, it's in `cps_scripts` folder). This file should named `project_config` and place directly
-on the top level the `CPS_PATH` folder. Make sure that there `main.sh` in your `CPS_PATH`.
+on the top level the `CPS_PATH` folder. Make sure that there `main.sh` in your `CPS_PATH`. Also all the path must be in absolute form.
 
 Sample Configuration:
 
 ```
-TASK_PATH=~/competitive_programming/task/
-CACHE_PATH=~/competitive_programming/cache/
-OUTPUT_PATH=~/competitive_programming/output/
-TEMPLATE_PATH=~/competitive_programming/template/
-ARCHIVE_PATH=~/competitive_programming/archive/
-SCRIPT_PATH=~/competitive_programming/cps_scripts/
-FRONTEND_PATH=~/competitive_programming/cps_scripts/frontend/Test.jar
-PRECOMPILED_HEADER_PATH=~/competitive_programming/cps_scripts/precompiled
+TASK_PATH=/home/cunbidun/competitive_programming/task/
+CACHE_PATH=/home/cunbidun/competitive_programming/cache/
+OUTPUT_PATH=/home/cunbidun/competitive_programming/output/
+TEMPLATE_PATH=/home/cunbidun/competitive_programming/template/
+ARCHIVE_PATH=/home/cunbidun/competitive_programming/archive/
+SCRIPT_PATH=/home/cunbidun/competitive_programming/cps_scripts/
+FRONTEND_PATH=/home/cunbidun/competitive_programming/cps_scripts/frontend/Test.jar
+PRECOMPILED_HEADER_PATH=/home/cunbidun/competitive_programming/cps_scripts/precompiled/
 USE_PRECOMPILED_HEADER=1
 
 CPP_DEBUG_FLAG=(-DLOCAL -Wall -Wshadow -std=c++17 -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG)
@@ -118,7 +118,7 @@ Here is an example: problem [E. Trees of Tranquillity](https://codeforces.com/co
 }
 ```
 
-There are 16 configurations:
+There are 16 attributes:
 
 | Num  | Attribute           | Type                    | Description                                                                                                                                                                                                                             | Default value   |
 | ---- | ------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |

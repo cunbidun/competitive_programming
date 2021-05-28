@@ -1,8 +1,8 @@
-#!/bin/zsh
+#!/bin/bash
 
 clear
 
-ROOT=$1:A
+ROOT=$(realpath "$1")
 CPS_DEBUG="$2"
 source "$CPS_PATH/project_config"
 

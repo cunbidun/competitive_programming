@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1256/E",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "3 1\n1 1 1 1 1\n",
+      "input": "5\n1 1 3 4 2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "7 2\n2 2 1 1 2 1\n",
+      "input": "6\n1 5 12 13 2 15\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "7486 3\n3 3 3 2 2 2 2 1 1 1\n",
+      "input": "10\n1 2 5 129 185 581 1041 1909 1580 8150\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "999 1\n1 1 1",
+      "input": "3\n1 100 1000",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Yet Another Division Into Teams",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #598 (Div. 3)"
+}

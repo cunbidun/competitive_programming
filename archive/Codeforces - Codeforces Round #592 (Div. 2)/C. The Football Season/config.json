@@ -1,0 +1,37 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1244/C",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "17 9 4\n",
+      "input": "30 60 3 1\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "-1\n",
+      "input": "10 51 5 4\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "0 0 20\n",
+      "input": "20 0 15 5\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. The Football Season",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #592 (Div. 2)"
+}

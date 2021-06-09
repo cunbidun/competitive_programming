@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 clear
 ulimit -s unlimited
 
@@ -49,7 +49,7 @@ function compile() {
 			cmp --silent "$ROOT/$1.cpp" "$CACHE_PATH/$1.cpp"
 			echo $?
 		)" -ne 0 ]; then # $1 in this case is a local variable
-			g++ $FLAG -o "$1" "./$1.cpp"
+			g++ "${FLAG[@]}" -o "$1" "./$1.cpp"
 			if [ $? -ne 0 ]; then
 				echo -e "\e[31;1mCompile $1 file failed!\e[0m"
 				cleanup
@@ -61,7 +61,7 @@ function compile() {
 			cp "$CACHE_PATH/$1" "$ROOT/$1"
 		fi
 	else
-		g++ $FLAG -o "$1" "./$1.cpp"
+		g++ "${FLAG[@]}" -o "$1" "./$1.cpp"
 		if [ $? -ne 0 ]; then
 			echo -e "\e[31;1mCompile $1 file failed!\e[0m"
 			cleanup
@@ -238,7 +238,7 @@ if [ "$(ls -A $DIR)" ]; then
 			export GREP_COLORS='ms=01;32'
 			grep --color -E "accepted|$" "${f%.*}.res"
 		else
-      echo
+			echo
 			echo "Input:"
 			p "$(<$f)"
 			if $expected_output; then

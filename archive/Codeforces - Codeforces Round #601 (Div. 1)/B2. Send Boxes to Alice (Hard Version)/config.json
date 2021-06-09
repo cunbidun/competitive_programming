@@ -1,0 +1,73 @@
+{
+  "numTest": 5,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/contest/1254/problem/B2",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "9\n",
+      "input": "3\n4 8 5\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "2\n",
+      "input": "5\n3 10 2 1 5\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "0\n",
+      "input": "4\n0 5 15 10\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "-1\n",
+      "input": "1\n1\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "68",
+      "input": "100\n61 28 67 53 13 6 70 5 79 82 60 60 84 17 80 25 82 82 69 76 81 43 58 86 18 78 4 25 8 30 33 87 91 18 90 26 62 11 28 66 9 33 58 66 47 48 80 38 25 57 4 84 79 71 54 84 63 32 97 62 26 68 5 69 54 93 25 26 100 73 24 94 80 39 30 45 95 80 0 29 57 98 92 15 17 76 69 11 57 56 48 10 28 7 63 66 53 58 12 58\n",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "5\n3 6 9 12 15",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "7",
+      "input": "5\n23 34 89 47 66",
+      "index": 6,
+      "active": true
+    },
+    {
+      "output": "4",
+      "input": "6\n4 4 2 9 1 5\n",
+      "index": 7,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "3\n4 4 2",
+      "index": 8,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "B2. Send Boxes to Alice (Hard Version)",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #601 (Div. 1)"
+}

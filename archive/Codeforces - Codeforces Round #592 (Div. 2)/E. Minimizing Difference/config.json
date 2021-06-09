@@ -1,0 +1,49 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1244/E",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "2\n",
+      "input": "4 5\n3 1 7 5\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "0\n",
+      "input": "3 10\n100 100 100\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "1\n",
+      "input": "10 9\n4 5 5 7 5 4 5 2 4 3\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "2 1000\n1 1000",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "2 1000000000000\n1 1000",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Minimizing Difference",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #592 (Div. 2)"
+}

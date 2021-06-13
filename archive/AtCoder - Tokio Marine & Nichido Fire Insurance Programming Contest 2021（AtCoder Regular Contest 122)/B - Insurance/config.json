@@ -1,0 +1,31 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "double_6",
+  "knowGenAns": false,
+  "url": "https://atcoder.jp/contests/arc122/tasks/arc122_b",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "1.83333333333333333333\n",
+      "input": "3\n3 1 4\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "362925658.10000000000000000000\n",
+      "input": "10\n866111664 178537096 844917655 218662351 383133839 231371336 353498483 865935868 472381277 579910117\n",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B - Insurance",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "AtCoder - Tokio Marine & Nichido Fire Insurance Programming Contest 2021（AtCoder Regular Contest 122)"
+}

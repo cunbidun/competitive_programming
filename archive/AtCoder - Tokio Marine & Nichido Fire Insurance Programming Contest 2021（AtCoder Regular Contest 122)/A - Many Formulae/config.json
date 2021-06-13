@@ -1,0 +1,55 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://atcoder.jp/contests/arc122/tasks/arc122_a",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "15\n",
+      "input": "3\n3 1 5\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "10\n",
+      "input": "4\n1 1 1 1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "279919144\n",
+      "input": "10\n866111664 178537096 844917655 218662351 383133839 231371336 353498483 865935868 472381277 579910117\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "1\n1",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "2\n1 5",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "3\n1 2 3",
+      "index": 5,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "A - Many Formulae",
+  "truncateLongTest": true,
+  "hideAcceptedTest": true,
+  "group": "AtCoder - Tokio Marine & Nichido Fire Insurance Programming Contest 2021（AtCoder Regular Contest 122)"
+}

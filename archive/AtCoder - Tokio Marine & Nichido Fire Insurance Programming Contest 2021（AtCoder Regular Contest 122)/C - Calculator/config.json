@@ -1,0 +1,55 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://atcoder.jp/contests/arc122/tasks/arc122_c",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "5\n1\n4\n2\n3\n1\n",
+      "input": "4\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "100",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "1000",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "1000000000",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "1000000000000000000",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "10",
+      "index": 5,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C - Calculator",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "AtCoder - Tokio Marine & Nichido Fire Insurance Programming Contest 2021（AtCoder Regular Contest 122)"
+}

@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://atcoder.jp/contests/acl1/tasks/acl1_b",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "10\n",
+      "input": "11\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "1100144\n",
+      "input": "20200920\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "304250263527210",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "1",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B - Sum is Multiple",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "AtCoder - ACL Contest 1"
+}

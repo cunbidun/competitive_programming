@@ -22,7 +22,7 @@ mv stdc++.h.gch "$PRECOMPILED_HEADER_PATH"
 cd "$PRECOMPILED_HEADER_PATH" || exit
 
 cd debug || exit
-g++ "${CPP_COMPILE_FLAG[@]}" stdc++.h
+g++ "${CPP_DEBUG_FLAG[@]}" stdc++.h
 rm -rf stdc++.h
 cd "$PRECOMPILED_HEADER_PATH" || exit
 

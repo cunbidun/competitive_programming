@@ -1,0 +1,55 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1202/C",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "8\n2\n4\n",
+      "input": "3\nDSAWWAW\nD\nWA\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "3\n3",
+      "input": "2\nDDD\nAAA",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "3\n3\n3\n3",
+      "input": "4\nDDAA\nAADD\nWWSS\nSSWW",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "3\n3\n3\n3",
+      "input": "4\nWWW\nAAA\nDDD\nSSS",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "1\nDDD",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "2 \n2\n2\n2",
+      "input": "4\nWW\nAA\nDD\nSS",
+      "index": 5,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. You Are Given a WASD-string...",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 70 (Rated for Div. 2)"
+}

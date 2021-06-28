@@ -1,0 +1,49 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1204/problem/D2",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "010\n",
+      "input": "110\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "010\n",
+      "input": "010\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "0000000\n",
+      "input": "0001111\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "0011001100001011101000\n",
+      "input": "0111001100111011101000\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "1001101000000100",
+      "input": "1001101000001101",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D2. Kirk and a Binary String (hard version)",
+  "truncateLongTest": false,
+  "hideAcceptedTest": false,
+  "group": "Codeforces - Codeforces Round #581 (Div. 2)"
+}

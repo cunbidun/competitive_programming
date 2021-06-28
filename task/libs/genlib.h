@@ -105,4 +105,19 @@ vector<vector<array<int, 2>>> gen_weighted_tree(int n, int min_wt, int max_wt, i
   }
   return tree;
 }
+
+vector<int> gen_tree_p_list(int n, int st = 1, bool p = true) {
+  vector<int> parent;
+  for (int i = 1; i < n; i++) {
+    int pre = rnd.next(0, i - 1);
+    parent.push_back(pre + st);
+  }
+  if (p) {
+    for (int i : parent) {
+      cout << i << ' ';
+    }
+    cout << '\n';
+  }
+  return parent;
+}
 #endif

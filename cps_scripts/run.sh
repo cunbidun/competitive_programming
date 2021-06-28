@@ -296,19 +296,20 @@ fi
 
 cleanup
 echo -e "$EQUAL_SEPERATOR"
-echo -e "Test results:"
+printf "Results: "
+
 if $rte; then
-	echo -e "\e[31;1mRun Time Error!\e[0m"
+	echo -e "\e[31;1mrun time error\e[0m"
 else
 	if $allPassed; then
 		if $tle; then
-			echo -e "\e[31;1mTime limit exceeded!\e[0m"
+			echo -e "\e[31;1mtime limit exceeded\e[0m"
 		else
-			printf "\e[32;1mAll test passed!\e[0m"
+			printf "\e[32;1maccepted\e[0m"
 			echo -e " in \e[32;1m$maxTime\e[0m ms."
 		fi
 	else
-		echo -e "\e[31;1mSome cases failed!\e[0m"
+		echo -e "\e[31;1mwrong answer\e[0m"
 	fi
 fi
 TESTING_END=$(($(date +%s%N) / 1000000))

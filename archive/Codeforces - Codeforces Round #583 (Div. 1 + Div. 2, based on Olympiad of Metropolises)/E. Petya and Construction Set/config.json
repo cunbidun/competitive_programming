@@ -1,0 +1,55 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1214/E",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "1 6\n2 6\n3 5\n3 6\n4 5\n",
+      "input": "3\n2 2 2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "1 6\n1 7\n2 6\n3 5\n3 6\n4 5\n7 8\n",
+      "input": "4\n2 2 2 1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "1 3\n2 3\n3 5\n4 5\n5 7\n6 7\n7 12\n8 12\n9 11\n9 12\n10 11\n",
+      "input": "6\n2 2 2 2 2 2\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "1 2\n1 4\n3 4\n",
+      "input": "2\n1 1\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "1 2",
+      "input": "1\n1",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "4\n4 3 2 4",
+      "index": 5,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Petya and Construction Set",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #583 (Div. 1 + Div. 2, based on Olympiad of Metropolises)"
+}

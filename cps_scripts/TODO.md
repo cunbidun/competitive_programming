@@ -1,0 +1,11 @@
+- [ ] trim space in the task name
+- [ ] conflict when archiving folder with the same name
+- [ ] runtime error handle print output
+- [ ] recompile gen.cpp when genlib.h change
+- [ ] print output file by c++
+- [ ] change slow to brute
+- [ ] rewrite plugin in a programming language
+- [ ] double-check when re-add a task from CC
+- [ ] Introduce Makefile?
+- [ ] runtime error also stop at wa
+- [ ] improve print results: which case fails? / first failed case

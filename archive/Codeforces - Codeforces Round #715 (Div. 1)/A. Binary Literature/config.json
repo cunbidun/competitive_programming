@@ -1,0 +1,85 @@
+{
+  "numTest": 1000,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "custom",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1508/problem/A",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "010\n011001010\n",
+      "input": "2\n1\n00\n11\n01\n3\n011001\n111010\n010001\n\n",
+      "index": 0,
+      "active": false
+    },
+    {
+      "output": "11001111",
+      "input": "1\n3\n000000\n001111\n110011",
+      "index": 1,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n6\n011101110100\n111110011111\n011111110110",
+      "index": 2,
+      "active": false
+    },
+    {
+      "output": "000111000",
+      "input": "1\n3\n000111\n111000\n100001",
+      "index": 3,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n3\n101001\n010101\n110110",
+      "index": 4,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n2\n1010\n1100\n0100",
+      "index": 5,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n3\n000000\n111111\n001010\n",
+      "index": 6,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n3\n000000\n111111\n110100",
+      "index": 7,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n2\n1001\n0110\n1010",
+      "index": 8,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n3\n011001\n111010\n010001\n",
+      "index": 9,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n3\n110010\n010001\n001001\n",
+      "index": 10,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "A. Binary Literature",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #715 (Div. 1)"
+}

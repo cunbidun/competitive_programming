@@ -1,0 +1,49 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1225/D",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "5\n",
+      "input": "6 3\n1 3 9 8 24 1\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "6 2\n1 3 9 8 24 1",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "10",
+      "input": "5 3\n1 1 1 1 1",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "3 3\n3 9 3",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "4 4\n4 4 4 1",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D. Power Products",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Technocup 2020 - Elimination Round 2"
+}

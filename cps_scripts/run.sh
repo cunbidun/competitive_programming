@@ -192,20 +192,26 @@ if [ "$(ls -A $DIR)" ]; then
 			fi
 		fi
 
+		expected_output=false # variable to check if the ouput file is empty or not
+
+		passed=true
 		# if this is interactive task
 		if [ "$interactive" = "true" ]; then
 			START=$(($(date +%s%N) / 1000000))
 			../interactor "$f" "${f%.*}.actual" "${f%.*}.res"
-			if [ $? -ne 0 ]; then
+      exit_code=$?
+			if [ $exit_code -ne 0 ] && [ $exit_code -ne 141 ]; then
 				rte=true
 				echo -e "Verdict: \e[31;1mrun time error\e[0m"
 				echo -e "$DASH_SEPERATOR"
 				continue
 			fi
+      if [ $exit_code = 141 ]; then
+        echo "wrong answer" > "${f%.*}.res"
+      fi
 			END=$(($(date +%s%N) / 1000000))
 			time=$((END - START))
 		else                   # not interactive task
-			expected_output=false # variable to check if the ouput file is empty or not
 			START=$(($(date +%s%N) / 1000000))
 			../solution <$f >"${f%.*}.actual"
 			if [ $? -ne 0 ]; then # if there is run time error
@@ -225,7 +231,6 @@ if [ "$(ls -A $DIR)" ]; then
 			../checker "$f" "${f%.*}.actual" "${f%.*}.out" "${f%.*}.res" >/dev/null 2>&1
 		fi
 		word=$(cat "${f%.*}.res" | head -n1 | awk '{print $1;}')
-		passed=true
 		undecided=false
 		if [ "$word" = "wrong" ]; then
 			passed=false

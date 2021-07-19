@@ -1,0 +1,85 @@
+{
+  "numTest": 10,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/contest/1530/problem/E",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "ckpuv\naababab\nzzzzzz\n",
+      "input": "3\nvkcup\nabababa\nzzzzzz\n",
+      "index": 0,
+      "active": false
+    },
+    {
+      "output": "aabababa",
+      "input": "1\nabababaa",
+      "index": 1,
+      "active": false
+    },
+    {
+      "output": "abaaaaaaaaa",
+      "input": "1\nabaaaaaaaaa",
+      "index": 2,
+      "active": false
+    },
+    {
+      "output": "aababb\nabbaaaa",
+      "input": "2\nabaabb\naaaaabb",
+      "index": 3,
+      "active": false
+    },
+    {
+      "output": "aabbcc\nabaaaaaacbb\n",
+      "input": "2\naabbcc\naaaaaaabbbc",
+      "index": 4,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\naaac",
+      "index": 5,
+      "active": false
+    },
+    {
+      "output": "z",
+      "input": "1\nz",
+      "index": 6,
+      "active": false
+    },
+    {
+      "output": "aabababa",
+      "input": "1\nabaaabba",
+      "index": 7,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\naeezea\n",
+      "index": 8,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\nabaaaaa",
+      "index": 9,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "1\nba",
+      "index": 10,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "E. Minimax",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #733 (Div. 1 + Div. 2, based on VK Cup 2021 - Elimination (Engine))"
+}

@@ -1,0 +1,37 @@
+{
+  "numTest": 1,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/contest/1553/problem/F",
+  "timeLimit": 4000,
+  "tests": [
+    {
+      "output": "0 2 12 22\n",
+      "input": "4\n6 2 7 3\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "0 3 5\n",
+      "input": "3\n3 2 1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "0 2",
+      "input": "2\n2 4 ",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "F. Pairwise Modulo",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Harbour.Space Scholarship Contest 2021-2022 (open for everyone, rated, Div. 1 + Div. 2)"
+}

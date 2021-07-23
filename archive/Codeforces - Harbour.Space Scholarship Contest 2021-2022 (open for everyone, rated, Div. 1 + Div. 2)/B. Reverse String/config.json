@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1553/problem/B",
+  "timeLimit": 3000,
+  "tests": [
+    {
+      "output": "YES\nYES\nNO\nYES\nYES\nNO\n",
+      "input": "6\nabcdef\ncdedcb\naaa\naaaaa\naab\nbaaa\nab\nb\nabcdef\nabcdef\nba\nbaa\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "YES",
+      "input": "1\nab\nb",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "NO",
+      "input": "1\nba\nbaa",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "YES\nYES\nNO",
+      "input": "3\naaa\naaaaa\naaa\naaaa\naaa\naaaaaa",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B. Reverse String",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Harbour.Space Scholarship Contest 2021-2022 (open for everyone, rated, Div. 1 + Div. 2)"
+}

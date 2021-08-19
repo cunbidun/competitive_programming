@@ -1,0 +1,49 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1437/E",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "4\n",
+      "input": "7 2\n1 2 1 1 3 5 1\n3 5\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "-1\n",
+      "input": "3 3\n1 3 2\n1 2 3\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "2\n",
+      "input": "5 0\n4 3 1 2 3\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "3\n",
+      "input": "10 3\n1 3 5 6 12 9 8 10 13 15\n2 4 9\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "0",
+      "input": "5 0\n1 2 3 4 5",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Make It Increasing",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 97 (Rated for Div. 2)"
+}

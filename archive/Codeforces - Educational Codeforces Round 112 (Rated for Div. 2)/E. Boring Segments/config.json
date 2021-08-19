@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1555/problem/E",
+  "timeLimit": 3000,
+  "tests": [
+    {
+      "output": "3\n",
+      "input": "5 12\n1 5 5\n3 4 10\n4 10 6\n11 12 5\n10 12 3\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "0\n",
+      "input": "1 10\n1 10 23\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "16",
+      "input": "9 10\n6 7 10\n2 3 16\n5 6 13\n7 8 20\n9 10 6\n4 5 4\n3 4 10\n1 2 6\n8 9 20",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "7",
+      "input": "7 10\n1 4 13\n5 6 10\n4 7 1\n7 8 14\n6 9 9\n4 5 8\n7 10 6",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Boring Segments",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 112 (Rated for Div. 2)"
+}

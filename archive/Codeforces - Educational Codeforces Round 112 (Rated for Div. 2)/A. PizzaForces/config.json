@@ -1,0 +1,31 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1555/problem/A",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "30\n40\n750\n15\n25000000000000000\n15\n",
+      "input": "6\n12\n15\n300\n1\n9999999999999999\n3\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "35",
+      "input": "1\n14",
+      "index": 1,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "A. PizzaForces",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 112 (Rated for Div. 2)"
+}

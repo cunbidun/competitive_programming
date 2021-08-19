@@ -13,7 +13,7 @@ app.use(express.json());
 const PORT = 8080;
 
 function reformat(s) {
-  return s.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`);
+  return s.replace(/"/g, `'`).replace(/!/g, ``).replace(/\//g, `-`).replace(/'/g, ``).replace(/#/g, ``);
 }
 
 app.post("/", async (req, res) => {

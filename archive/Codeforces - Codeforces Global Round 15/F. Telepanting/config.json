@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1552/problem/F",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "23\n",
+      "input": "4\n3 2 0\n6 5 1\n7 4 0\n8 1 1\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "503069073\n",
+      "input": "1\n454971987 406874902 1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "899754847\n",
+      "input": "5\n243385510 42245605 0\n644426565 574769163 0\n708622105 208990040 0\n786625660 616437691 0\n899754846 382774619 0\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "3511295\n",
+      "input": "5\n200000000 100000000 1\n600000000 400000000 0\n800000000 300000000 0\n900000000 700000000 1\n1000000000 500000000 0\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "F. Telepanting",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Global Round 15"
+}

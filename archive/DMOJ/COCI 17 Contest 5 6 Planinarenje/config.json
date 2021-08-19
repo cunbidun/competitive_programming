@@ -1,0 +1,61 @@
+{
+  "numTest": 100,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://dmoj.ca/problem/coci17c5p6",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "Slavko\nSlavko\n",
+      "input": "2 3\n1 2\n2 2\n2 1\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "Slavko\nMirko\nMirko\nMirko\n",
+      "input": "4 5\n2 2\n1 2\n1 1\n1 3\n4 2\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "Slavko\nSlavko\nMirko\nSlavko\n",
+      "input": "4 5\n1 2\n1 3\n2 2\n2 3\n4 1\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "3 7\n1 1\n1 2\n2 1\n2 2\n2 3\n3 2\n3 3",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "3 6\n1 1\n1 2\n2 1\n2 2\n3 1\n3 2",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "3 6\n1 1\n1 2\n2 1\n2 3\n3 2\n3 3",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "4 7\n1 3\n2 2\n2 3\n3 1\n3 2\n3 4\n4 3\n",
+      "index": 6,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "COCI 17 Contest 5 6 Planinarenje",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "DMOJ"
+}

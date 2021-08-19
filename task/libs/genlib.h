@@ -106,6 +106,23 @@ vector<vector<array<int, 2>>> gen_weighted_tree(int n, int min_wt, int max_wt, i
   return tree;
 }
 
+vector<vector<int>> gen_tree(int n, int st = 1, bool p = true) {
+  vector<array<int, 2>> edge;
+  vector<vector<int>> tree(n);
+  for (int i = 1; i < n; i++) {
+    int pre = rnd.next(0, i - 1);
+    edge.push_back({i, pre});
+    tree[i].push_back(pre);
+    tree[pre].push_back(i);
+  }
+  if (p) {
+    for (auto [i, j] : edge) {
+      cout << i + st << " " << j + st << "\n";
+    }
+  }
+  return tree;
+}
+
 vector<int> gen_tree_p_list(int n, int st = 1, bool p = true) {
   vector<int> parent;
   for (int i = 1; i < n; i++) {

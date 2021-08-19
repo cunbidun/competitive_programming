@@ -1,0 +1,49 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1476/E",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "YES\n3 2 4 5 1\n",
+      "input": "5 3 4\n_b_d\n__b_\naaaa\nab__\n_bcd\nabcd 4\nabba 2\ndbcd 5\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "NO\n",
+      "input": "1 1 3\n__c\ncba 1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "NO\n",
+      "input": "2 2 2\na_\n_b\nab 1\nab 2\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "YES\n1",
+      "input": "1 1 4\n_b_d\nabcd 1\n",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "YES\n10 7 8 9 6 5 4 3 2 1 ",
+      "input": "10 10 3\nbb_\nabc\nbac\nbab\n_ab\n_b_\n___\nb__\n_a_\n__a\ncab 7\ncaa 10\nbac 7\naba 10\nabc 7\nbab 7\nbbb 7\nbaa 10\ncaa 10\naab 7",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Pattern Matching",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Educational Codeforces Round 103 (Rated for Div. 2)"
+}

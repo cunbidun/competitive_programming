@@ -1,0 +1,73 @@
+{
+  "numTest": 1000,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": "https://codeforces.com/contest/1549/problem/D",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "3\n3\n2\n6\n",
+      "input": "4\n5\n1 5 2 4 6\n4\n8 2 5 10\n2\n1000 2000\n8\n465 55 3 54 234 12 45 78\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "1\n5\n1 5 2 4 6",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "1\n4\n8 2 5 10",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "1\n2",
+      "input": "2\n1\n1212\n2\n1 2214",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "1\n4\n15 13 9 4",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "1\n10\n6 4 13 4 3 8 8 12 2 7\n",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "1\n4\n0 5 5 9",
+      "index": 6,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "1\n4\n5 4 3 2\n",
+      "index": 7,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "1\n2\n14 13\n",
+      "index": 8,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "D. Integers Have Friends",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #736 (Div. 2)"
+}

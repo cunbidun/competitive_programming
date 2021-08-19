@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1438/D",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "YES\n1\n1 3 4\n",
+      "input": "5\n4 2 1 7 2\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "NO\n",
+      "input": "4\n10 4 49 22\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "4\n2 2 2 2",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "4 \n1 2 4 7",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D. Powerful Ksenia",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round #682 (Div. 2)"
+}

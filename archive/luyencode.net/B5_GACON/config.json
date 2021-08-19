@@ -1,0 +1,25 @@
+{
+  "numTest": 1000,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": null,
+  "timeLimit": 10000,
+  "tests": [
+    {
+      "output": "14",
+      "input": "3 4\n1 2 4 5\n3 1 4 2\n2 3 4 5",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "B5_GACON",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "luyencode.net"
+}

@@ -1,0 +1,97 @@
+{
+  "numTest": 1000,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": true,
+  "url": null,
+  "timeLimit": 10000,
+  "tests": [
+    {
+      "output": "1",
+      "input": "4 1\n1 1 1 1",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "8",
+      "input": "4 1\n1 2 3 4",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "7",
+      "input": "4 1\n3 2 3 4",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "7",
+      "input": "4 2\n1 3 9 5 ",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "5",
+      "input": "4 1\n3 2 3 2",
+      "index": 4,
+      "active": true
+    },
+    {
+      "output": "18",
+      "input": "11 1\n2 2 5 6 9 2 11 9 2 11 12",
+      "index": 5,
+      "active": true
+    },
+    {
+      "output": "9",
+      "input": "4 1\n2 2 5 6",
+      "index": 6,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "3 1\n2 1 1\n",
+      "index": 7,
+      "active": true
+    },
+    {
+      "output": "3",
+      "input": "3 3\n1 1 1",
+      "index": 8,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "50 12\n19 15 18 3 9 2 8 11 17 7 4 10 15 2 2 7 11 7 6 18 12 14 6 6 16 13 18 8 10 9 6 11 8 1 4 18 9 12 11 1\n3 4 7 9 8 11 1 14 18 5 14\n",
+      "index": 9,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "49 21\n12 2 2 14 14 9 19 15 4 8 3 4 19 4 16 8 13 17 16 2 15\n6 14 17 19 4 14 5 13 18 16 16 17 16 13 14 3 9 20 2 11 11 14 10 10 2 10 2 7 17 \n",
+      "index": 10,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "53 29\n6 7 17 12 12 7 15 16 4 15 2 18 11 10 9 4 1 5 4 4 20 3 14 4 4 2 10 3 4 15 2 17 8 17 19 11 20 15 3 20 4 17 2 14 14 11 6 7 17 3 18 8 18\n",
+      "index": 11,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "23 23\n12 12 7 \n15 16 4 \n15 2 18 \n11 10 9 \n4 1 5\n4 4 20 \n3 14 4\n4 2",
+      "index": 12,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": true,
+  "name": "Citdel",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "OA SWE Full Time 2022"
+}

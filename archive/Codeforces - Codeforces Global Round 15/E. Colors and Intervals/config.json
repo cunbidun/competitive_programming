@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1552/problem/E",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "4 5\n1 7\n8 11\n6 12\n",
+      "input": "4 3\n2 4 3 1 1 4 2 3 2 1 3 4\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "1 2\n",
+      "input": "1 2\n1 1\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "6 8\n3 7\n1 4\n",
+      "input": "3 3\n3 1 2 3 2 1 2 1 3\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "2 3\n5 6\n",
+      "input": "2 3\n2 1 1 1 2 2\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Colors and Intervals",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Global Round 15"
+}

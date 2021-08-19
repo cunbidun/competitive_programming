@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": null,
+  "timeLimit": 10000,
+  "tests": [
+    {
+      "output": "",
+      "input": "3\nABCDE02468\n17",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "DistinctStrings",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Topcoder 810 DIV 2"
+}

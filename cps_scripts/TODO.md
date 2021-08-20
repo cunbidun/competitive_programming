@@ -9,3 +9,9 @@
 - [ ] Introduce Makefile?
 - [ ] runtime error also stop at wa
 - [ ] improve print results: which case fails? / first failed case
+- [ ] Fix compile_checker.sh script
+- [ ] revamp installation instruction
+  - [ ] recompile binary  
+    - [ ] printer
+    - [ ] checkers
+    - [ ] tc_parser

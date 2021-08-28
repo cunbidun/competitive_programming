@@ -1,0 +1,37 @@
+{
+  "numTest": 100,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": true,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1561/problem/E",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "4\n3 3 3 3\n2\n3 5\n-1\n",
+      "input": "3\n3\n1 2 3\n5\n3 4 5 2 1\n3\n2 1 3\n",
+      "index": 0,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n7\n7 4 1 6 3 2 5",
+      "index": 1,
+      "active": false
+    },
+    {
+      "output": "",
+      "input": "1\n9\n1 8 7 2 3 6 5 4 9",
+      "index": 2,
+      "active": false
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "E. Bottom-Tier Reversals",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round 740 (Div. 2, based on VK Cup 2021 - Final (Engine))"
+}

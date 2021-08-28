@@ -1,0 +1,49 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1561/problem/C",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "output": "43\n13\n",
+      "input": "2\n1\n1 42\n2\n3 10 15 8\n2 12 11\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "2",
+      "input": "1\n4\n2 1 1\n3 2 3 4\n1 5\n4 2 7",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "16",
+      "input": "1\n1\n1 15",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "16",
+      "input": "1\n1\n2 15 16",
+      "index": 3,
+      "active": true
+    },
+    {
+      "output": "17",
+      "input": "1\n2\n1 15\n1 17",
+      "index": 4,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "C. Deep Down Below",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round 740 (Div. 2, based on VK Cup 2021 - Final (Engine))"
+}

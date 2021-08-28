@@ -1,4 +1,4 @@
-#include "../libs/interactive.h"
+#include "interactive.h"
 #include <bits/stdc++.h>
 
 using namespace std;

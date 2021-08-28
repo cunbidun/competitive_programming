@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/gym/339918/problem/D",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "output": "5\n",
+      "input": "5 5 2\n1 11 2 3 3\n9 9 2 3 3\n2 2 2 2 2\n1 2 2 5 6\n4 10 2 7 8\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "1 1 1\n1",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": "4",
+      "input": "2 2 1 \n1 2\n2 4",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "5 5 5\n1 11 2 3 3\n9 9 2 3 3\n2 2 2 2 2\n1 2 2 5 6\n4 10 2 7 8\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D. 2019 HSG9 HANOI B4. Hình vuông con",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - On hsg Ha Noi"
+}

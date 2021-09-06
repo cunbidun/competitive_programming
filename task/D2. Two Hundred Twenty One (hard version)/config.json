@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1562/problem/D2",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "input": "3\n14 1\n+--++---++-++-\n1 14\n14 3\n+--++---+++---\n1 14\n6 12\n3 10\n4 10\n+-+-\n1 1\n1 2\n1 3\n1 4\n2 2\n2 3\n2 4\n3 3\n3 4\n4 4\n",
+      "output": "2\n5 8\n2\n1 11\n1\n9\n0\n1\n1\n2\n1 2\n1\n2\n2\n1 3\n1\n2\n2\n2 3\n1\n3\n1\n3\n2\n3 4\n1\n4\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D2. Two Hundred Twenty One (hard version)",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round 741 (Div. 2)"
+}

@@ -1,0 +1,1 @@
+{"numTest":1000,"compact":true,"genParameters":"","generatorSeed":"","interactive":false,"useGeneration":true,"checker":"token_checker","knowGenAns":true,"url":null,"timeLimit":10000,"tests":[{"output":"1","input":"1 3\n5\n1 1 6","index":0,"active":true}],"stopAtWrongAnswer":true,"name":"Task 2","truncateLongTest":false,"hideAcceptedTest":true,"group":"HRT SWE Full Time 2022"}

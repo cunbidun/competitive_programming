@@ -1,5 +1,5 @@
-#include "../libs/genlib.h"
-#include "../libs/testlib.h"
+#include "genlib.hpp"
+#include "testlib.h"
 
 using namespace std;
 

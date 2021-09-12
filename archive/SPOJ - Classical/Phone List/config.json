@@ -1,1 +1,35 @@
-{"numTest":0,"genParameters":"","isInteractive":false,"useGeneration":false,"printWrongAnswer":false,"knowGenAns":false,"url":"https:\/\/www.spoj.com\/problems\/PHONELST\/","timeLimit":1000,"tests":[{"output":"NO\nYES\n","input":"2\n3\n911\n97625999\n91125426\n5\n113\n12340\n123440\n12345\n98346\n","index":0,"active":true},{"output":"NO","input":"1\n6\n212\n141251\n121\n1\n215125125555555555\n1212214124","index":1,"active":true},{"output":"NO","input":"1\n2\n12\n1","index":2,"active":true}],"name":"Phone List","truncateLongTest":false,"checkerParameters":"","useLocalChecker":false,"group":"SPOJ - Classical"}
+{
+    "numTest": 0,
+    "genParameters": "",
+    "isInteractive": false,
+    "useGeneration": false,
+    "printWrongAnswer": false,
+    "knowGenAns": false,
+    "url": "https://www.spoj.com/problems/PHONELST/",
+    "timeLimit": 1000,
+    "tests": [
+        {
+            "output": "NO\nYES\n",
+            "input": "2\n3\n911\n97625999\n91125426\n5\n113\n12340\n123440\n12345\n98346\n",
+            "index": 0,
+            "active": true
+        },
+        {
+            "output": "NO",
+            "input": "1\n6\n212\n141251\n121\n1\n215125125555555555\n1212214124",
+            "index": 1,
+            "active": true
+        },
+        {
+            "output": "NO",
+            "input": "1\n2\n12\n1",
+            "index": 2,
+            "active": true
+        }
+    ],
+    "name": "Phone List",
+    "truncateLongTest": false,
+    "checkerParameters": "",
+    "useLocalChecker": false,
+    "group": "SPOJ - Classical"
+}

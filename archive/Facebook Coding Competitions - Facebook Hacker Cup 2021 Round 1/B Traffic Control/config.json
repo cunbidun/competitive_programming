@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://www.facebook.com/codingcompetitions/hacker-cup/2021/round-1/problems/B",
+  "timeLimit": 360000,
+  "tests": [
+    {
+      "input": "4\n2 2 999 999\n2 3 12 11\n4 3 6 6\n50 50 1 1\n",
+      "output": "Case #1: Possible\n333 333\n333 333\nCase #2: Possible\n5 3 1\n3 4 3\nCase #3: Possible\n1 1 1\n1 2 1\n1 2 1\n1 1 1\nCase #4: Impossible\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B Traffic Control",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Facebook Coding Competitions - Facebook Hacker Cup 2021 Round 1"
+}

@@ -7,7 +7,10 @@ typedef long long ll;
 
 void writeTest(int test) {
   startTest(test);
-
+  int N = rnd.next(1, 15);
+  int K = rnd.next(0, N);
+  gen_string(N, 0, 0, 0, "AB");
+  cout << ' ' << K << '\n';
   char number_str[10];
   sprintf(number_str, "%d", test);
   std::rename(number_str, ('S' + to_string(test) + ".in").c_str());

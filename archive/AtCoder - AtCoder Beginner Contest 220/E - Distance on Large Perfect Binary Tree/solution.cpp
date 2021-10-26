@@ -97,35 +97,21 @@ public:
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  int T;
-  cin >> T;
-  using mint = mint<(int)1e9 + 7>;
-
-  for (int t = 1; t <= T; t++) {
-    cout << "Case #" << t << ": ";
-    int N;
-    cin >> N;
-    string S;
-    cin >> S;
-    mint ans = 0;
-
-    int i = 0;
-    while (S[i] == 'F') {
-      i++;
+  using mint = mint<998244353>;
+  int N, D;
+  cin >> N >> D;
+  vector<mint> f(N + 1);
+  f[1] = 0;
+  mint m2 = mint(2);
+  for (int i = 2; i <= N; i++) {
+    if (D >= 2) {
+      int level = max(min(D - 2, i - 2) - max(0, D - i) + 1, 0);
+      f[i] += m2 * m2.pow(D - 2) * level;
     }
-    for (; i < N; i++) {
-      for (int j = i + 1; j < N; j++) {
-        if (S[j] == S[i]) {
-          i = j - 1;
-          break;
-        }
-        if (S[i] != 'F' && S[j] != 'F' && S[i] != S[j]) {
-          ans += 1LL * (i + 1) * (N - j);
-          i = j - 1;
-          break;
-        }
-      }
+    f[i] += mint(2) * f[i - 1];
+    if (i > D) {
+      f[i] += m2 * mint(2).pow(D);
     }
-    cout << ans << '\n';
   }
+  cout << f[N] << '\n';
 }

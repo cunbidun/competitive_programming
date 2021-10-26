@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <queue> 
 
 using namespace std;
 
@@ -23,6 +22,6 @@ public:
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  cout << 1 << '\n';
-  
+  int N;
+  cin >> N;
 }

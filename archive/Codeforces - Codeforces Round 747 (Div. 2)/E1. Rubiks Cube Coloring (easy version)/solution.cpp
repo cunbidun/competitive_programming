@@ -97,35 +97,28 @@ public:
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  int T;
-  cin >> T;
-  using mint = mint<(int)1e9 + 7>;
+  using mint = mint<1000000007>;
+  int N;
+  cin >> N;
+  vector<vector<mint>> f(N + 1, vector<mint>(6, 0));
+  for (int i = 0; i < 6; i++) {
+    f[1][i] = 1;
+  }
 
-  for (int t = 1; t <= T; t++) {
-    cout << "Case #" << t << ": ";
-    int N;
-    cin >> N;
-    string S;
-    cin >> S;
-    mint ans = 0;
-
-    int i = 0;
-    while (S[i] == 'F') {
-      i++;
-    }
-    for (; i < N; i++) {
-      for (int j = i + 1; j < N; j++) {
-        if (S[j] == S[i]) {
-          i = j - 1;
-          break;
-        }
-        if (S[i] != 'F' && S[j] != 'F' && S[i] != S[j]) {
-          ans += 1LL * (i + 1) * (N - j);
-          i = j - 1;
-          break;
+  for (int i = 2; i <= N; i++) {
+    for (int c = 0; c < 6; c++) {
+      for (int j = 0; j < 6; j++) {
+        for (int k = 0; k < 6; k++) {
+          if (c != j && c != k && c + j != 5 && c + k != 5) {
+            f[i][c] += f[i - 1][j] * f[i - 1][k];
+          }
         }
       }
     }
-    cout << ans << '\n';
   }
+  mint ans = 0;
+  for (int i = 0; i < 6; i++) {
+    ans += f[N][i];
+  }
+  cout << ans << '\n';
 }

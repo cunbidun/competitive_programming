@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1592/problem/A",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "input": "3\n2 4\n3 7\n2 6\n4 2\n3 11\n2 1 7\n",
+      "output": "1\n2\n3\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "A. Gamer Hemose",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round 746 (Div. 2)"
+}

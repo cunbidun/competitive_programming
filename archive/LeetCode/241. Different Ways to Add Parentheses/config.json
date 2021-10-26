@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://leetcode.com/problems/different-ways-to-add-parentheses/",
+  "timeLimit": 10000,
+  "tests": [
+    {
+      "output": "0 2",
+      "input": "2-1-1",
+      "index": 0,
+      "active": true
+    },
+    {
+      "output": "1",
+      "input": "1",
+      "index": 1,
+      "active": true
+    },
+    {
+      "output": null,
+      "input": "1+1",
+      "index": 2,
+      "active": true
+    },
+    {
+      "output": "",
+      "input": "2*3-4*5",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "241. Different Ways to Add Parentheses",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "LeetCode"
+}

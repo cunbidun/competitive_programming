@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
 template <typename T> T mod_inv(T a, T m) {
   // assert(__gcd(a, m) == 1);
   a %= m;
@@ -97,35 +96,27 @@ public:
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  int T;
-  cin >> T;
-  using mint = mint<(int)1e9 + 7>;
-
-  for (int t = 1; t <= T; t++) {
-    cout << "Case #" << t << ": ";
-    int N;
-    cin >> N;
-    string S;
-    cin >> S;
-    mint ans = 0;
-
-    int i = 0;
-    while (S[i] == 'F') {
-      i++;
-    }
-    for (; i < N; i++) {
-      for (int j = i + 1; j < N; j++) {
-        if (S[j] == S[i]) {
-          i = j - 1;
-          break;
-        }
-        if (S[i] != 'F' && S[j] != 'F' && S[i] != S[j]) {
-          ans += 1LL * (i + 1) * (N - j);
-          i = j - 1;
-          break;
-        }
-      }
-    }
-    cout << ans << '\n';
+  using mint = mint<1000000007>;
+  string s;
+  cin >> s;
+  int N = s.size();
+  vector<mint> f2(N + 1);
+  vector<mint> f3(N + 1);
+  f2[0] = 1;
+  f3[0] = 1;
+  for (int i = 1; i <= N; i++) {
+    f2[i] = f2[i - 1] * 2;
+    f3[i] = f3[i - 1] * 3;
   }
+
+  int cnt = 0;
+  mint ans = 0;
+  for (int i = 0; i < N; i++) {
+    if (s[i] == '1') {
+      ans += f2[cnt] * f3[N - i - 1];
+      cnt++;
+    }
+  }
+  ans += f2[cnt];
+  cout << ans << '\n';
 }

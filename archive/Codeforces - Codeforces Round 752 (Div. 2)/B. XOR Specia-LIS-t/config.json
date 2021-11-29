@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1604/problem/B",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "input": "4\n7\n1 3 4 2 2 1 5\n3\n1 3 4\n5\n1 3 2 4 2\n4\n4 3 2 1\n",
+      "output": "YES\nNO\nYES\nYES\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B. XOR Specia-LIS-t",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round 752 (Div. 2)"
+}

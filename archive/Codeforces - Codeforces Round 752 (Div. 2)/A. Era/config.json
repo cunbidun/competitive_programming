@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/contest/1604/problem/A",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "input": "4\n3\n1 3 4\n5\n1 2 5 7 4\n1\n1\n3\n69 6969 696969\n",
+      "output": "1\n3\n0\n696966\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "A. Era",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round 752 (Div. 2)"
+}

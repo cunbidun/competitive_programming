@@ -1,0 +1,43 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://atcoder.jp/contests/code-festival-2017-quala/tasks/code_festival_2017_quala_b",
+  "timeLimit": 2000,
+  "tests": [
+    {
+      "input": "2 2 2\n",
+      "output": "Yes\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "2 2 1\n",
+      "output": "No\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "3 5 8\n",
+      "output": "Yes\n",
+      "index": 2,
+      "active": true
+    },
+    {
+      "input": "7 9 20\n",
+      "output": "No\n",
+      "index": 3,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "B - fLIP",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "AtCoder - CODE FESTIVAL 2017 qual A"
+}

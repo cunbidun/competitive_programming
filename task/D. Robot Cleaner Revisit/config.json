@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codeforces.com/problemset/problem/1623/D",
+  "timeLimit": 3000,
+  "tests": [
+    {
+      "input": "6\n2 2 1 1 2 1 25\n3 3 1 2 2 2 25\n10 10 1 1 10 10 75\n10 10 10 10 1 1 75\n5 5 1 3 2 2 10\n97 98 3 5 41 43 50\n",
+      "output": "3\n3\n15\n15\n332103349\n99224487\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "D. Robot Cleaner Revisit",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Codeforces - Codeforces Round 763 (Div. 2)"
+}

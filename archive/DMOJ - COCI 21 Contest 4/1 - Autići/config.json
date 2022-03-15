@@ -1,0 +1,37 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://dmoj.ca/problem/coci21c4p1",
+  "timeLimit": 1000,
+  "tests": [
+    {
+      "input": "1\n10\n",
+      "output": "0\n",
+      "index": 0,
+      "active": true
+    },
+    {
+      "input": "3\n5 5 5\n",
+      "output": "20\n",
+      "index": 1,
+      "active": true
+    },
+    {
+      "input": "4\n7 3 3 5\n",
+      "output": "24\n",
+      "index": 2,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "1 - Autići",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "DMOJ - COCI 21 Contest 4"
+}

@@ -1,19 +1,28 @@
 #ifndef _cps_interactive_h_
 #define _cps_interactive_h_
 
+#ifdef __APPLE__
+#include <fstream>
+#include <istream>
+#include <ostream>
+#include <string>
+#include <vector>
+#else
 #include <bits/stdc++.h>
-#include <iostream>
+#endif
 
-using namespace std;
-
+using std::ifstream;
+using std::istream;
+using std::ofstream;
+using std::ostream;
+using std::string;
 ofstream screen, res;
 ifstream in;
 
 class dual_out {
 public:
   dual_out(ostream &os1, ostream &os2) : os1(os1), os2(os2) {}
-  template <class T>
-  dual_out &operator<<(const T &x) {
+  template <class T> dual_out &operator<<(const T &x) {
     os1 << x;
     os2 << "\033[0;32m" << x << "\033[0m"; // green color
     return *this;
@@ -34,8 +43,7 @@ class dual_in {
 public:
   dual_in(istream &is, ostream &os) : is(is), os(os) {}
 
-  template <class T>
-  dual_in &operator>>(T &x) {
+  template <class T> dual_in &operator>>(T &x) {
     is >> x;
     os << x << ' ';
     return *this;
@@ -52,7 +60,7 @@ private:
 };
 
 /**
- * print wrong answer and exit 
+ * print wrong answer and exit
  *
  * @param: num = 1, print "too many questions"
  * @param: num = 2, print "incorrect format"
@@ -73,7 +81,7 @@ void WA(int num = 0, string message = "") {
 }
 
 void OK() {
-  res << "accepted" << endl;
+  res << "accepted" << std::endl;
   exit(0);
 }
 

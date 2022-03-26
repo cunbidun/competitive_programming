@@ -1,13 +1,15 @@
 #ifndef _GENLIB_H_
 #define _GENLIB_H_
 
+#include <array>
 #include <assert.h>
 #include <iostream>
 
 #include "testlib.h"
 using namespace std;
 
-inline string gen_string(int n, bool lower, bool upper, bool number, string custom, bool p = true) {
+inline string gen_string(int n, bool lower, bool upper, bool number,
+                         string custom, bool p = true) {
   string s = "";
   if (custom == "") {
     if (lower) {
@@ -44,7 +46,8 @@ vector<T> gen_array(int n, T min_val, T max_val, bool p = true) {
   return array;
 }
 
-inline vector<vector<int>> gen_directed_graph(int n, int m, int st = 1, bool p = true) {
+inline vector<vector<int>> gen_directed_graph(int n, int m, int st = 1,
+                                              bool p = true) {
   vector<vector<int>> g(n);
   set<pair<int, int>> s;
   for (int i = 0; i < m; i++) {
@@ -67,7 +70,9 @@ inline vector<vector<int>> gen_directed_graph(int n, int m, int st = 1, bool p =
   return g;
 }
 
-inline vector<vector<int>> gen_weighted_graph(int n, int m, int min_wt, int max_wt, int st = 1, bool p = true) {
+inline vector<vector<int>> gen_weighted_graph(int n, int m, int min_wt,
+                                              int max_wt, int st = 1,
+                                              bool p = true) {
   vector<vector<int>> g(n);
   set<pair<int, int>> s;
   vector<pair<int, int>> edges;
@@ -84,13 +89,15 @@ inline vector<vector<int>> gen_weighted_graph(int n, int m, int min_wt, int max_
   }
   if (p) {
     for (auto [i, j] : edges) {
-      cout << i + st << " " << j + st << " " << rnd.next(min_wt, max_wt) << "\n";
+      cout << i + st << " " << j + st << " " << rnd.next(min_wt, max_wt)
+           << "\n";
     }
   }
   return g;
 }
 
-inline vector<vector<array<int, 2>>> gen_weighted_tree(int n, int min_wt, int max_wt, int st = 1, bool p = true) {
+inline vector<vector<array<int, 2>>>
+gen_weighted_tree(int n, int min_wt, int max_wt, int st = 1, bool p = true) {
   vector<array<int, 3>> edge;
   vector<vector<array<int, 2>>> tree(n);
   for (int i = 1; i < n; i++) {

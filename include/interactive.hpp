@@ -16,8 +16,8 @@ using std::istream;
 using std::ofstream;
 using std::ostream;
 using std::string;
-ofstream screen, res;
-ifstream in;
+
+ofstream res;
 
 class dual_out {
 public:
@@ -66,7 +66,7 @@ private:
  * @param: num = 2, print "incorrect format"
  * @param: message, print if non-empty
  */
-void WA(int num = 0, string message = "") {
+inline void WA(int num = 0, string message = "") {
   res << "wrong answer\n";
   if (message != "") {
     res << message;
@@ -80,7 +80,7 @@ void WA(int num = 0, string message = "") {
   exit(0);
 }
 
-void OK() {
+inline void OK() {
   res << "accepted" << std::endl;
   exit(0);
 }

@@ -15,10 +15,6 @@
 		{
 			"name": "CC",
 			"path": "CC"
-		},
-		{
-			"name": "cps_scripts",
-			"path": "cps_scripts"
 		}
 	],
 	"settings": {

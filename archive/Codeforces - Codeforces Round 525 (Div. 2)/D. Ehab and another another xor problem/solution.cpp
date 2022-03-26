@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
@@ -12,9 +12,7 @@ int main() {
     assert(r != -2);
     return r;
   };
-  auto set = [](int x, int p) {
-    return x | (1 << p);
-  };
+  auto set = [](int x, int p) { return x | (1 << p); };
   int c = ask(0, 0);
   int a = 0, b = 0;
   for (int i = 29; i >= 0; i--) {

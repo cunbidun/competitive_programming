@@ -2,3 +2,6 @@ stdc++.h.gch
 TestCase
 cache
 .vscode
+
+.DS_Store
+*.dSYM

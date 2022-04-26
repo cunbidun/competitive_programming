@@ -67,21 +67,22 @@ private:
  * @param: message, print if non-empty
  */
 inline void WA(int num = 0, string message = "") {
-  res << "wrong answer\n";
   if (message != "") {
     res << message;
   } else if (num == 1) {
-    res << "too many questions";
+    res << "asked too many questions";
   } else if (num == 2) {
     res << "incorrect format";
   } else if (num == 3) {
     res << "idleness limit exceeded";
   }
-  exit(0);
+  exit(1);
 }
 
-inline void OK() {
-  res << "accepted" << std::endl;
+inline void OK(string message = "") {
+  if (message != "") {
+    res << message;
+  }
   exit(0);
 }
 

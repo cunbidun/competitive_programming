@@ -1,9 +1,7 @@
-#ifdef __APPLE__
+#include <array>
+#include <functional>
 #include <iostream>
 #include <vector>
-#else
-#include <bits/stdc++.h>
-#endif
 
 using namespace std;
 
@@ -14,7 +12,6 @@ int main() {
   cin >> N;
   vector<int> a(N);
   for (int i = 0; i < N; i++) {
-
     cin >> a[i];
   }
   cout << 1 << '\n';

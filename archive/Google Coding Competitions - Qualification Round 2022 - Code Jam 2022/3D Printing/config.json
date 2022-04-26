@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a4672b",
+  "timeLimit": 5000,
+  "tests": [
+    {
+      "input": "3\n300000 200000 300000 500000\n300000 200000 500000 300000\n300000 500000 300000 200000\n1000000 1000000 0 0\n0 1000000 1000000 1000000\n999999 999999 999999 999999\n768763 148041 178147 984173\n699508 515362 534729 714381\n949704 625054 946212 951187\n",
+      "output": "Case #1: 300000 200000 300000 200000\nCase #2: IMPOSSIBLE\nCase #3: 400001 100002 100003 399994\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "3D Printing",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Google Coding Competitions - Qualification Round 2022 - Code Jam 2022"
+}

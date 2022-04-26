@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a46471",
+  "timeLimit": 5000,
+  "tests": [
+    {
+      "input": "4\n4\n6 10 12 8\n6\n5 4 5 4 4 4\n10\n10 10 7 6 7 4 4 5 7 4\n1\n10\n",
+      "output": "Case #1: 4\nCase #2: 5\nCase #3: 9\nCase #4: 1\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "d1000000",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Google Coding Competitions - Qualification Round 2022 - Code Jam 2022"
+}

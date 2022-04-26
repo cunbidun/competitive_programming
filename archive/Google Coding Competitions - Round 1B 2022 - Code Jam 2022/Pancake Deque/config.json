@@ -1,0 +1,25 @@
+{
+  "numTest": 0,
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "interactive": false,
+  "useGeneration": false,
+  "checker": "token_checker",
+  "knowGenAns": false,
+  "url": "https://codingcompetitions.withgoogle.com/codejam/round/000000000087711b/0000000000acd59d",
+  "timeLimit": 20000,
+  "tests": [
+    {
+      "input": "4\n2\n1 5\n4\n1 4 2 3\n5\n10 10 10 10 10\n4\n7 1 3 1000000\n",
+      "output": "Case #1: 2\nCase #2: 3\nCase #3: 5\nCase #4: 2\n",
+      "index": 0,
+      "active": true
+    }
+  ],
+  "stopAtWrongAnswer": false,
+  "name": "Pancake Deque",
+  "truncateLongTest": false,
+  "hideAcceptedTest": true,
+  "group": "Google Coding Competitions - Round 1B 2022 - Code Jam 2022"
+}

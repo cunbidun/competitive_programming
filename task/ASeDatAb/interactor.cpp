@@ -76,6 +76,20 @@ void interactor(ifstream &from_input, ofstream &screen) {
 #include <sys/stat.h>
 #include <unistd.h>
 
+/**
+ * @brief The interactor program for interactive task. 
+ *        The program should accept 3 arguments and can be invoke this way:
+ *       
+ *          interactor <input_file> <screen_file> <result_file> 
+ *  
+ *        The input_file will contain data that will be feed into interactor
+ * 
+ *        The screen_file will store interaction between solution and the interactor. 
+ *        Later, this data will be print to screen. 
+ * 
+ *        The result_file will contain the result of the test. 
+ *        Later, this data will be use to report error and verdict.
+ */
 int main(int argc, char *argv[]) {
   filesystem::path tmp_dir = filesystem::temp_directory_path();
   char const *que = "/tmp/que";

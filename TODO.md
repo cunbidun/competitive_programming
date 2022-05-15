@@ -1,4 +1,0 @@
-- [ ] linear sieve
-- [ ] max flow min cut theorem
-- [ ] dinic alogorithm time complexity in bipartite graph
-- [ ] möbius function

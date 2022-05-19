@@ -24,7 +24,7 @@ void interactor(ifstream &from_input, ofstream &screen) {
 
   std::mt19937_64 rng(std::chrono::steady_clock::now().time_since_epoch().count());
 
-  int T = 100;
+  int T = 1;
   to_sol << T << endl;
   while (T--) {
     int q_asked = 0;
@@ -66,7 +66,7 @@ void interactor(ifstream &from_input, ofstream &screen) {
       }
     }
   }
-  OK("100 tests");
+  OK();
 }
 
 #include <sys/fcntl.h>
@@ -77,18 +77,18 @@ void interactor(ifstream &from_input, ofstream &screen) {
 #include <unistd.h>
 
 /**
- * @brief The interactor program for interactive task. 
- *        The program should accept 3 arguments and can be invoke this way:
- *       
- *          interactor <input_file> <screen_file> <result_file> 
- *  
- *        The input_file will contain data that will be feed into interactor
- * 
- *        The screen_file will store interaction between solution and the interactor. 
- *        Later, this data will be print to screen. 
- * 
- *        The result_file will contain the result of the test. 
- *        Later, this data will be use to report error and verdict.
+ * The interactor program for interactive task.
+ * The program should accept 3 file path as arguments and can be invoke this way:
+ *
+ *    interactor <input_file> <screen_file> <result_file>
+ *
+ * The input_file will contain data that will be feed into interactor
+ *
+ * The screen_file will store interaction between solution and the interactor.
+ * Later, this data will be print to screen.
+ *
+ * The result_file will contain the result of the test.
+ * Later, this data will be use to report error and verdict.
  */
 int main(int argc, char *argv[]) {
   filesystem::path tmp_dir = filesystem::temp_directory_path();

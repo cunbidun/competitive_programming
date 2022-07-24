@@ -1,11 +1,6 @@
 {
-  "frontend_exec": "java -jar /Users/cunbidun/competitive_programming/cpcli/binary/TaskConfigEditor/TaskConfigEditor.jar",
-  "task_dir": "/Users/cunbidun/competitive_programming/task",
-  "output_dir": "/Users/cunbidun/competitive_programming/output",
-  "template_dir": "/Users/cunbidun/competitive_programming/template.mac",
-  "archive_dir": "/Users/cunbidun/competitive_programming/archive",
-  "include_dir": "/Users/cunbidun/competitive_programming/include",
-  "cpcli_dir": "/Users/cunbidun/competitive_programming/cpcli",
+  "root": "/Users/cunbidun/competitive_programming",
+  "frontend_exec": "java -jar /Users/cunbidun/competitive_programming/cpcli/task_editor/TaskConfigEditor/TaskConfigEditor.jar",
   "cpp_compiler": "g++",
   "cpp_compile_flag": "-DLOCAL -O2 -std=c++17",
   "cpp_debug_flag": "-DLOCAL -Wall -Wshadow -std=c++17 -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG",

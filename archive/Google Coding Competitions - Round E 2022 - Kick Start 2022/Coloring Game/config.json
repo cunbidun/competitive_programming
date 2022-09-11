@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Google Coding Competitions - Round E 2022 - Kick Start 2022",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "Coloring Game",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "index": 0,
+      "input": "3\n1\n3\n6\n",
+      "output": "Case #1: 1\nCase #2: 1\nCase #3: 2\n"
+    }
+  ],
+  "timeLimit": 20000,
+  "truncateLongTest": false,
+  "url": "https://codingcompetitions.withgoogle.com/kickstart/round/00000000008cb0f5/0000000000ba856a",
+  "useGeneration": false
+}

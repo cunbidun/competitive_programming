@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Meta Coding Competitions - Meta Hacker Cup 2022 Qualification Round",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "A Second Hands",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "index": 0,
+      "input": "5\n3 2\n1 2 2\n5 3\n1 2 3 3 1\n5 2\n1 2 3 4 5\n5 5\n1 1 2 2 1\n1 1\n1\n",
+      "output": "Case #1: YES\nCase #2: YES\nCase #3: NO\nCase #4: NO\nCase #5: YES\n"
+    }
+  ],
+  "timeLimit": 360000,
+  "truncateLongTest": false,
+  "url": "https://www.facebook.com/codingcompetitions/hacker-cup/2022/qualification-round/problems/A",
+  "useGeneration": false
+}

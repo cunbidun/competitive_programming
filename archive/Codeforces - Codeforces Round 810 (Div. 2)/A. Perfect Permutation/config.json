@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 810 (Div. 2)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "A. Perfect Permutation",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "index": 0,
+      "input": "2\n1\n4\n",
+      "output": "1\n2 1 4 3\n"
+    }
+  ],
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/contest/1711/problem/A",
+  "useGeneration": false
+}

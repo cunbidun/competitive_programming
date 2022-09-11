@@ -52,7 +52,7 @@ int main() {
   for (int i = 1; i <= N + 1; i++) {
     if (a[i] != a[i - 1]) {
       ans = mint.add(ans, C(a[i - 1] + i - 2, i - 1));
-      for (int j = last; j < i; j++) {
+      for (int j = last; j < i;   j++) {
         ans = mint.add(ans, C(a[i - 1] + j - 2, j - 1));
       }
       last = i;

@@ -18,6 +18,7 @@ int main() {
       continue;
     }
     for (int j = i - 2; j >= 0; j--) {
+      for (int i = 0; i <)
     }
   }
 }

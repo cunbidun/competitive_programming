@@ -91,7 +91,7 @@ int main() {
           cout << "YES\n";
         }
       } else {
-        if (K % 2 == 1) {
+        if (K % 2 == 1 && a[0] != a[1]) {
           cout << "NO\n";
         } else {
           cout << "YES\n";
@@ -99,21 +99,10 @@ int main() {
       }
       continue;
     }
-    if (cnt == 0) {
-      if (K == 1) {
-        cout << "NO\n";
-      } else {
-        cout << "YES\n";
-      }
-      continue;
-    }
     auto a_p1 = polynomial_rolling_hash(a, P, MOD1);
     auto a_p2 = polynomial_rolling_hash(a, P, MOD2);
     auto b_p1 = polynomial_rolling_hash(b, P, MOD1);
     auto b_p2 = polynomial_rolling_hash(b, P, MOD2);
-    // cout << a_p1.hash[1] << '\n';
-    // cout << a_p1.get_hash(0, 1) << '\n';
-    // cout << b_p1.get_hash(3, 4) << '\n';
     int f = 0;
     for (int i = 0; i < N - 1; i++) {
       auto p11 = (a_p1.get_hash(0, i) == b_p1.get_hash(N - i - 1, N - 1));
@@ -125,6 +114,18 @@ int main() {
         f = 1;
       }
     }
-    cout << (f ? "YES" : "NO") << '\n';
+    if (f) {
+      cout << "YES\n";
+      continue;
+    }
+    if (cnt == 0) {
+      if (K == 1) {
+        cout << "NO\n";
+      } else {
+        cout << "YES\n";
+      }
+    } else {
+      cout << "NO\n";
+    }
   }
 }

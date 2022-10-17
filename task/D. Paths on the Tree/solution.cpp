@@ -85,5 +85,7 @@ int main() {
     })(1);
 
     debug() << imie(mx);
+    for (int i = 1; i <= N; i++) {
+    }
   }
 }

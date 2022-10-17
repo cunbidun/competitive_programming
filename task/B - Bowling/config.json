@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "AtCoder - AtCoder Grand Contest 051 (Good Bye rng_58 Day 2)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "B - Bowling",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "index": 0,
+      "input": "\n",
+      "output": "9\n1 1\n1 5\n2 7\n4 4\n5 3\n6 8\n7 5\n8 2\n8 7\n"
+    }
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://atcoder.jp/contests/agc051/tasks/agc051_b",
+  "useGeneration": false
+}

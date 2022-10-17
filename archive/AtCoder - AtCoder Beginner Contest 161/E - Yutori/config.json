@@ -1,0 +1,43 @@
+{
+  "checker": "token_checker",
+  "compact": true,
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "AtCoder - AtCoder Beginner Contest 161",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "E - Yutori",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "index": 0,
+      "input": "11 3 2\nooxxxoxxxoo\n",
+      "output": "6\n"
+    },
+    {
+      "active": true,
+      "index": 1,
+      "input": "5 2 3\nooxoo\n",
+      "output": "1\n5\n"
+    },
+    {
+      "active": true,
+      "index": 2,
+      "input": "5 1 0\nooooo\n",
+      "output": "\n"
+    },
+    {
+      "active": true,
+      "index": 3,
+      "input": "16 4 3\nooxxoxoxxxoxoxxo\n",
+      "output": "11\n16\n"
+    }
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://atcoder.jp/contests/abc161/tasks/abc161_e",
+  "useGeneration": false
+}

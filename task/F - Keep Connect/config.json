@@ -1,0 +1,35 @@
+{
+  "genParameters": "",
+  "name": "F - Keep Connect",
+  "group": "AtCoder - UNIQUE VISION Programming Contest 2022（AtCoder Beginner Contest 248）",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "3 998244353\n",
+      "output": "7 15\n",
+      "active": true
+    },
+    {
+      "index": 1,
+      "input": "16 999999937\n",
+      "output": "46 1016 14288 143044 1079816 6349672 29622112 110569766 330377828 784245480 453609503 38603306 44981526 314279703 408855776\n",
+      "active": true
+    },
+    {
+      "index": 2,
+      "input": "",
+      "output": "",
+      "active": true
+    }
+  ]
+}

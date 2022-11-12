@@ -1,6 +1,6 @@
 {
   "root": "/Users/cunbidun/competitive_programming",
-  "frontend_exec": "java -jar /Users/cunbidun/competitive_programming/cpcli/task_editor/TaskConfigEditor/TaskConfigEditor.jar",
+  "frontend_exec": "java -jar ~/.local/share/cpcli/frontend/TaskConfigEditor.jar",
   "cpp_compiler": "g++",
   "cpp_compile_flag": "-DLOCAL -O2 -std=c++17",
   "cpp_debug_flag": "-DLOCAL -Wall -Wshadow -std=c++17 -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG",

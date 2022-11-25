@@ -1,6 +1,6 @@
 /**
- *  author: {{ author }} 
- *  created: {{ __now__ }}       
+ *  author: cunbidun 
+ *  created: 2022-11-24 23:08:30       
  **/
 #include <array>
 #include <functional>

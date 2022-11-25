@@ -1,0 +1,59 @@
+{
+  "genParameters": "",
+  "name": "A - Pay to Win",
+  "group": "AtCoder - AtCoder Grand Contest 044",
+  "checker": "token_checker",
+  "numTest": 1000,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": true,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "5\n11 1 2 4 8\n11 1 2 2 8\n32 10 8 5 4\n29384293847243 454353412 332423423 934923490 1\n900000000000000000 332423423 454353412 934923490 987654321\n",
+      "output": "20\n19\n26\n3821859835\n23441258666\n",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "2\n1 1 1 1 1\n10 22 1 22 1",
+      "output": "1\n4",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "1\n10 22 1 22 1",
+      "output": "4",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 3,
+      "input": "1\n1000000000000000000 1000000000 1000000000 1000000000 1000000000",
+      "output": "",
+      "active": false,
+      "answer": false
+    },
+    {
+      "index": 4,
+      "input": "3\n1 1000000 1000000 1000000 1000000\n3 1000000 1000000 1000000 1000000\n3 1000000 1000000 1000000 100",
+      "output": "",
+      "active": false,
+      "answer": false
+    },
+    {
+      "index": 5,
+      "input": "1\n1024646044 1000000000 1000000000 1000000000 1",
+      "output": "",
+      "active": true,
+      "answer": true
+    }
+  ]
+}

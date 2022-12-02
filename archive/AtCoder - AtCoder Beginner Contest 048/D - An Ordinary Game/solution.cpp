@@ -1,3 +1,7 @@
+/**
+ *  author: cunbidun
+ *  created: Tuesday, 2022-11-29 21:11:21 CST
+ **/
 #include <array>
 #include <functional>
 #include <iostream>
@@ -10,5 +14,5 @@ int main() {
   cin.tie(nullptr);
   string s;
   cin >> s;
-  cout << s << '\n';
+  cout << ((s.size() % 2 != (s.front() == s.back())) ? "First" : "Second") << '\n';
 }

@@ -1,31 +1,25 @@
 {
-  "genParameters": "",
-  "name": "D - Squares",
-  "group": "AtCoder - HHKB Programming Contest 2020",
   "checker": "token_checker",
-  "numTest": 0,
-  "timeLimit": 2000,
+  "genParameters": "",
   "generatorSeed": "",
-  "useGeneration": false,
-  "knowGenAns": false,
+  "group": "AtCoder - HHKB Programming Contest 2020",
   "hideAcceptedTest": true,
-  "truncateLongTest": false,
-  "stopAtWrongAnswer": false,
   "interactive": false,
+  "knowGenAns": false,
+  "name": "D - Squares",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
   "tests": [
     {
+      "active": true,
+      "answer": true,
       "index": 0,
       "input": "3\n3 1 2\n4 2 2\n331895368 154715807 13941326\n",
-      "output": "20\n32\n409369707\n",
-      "active": true,
-      "answer": true
-    },
-    {
-      "index": 1,
-      "input": "1\n3 1 2",
-      "output": "20",
-      "active": true,
-      "answer": true
+      "output": "20\n32\n409369707\n"
     }
-  ]
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://atcoder.jp/contests/hhkb2020/tasks/hhkb2020_d",
+  "useGeneration": false
 }

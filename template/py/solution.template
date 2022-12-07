@@ -1,0 +1,7 @@
+"""
+author: {{ author }}
+created: {{ __now__ }}
+"""
+
+if __name__ == "__main__":
+    pass

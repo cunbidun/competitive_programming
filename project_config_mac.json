@@ -1,10 +1,21 @@
 {
   "root": "/Users/cunbidun/competitive_programming",
   "frontend_exec": "java -jar ~/.local/share/cpcli/frontend/TaskConfigEditor.jar",
-  "cpp_compiler": "clang++",
-  "cpp_compile_flag": "-DLOCAL -O2 -std=c++17",
-  "cpp_debug_flag": "-DLOCAL -Wall -Wshadow -std=c++17 -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG",
-  "use_precompiled_header": false,
-  "use_cache": true,
+  "language_config": {
+    "default": "cpp",
+    "override": {
+      "solution": "py"
+    },
+    "[cpp]": {
+      "compiler": "clang++",
+      "regular_flag": "-DLOCAL -O2 -std=c++17",
+      "debug_flag": "-DLOCAL -Wall -Wshadow -std=c++17 -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG",
+      "use_precompiled_header": false,
+      "use_cache": true
+    },
+    "[py]": {
+      "compiler": "/Users/cunbidun/opt/miniconda3/bin/python"
+    }
+  },
   "use_template_engine": true
 }

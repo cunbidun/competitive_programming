@@ -1,6 +1,7 @@
 /**
  *  author: cunbidun
  *  created: Tuesday, 2022-11-29 21:11:21 CST
+ *  tags: best-problem
  **/
 #include <array>
 #include <functional>

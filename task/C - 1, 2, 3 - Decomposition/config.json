@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "AtCoder - AtCoder Regular Contest 123",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "C - 1, 2, 3 - Decomposition",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "5\n456\n10000\n123\n314\n91\n",
+      "output": "2\n4\n1\n2\n4\n"
+    }
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://atcoder.jp/contests/arc123/tasks/arc123_c",
+  "useGeneration": false
+}

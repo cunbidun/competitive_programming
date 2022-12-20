@@ -1,0 +1,46 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "AtCoder - Mujin Programming Challenge 2017",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "A - Robot Racing",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "3\n1 2 3\n",
+      "output": "4\n"
+    },
+    {
+      "active": true,
+      "answer": true,
+      "index": 1,
+      "input": "3\n2 3 4\n",
+      "output": "6\n"
+    },
+    {
+      "active": true,
+      "answer": true,
+      "index": 2,
+      "input": "8\n1 2 3 5 7 11 13 17\n",
+      "output": "10080\n"
+    },
+    {
+      "active": true,
+      "answer": true,
+      "index": 3,
+      "input": "13\n4 6 8 9 10 12 14 15 16 18 20 21 22\n",
+      "output": "311014372\n"
+    }
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://atcoder.jp/contests/mujin-pc-2017/tasks/mujin_pc_2017_a",
+  "useGeneration": false
+}

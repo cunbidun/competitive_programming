@@ -1,0 +1,45 @@
+{
+  "genParameters": "",
+  "name": "C - +-- Rectangle",
+  "group": "AtCoder - AtCoder Grand Contest 016",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "3 3 2 2\n",
+      "output": "Yes\n1 1 1\n1 -4 1\n1 1 1\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "2 4 1 2\n",
+      "output": "No\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "3 4 2 3\n",
+      "output": "Yes\n2 -5 8 7\n3 -5 -4 -5\n2 1 -1 7\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 3,
+      "input": "7 7 3 3",
+      "output": "",
+      "active": true,
+      "answer": false
+    }
+  ]
+}

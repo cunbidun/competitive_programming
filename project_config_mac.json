@@ -3,9 +3,7 @@
   "task_editor_exec": "java -jar ~/.local/share/cpcli/task-editor/java-task-editor.jar",
   "language_config": {
     "default": "cpp",
-    "override": {
-      "solution": "java"
-    },
+    "override": {},
     "[cpp]": {
       "compiler": "clang++",
       "regular_flag": "-DLOCAL -O2 -std=c++17",

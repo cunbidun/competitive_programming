@@ -1,0 +1,38 @@
+{
+  "genParameters": "",
+  "name": "D - Lets Play Nim",
+  "group": "AtCoder - AtCoder Regular Contest 105",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "3\n1\n10\n2\n1 2\n21\n476523737 103976339 266993 706803678 802362985 892644371 953855359 196462821 817301757 409460796 773943961 488763959 405483423 616934516 710762957 239829390 55474813 818352359 312280585 185800870 255245162\n",
+      "output": "Second\nFirst\nSecond\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "1\n6\n3 3 3 3 3 3",
+      "output": "Second",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "1\n4 \n5 4 3 2",
+      "output": "First",
+      "active": true,
+      "answer": true
+    }
+  ]
+}

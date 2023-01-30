@@ -1,0 +1,24 @@
+{
+  "genParameters": "",
+  "name": "B - Unique XOR Path",
+  "group": "AtCoder - AtCoder Grand Contest 060",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "4\n2 2 1\nRD\n4 3 1\nRDDDR\n15 20 18\nDDRRRRRRRDDDDRRDDRDRRRRDDRDRDDRRR\n20 15 7\nDRRDDDDDRDDDRRDDRRRDRRRDDDDDRRRDD\n",
+      "output": "Yes\nNo\nYes\nNo\n",
+      "active": true,
+      "answer": true
+    }
+  ]
+}

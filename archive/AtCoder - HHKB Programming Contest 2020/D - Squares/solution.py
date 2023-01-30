@@ -4,6 +4,7 @@ created: Tuesday, 2022-12-06 18:28:36 CST
 tags: best-problem
 """
 
+
 if __name__ == "__main__":
     MOD = 10**9 + 7
     T = int(input())

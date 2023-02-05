@@ -1,7 +1,3 @@
-/**
- *  author: cunbidun 
- *  created: Sunday, 2023-02-05 12:30:47 CST       
- **/
 use std::{
     collections::VecDeque,
     fmt,
@@ -33,4 +29,8 @@ impl Scanner {
     }
 }
 
+/**
+ *  author: cunbidun 
+ *  created: Sunday, 2023-02-05 14:41:16 CST       
+ **/
 fn main() {}

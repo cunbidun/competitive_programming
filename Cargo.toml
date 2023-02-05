@@ -13,4 +13,7 @@ path = "task/F - Make Pair/solution.rs"
 [package]
 name = "competitive-programming"
 version = "1.0.0"
-edition = "2021"
+edition = "2018"
+
+[dependencies]
+# cplib  = { path = "lib/rust" }

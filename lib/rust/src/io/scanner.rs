@@ -5,7 +5,7 @@ use std::{
     str::FromStr,
 };
 
-struct Scanner {
+pub struct Scanner {
     tokens: VecDeque<String>,
 }
 
@@ -29,8 +29,3 @@ impl Scanner {
     }
 }
 
-/**
- *  author: {{ author }} 
- *  created: {{ __now__ }}       
- **/
-fn main() {}

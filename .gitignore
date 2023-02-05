@@ -1,7 +1,17 @@
-stdc++.h.gch
+# cpcli
 TestCase
 cache
+
+# Vsocde
 .vscode
 
+# Macos
 .DS_Store
 *.dSYM
+
+# CPP
+stdc++.h.gch
+
+# Rust 
+target/
+Cargo.lock

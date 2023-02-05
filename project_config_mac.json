@@ -3,13 +3,16 @@
   "task_editor_exec": "java -jar ~/.local/share/cpcli/task-editor/java-task-editor.jar",
   "language_config": {
     "default": "cpp",
-    "override": {},
+    "override": {
+      "solution": "rs"
+    },
     "[cpp]": {
       "compiler": "clang++",
       "regular_flag": "-DLOCAL -O2 -std=c++17",
       "debug_flag": "-DLOCAL -Wall -Wshadow -std=c++17 -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG",
       "use_precompiled_header": false,
-      "use_cache": true
+      "use_cache": true,
+      "include_dir": "/Users/cunbidun/competitive_programming/lib/cpp/"
     },
     "[py]": {
       "interpreter": "/Users/cunbidun/opt/miniconda3/bin/python"
@@ -19,6 +22,10 @@
       "runtime": "java",
       "regular_flag": " ",
       "debug_flag": " "
+    },
+    "[rs]": {
+      "compiler": "rustc",
+      "regular_flag": "-O --crate-type bin --edition=2018 -C overflow-checks=on"
     }
   },
   "use_template_engine": true

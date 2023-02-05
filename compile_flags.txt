@@ -5,5 +5,5 @@
 -Wduplicated-cond
 -pedantic
 -Wlogical-op
--Iinclude
+-Ilib/cpp
 

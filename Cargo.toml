@@ -1,0 +1,16 @@
+[[bin]]
+name = "archive_atcoder_atcoder_grand_contest_048_b_bracket_score_solution_rs"
+path = "archive/AtCoder - AtCoder Grand Contest 048/B - Bracket Score/solution.rs"
+
+[[bin]]
+name = "output_solution_rs"
+path = "output/solution.rs"
+
+[[bin]]
+name = "task_f_make_pair_solution_rs"
+path = "task/F - Make Pair/solution.rs"
+
+[package]
+name = "competitive-programming"
+version = "1.0.0"
+edition = "2021"

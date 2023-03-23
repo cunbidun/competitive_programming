@@ -1,0 +1,64 @@
+{
+  "genParameters": "",
+  "name": "F - Air Safety",
+  "group": "AtCoder - M-SOLUTIONS Programming Contest 2020",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 3000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "2\n11 1 U\n11 47 D\n",
+      "output": "230\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "4\n20 30 U\n30 20 R\n20 10 D\n10 20 L\n",
+      "output": "SAFE\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "8\n168 224 U\n130 175 R\n111 198 D\n121 188 L\n201 116 U\n112 121 R\n145 239 D\n185 107 L\n",
+      "output": "100\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 3,
+      "input": "2\n111 198 D\n121 188 L",
+      "output": "100",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 4,
+      "input": "5\n2 2 R\n1 1 D\n3 3 D\n6 6 R\n5 5 L",
+      "output": "10",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 5,
+      "input": "4\n2 2 R\n1 1 D\n6 6 R\n5 5 L",
+      "output": "SAFE",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

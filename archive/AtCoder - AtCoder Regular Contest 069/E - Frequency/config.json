@@ -1,0 +1,32 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "AtCoder - AtCoder Regular Contest 069",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "E - Frequency",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "2\n1 2\n",
+      "output": "2\n1\n"
+    },
+    {
+      "active": true,
+      "answer": true,
+      "index": 1,
+      "input": "10\n1 2 1 3 2 4 2 5 8 1\n",
+      "output": "10\n7\n0\n4\n0\n3\n0\n2\n3\n0\n"
+    }
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://atcoder.jp/contests/arc069/tasks/arc069_c",
+  "useGeneration": false
+}

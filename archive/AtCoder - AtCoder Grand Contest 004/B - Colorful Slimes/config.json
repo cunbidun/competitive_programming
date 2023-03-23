@@ -1,0 +1,50 @@
+{
+  "genParameters": "",
+  "name": "B - Colorful Slimes",
+  "group": "AtCoder - AtCoder Grand Contest 004",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "2 10\n1 100\n",
+      "output": "12\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "3 10\n100 1 100\n",
+      "output": "23\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "4 10\n1 2 3 4\n",
+      "output": "10\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 3,
+      "input": "10 1000000000\n1000000000 1000000000 1000000000 1000000000 1 1000000000 1000000000 1000000000 1000000000 1000000000",
+      "output": "",
+      "active": true,
+      "answer": false
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "genParameters": "",
+  "name": "F - Graph Smoothing",
+  "group": "AtCoder - AtCoder Beginner Contest 199（Sponsored by Panasonic）",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "3 2 1\n3 1 5\n1 2\n1 3\n",
+      "output": "3\n500000005\n500000008\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "3 2 2\n12 48 36\n1 2\n1 3\n",
+      "output": "750000036\n36\n250000031\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "4 5 1000\n578 173 489 910\n1 2\n2 3\n3 4\n4 1\n1 3\n",
+      "output": "201113830\n45921509\n67803140\n685163678\n",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

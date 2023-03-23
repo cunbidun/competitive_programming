@@ -28,4 +28,3 @@ impl Scanner {
         T::from_str(&self.tokens.pop_front().unwrap()).unwrap()
     }
 }
-

@@ -1,0 +1,106 @@
+{
+  "genParameters": "",
+  "name": "B - First Second",
+  "group": "AtCoder - AtCoder Grand Contest 047",
+  "checker": "token_checker",
+  "numTest": 1,
+  "timeLimit": 3000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": true,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "3\nabcxyx\ncyx\nabc\n",
+      "output": "1\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "6\nb\na\nabc\nc\nd\nab\n",
+      "output": "5\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "5\na\naa\naaa\nb\nbb\n",
+      "output": "4",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 3,
+      "input": "5\nabbca\naca\na\nba\nbba",
+      "output": "7",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 4,
+      "input": "3\nabbca\nbba\nabbca",
+      "output": "1",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 5,
+      "input": "5\naaaaa\naaaa\naaa\naa\na",
+      "output": "10",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 6,
+      "input": "5\nxys\nsy\nxysxy\nx\ny",
+      "output": "",
+      "active": true,
+      "answer": false
+    },
+    {
+      "index": 7,
+      "input": "5\na\nb\nc\nd\ne",
+      "output": "0",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 8,
+      "input": "5\nabababa\nababa\nabab\naba\nab",
+      "output": "4",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 9,
+      "input": "3\njoojj\njjjoj\nooojj\n",
+      "output": "0",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 10,
+      "input": "2\njoojj\nooojj\n",
+      "output": "0",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 11,
+      "input": "13\njoojj\njjjoj\nooojj\noojoo\noojo\njoo\nooo\nojj\nj\njojoo\nojo\no\njo",
+      "output": "33",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

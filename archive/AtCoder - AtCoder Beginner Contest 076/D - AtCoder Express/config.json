@@ -1,0 +1,78 @@
+{
+  "genParameters": "",
+  "name": "D - AtCoder Express",
+  "group": "AtCoder - AtCoder Beginner Contest 076",
+  "checker": "double_4",
+  "numTest": 1000,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": true,
+  "knowGenAns": true,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": true,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "1\n100\n30\n",
+      "output": "2100.000000000000000\n",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "2\n60 50\n34 38\n",
+      "output": "2632.000000000000000\n",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "3\n12 14 2\n6 2 7\n",
+      "output": "76.000000000000000\n",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 3,
+      "input": "1\n9\n10\n",
+      "output": "20.250000000000000000\n",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 4,
+      "input": "10\n64 55 27 35 76 119 7 18 49 100\n29 19 31 39 27 48 41 87 55 70\n",
+      "output": "20291.000000000000\n",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 5,
+      "input": "1\n3\n10",
+      "output": "2.25",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 6,
+      "input": "1\n1\n1",
+      "output": "0.25",
+      "active": false,
+      "answer": true
+    },
+    {
+      "index": 7,
+      "input": "1\n3\n1",
+      "output": "2",
+      "active": false,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

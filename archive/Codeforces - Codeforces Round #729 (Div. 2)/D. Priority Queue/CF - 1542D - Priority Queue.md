@@ -1,18 +1,10 @@
----
-fontfamily: sourcecodepro 
-fontsize: 10pt
-title: "D. Priority Queue"
-date: "2021-07-10"
-keywords: [2200, dp]
-lang: "en"
-...
+tags:: #dp
+rating:: #cf-2200
+link:: https://codeforces.com/problemset/problem/1542/D
 
-# [D. Priority Queue](https://codeforces.com/problemset/problem/1542/D)
-
-## Variables
-1. Let $a$ is the input array, $a[i]$ is either equal to '-' or a positive number
-2. Let $N$ is the size of $a$
-
+- ## Variables
+  1. Let $a$ is the input array, $a[i]$ is either equal to '-' or a positive number
+  2. Let $N$ is the size of $a$
 ## High-level idea
 1. Because the number of subsets is enormous, 
 instead of finding all the subsets, let's calculate the contribution of each element.
@@ -22,8 +14,7 @@ Elements will contribute to the sum when it remains in the priority queue after 
 $a[i]$ is the $k^{th}$ smallest elements in the priority queue.
 
 3. The number of times $a[i]$ remains in the queue is equal to $f[i][1] + \cdots + f[i][N]$, 
-so the contribution of $a[i]$ to the total sum is $a[i] \cdot (f[i][1] + \cdots + f[i][N])$ 
-
+so the contribution of $a[i]$ to the total sum is $a[i] \cdot (f[i][1] + \cdots + f[i][N])$
 ## Low-level detail
 Let's fix $i$ and calculate $f[k]$ for $k = 1 \rightarrow N$. To calculate $f[k]$, we will need
 other dimension. Let's $f[j][k]$ is the number of subsets if we only

@@ -1,0 +1,36 @@
+{
+  "genParameters": "",
+  "name": "B. Astrophysicists",
+  "group": "Codeforces - Codeforces Round 880 (Div. 2)",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 1000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "5\n3 3 100\n2 1 14\n91 2 13\n36 16 6\n73 8 22\n",
+      "output": "100\n0\n26\n72\n176\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "1\n3 3 15",
+      "output": "15",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

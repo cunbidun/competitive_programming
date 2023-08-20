@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 843 (Div. 2)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "E. The Human Equation",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "5\n3\n1 2 -3\n5\n1 0 0 -1 -1\n6\n2 -4 3 -5 4 1\n5\n1 -1 1 -1 1\n7\n0 0 0 0 0 0 0\n",
+      "output": "3\n2\n6\n1\n0\n"
+    }
+  ],
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1775/E",
+  "useGeneration": false
+}

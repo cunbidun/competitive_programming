@@ -38,7 +38,7 @@ template <class T> vector<T> gen_array(int n, T min_val, T max_val, bool p = tru
       if (i != 0) {
         cout << " ";
       }
-      cout << rnd.next(min_val, max_val);
+      cout << array[i];
     }
   }
   return array;
@@ -55,6 +55,29 @@ inline vector<vector<int>> gen_directed_graph(int n, int m, int st = 1, bool p =
     } else {
       g[u].push_back(v);
       s.insert({u, v});
+    }
+  }
+  if (p) {
+    for (int i = 0; i < n; i++) {
+      for (int j : g[i]) {
+        cout << i + st << " " << j + st << "\n";
+      }
+    }
+  }
+  return g;
+}
+
+inline vector<vector<int>> gen_graph(int n, int m, int st = 1, bool p = true) {
+  vector<vector<int>> g(n);
+  set<pair<int, int>> s;
+  for (int i = 0; i < m; i++) {
+    int u = rnd.next(0, n - 1);
+    int v = rnd.next(0, n - 1);
+    if (u == v || s.find({min(u, v), max(u, v)}) != s.end()) {
+      i--;
+    } else {
+      g[u].push_back(v);
+      s.insert({min(u, v), max(u, v)});
     }
   }
   if (p) {
@@ -209,5 +232,37 @@ inline vector<int> gen_tree_p_list(int n, int st = 1, bool p = true) {
     cout << '\n';
   }
   return parent;
+}
+
+inline vector<vector<int>> gen_connected_graph(int n, int m, int st = 1, bool p = true) {
+  assert(m >= n - 1);
+  set<pair<int, int>> edge;
+  auto g = gen_tree(n, 0, false);
+  for (int i = 0; i < n; i++) {
+    for (int j : g[i]) {
+      edge.insert({min(i, j), max(i, j)});
+    }
+  }
+  for (int i = 0; i < m - (n - 1); i++) {
+    int u = rnd.next(0, n - 1);
+    int v = rnd.next(0, n - 1);
+    if (u == v || edge.find({min(u, v), max(u, v)}) != edge.end()) {
+      i--;
+    } else {
+      g[u].push_back(v);
+      g[v].push_back(u);
+      edge.insert({min(u, v), max(u, v)});
+    }
+  }
+  if (p) {
+    for (auto [i, j] : edge) {
+      if (rnd.next(0, 2))
+        cout << i + st << " " << j + st << "\n";
+      else {
+        cout << j + st << " " << i + st << "\n";
+      }
+    }
+  }
+  return g;
 }
 #endif

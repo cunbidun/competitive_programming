@@ -3,6 +3,7 @@
  *  created: Saturday, 2023-05-20 14:59:02 CDT
  **/
 #include <array>
+#include <bitset>
 #include <cassert>
 #include <functional>
 #include <iostream>

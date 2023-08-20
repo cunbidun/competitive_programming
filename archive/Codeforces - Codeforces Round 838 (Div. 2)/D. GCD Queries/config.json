@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 838 (Div. 2)",
+  "hideAcceptedTest": true,
+  "interactive": true,
+  "knowGenAns": false,
+  "name": "D. GCD Queries",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "2\n2\n\n1\n\n1\n5\n\n2\n\n4\n\n1\n",
+      "output": "? 1 2\n\n! 1 2\n\n\n? 1 2\n\n? 2 3\n\n! 3 3\n"
+    }
+  ],
+  "timeLimit": 3000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1762/D",
+  "useGeneration": false
+}

@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Hello 2022",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "D. The Winter Hike",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "4\n1\n0 8\n1 99\n2\n0 0 0 0\n0 0 0 0\n9 9 2 2\n9 9 9 9\n2\n0 0 4 2\n0 0 2 4\n4 2 4 2\n2 4 2 4\n4\n0 0 0 0 0 0 0 2\n0 0 0 0 0 0 2 0\n0 0 0 0 0 2 0 0\n0 0 0 0 2 0 0 0\n0 0 0 2 2 0 2 2\n0 0 2 0 1 6 2 1\n0 2 0 0 2 4 7 4\n2 0 0 0 2 0 1 6\n",
+      "output": "100\n22\n14\n42\n"
+    }
+  ],
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1621/D",
+  "useGeneration": false
+}

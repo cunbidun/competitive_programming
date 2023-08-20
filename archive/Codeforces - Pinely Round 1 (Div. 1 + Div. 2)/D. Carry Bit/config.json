@@ -1,0 +1,64 @@
+{
+  "genParameters": "",
+  "name": "D. Carry Bit",
+  "group": "Codeforces - Pinely Round 1 (Div. 1 + Div. 2)",
+  "checker": "token_checker",
+  "numTest": 100,
+  "timeLimit": 1000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "3 1\n",
+      "output": "15\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "3 0\n",
+      "output": "27\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "998 244\n",
+      "output": "573035660\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 3,
+      "input": "4 2",
+      "output": "52",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 4,
+      "input": "2 1",
+      "output": "4",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 5,
+      "input": "4 3",
+      "output": "",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

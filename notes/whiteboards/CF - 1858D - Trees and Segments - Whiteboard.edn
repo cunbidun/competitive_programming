@@ -1,5 +1,5 @@
 {:blocks (
-{:block/created-at 1692493561229
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -26,8 +26,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :collapsedHeight 0
 :nonce 1692461700420}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -47,8 +47,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493211309
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -68,8 +68,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493480014
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -89,8 +89,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493480643
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -110,8 +110,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493481398
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -131,8 +131,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493481879
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -152,8 +152,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493482730
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -173,8 +173,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493483471
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -194,8 +194,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493484078
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -215,8 +215,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493484720
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -236,8 +236,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493482937
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -257,8 +257,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493483824
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -278,8 +278,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493484525
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -299,8 +299,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493486262
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -320,8 +320,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493485114
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -341,8 +341,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493485810
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -362,8 +362,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493486486
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -383,8 +383,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493490529
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -404,8 +404,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493489473
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -425,8 +425,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493489808
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -446,8 +446,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493490923
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -467,8 +467,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493493185
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -488,8 +488,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493492194
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -509,8 +509,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493492542
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -530,8 +530,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493491741
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -551,8 +551,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493492781
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -572,8 +572,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493491459
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -593,8 +593,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493492411
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -614,8 +614,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493493999
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -635,8 +635,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493493684
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -656,8 +656,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493495909
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -677,8 +677,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493494800
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817014
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -698,8 +698,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493495336
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817014} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -719,8 +719,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493496834
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -740,8 +740,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493497110
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -761,8 +761,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493497345
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817014
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -782,8 +782,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493497908
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817014} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -803,8 +803,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493499482
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -824,8 +824,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493498442
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -845,8 +845,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493499068
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -866,8 +866,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493499823
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -887,8 +887,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493501183
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -908,8 +908,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493501476
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -929,8 +929,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493502021
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -950,8 +950,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493502212
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -971,8 +971,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493503596
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -992,8 +992,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493502771
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1013,8 +1013,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493503275
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1034,8 +1034,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493504355
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1055,8 +1055,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493506514
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1076,8 +1076,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493505958
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1097,8 +1097,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493506180
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1118,8 +1118,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493507339
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1139,8 +1139,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493505268
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817014
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1160,8 +1160,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493506814
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817014} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1181,8 +1181,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493507935
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1202,8 +1202,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493511792
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1223,8 +1223,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493518544
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1244,8 +1244,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493518971
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1265,8 +1265,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493523256
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1286,8 +1286,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493526981
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1307,8 +1307,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493529799
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1328,8 +1328,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493528153
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1349,8 +1349,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493528910
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1370,8 +1370,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493530076
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1391,8 +1391,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493529310
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1412,8 +1412,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493528467
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1433,8 +1433,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493531849
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817013
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1454,8 +1454,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493531674
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817013} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1475,8 +1475,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493532770
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1496,8 +1496,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493533185
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1517,8 +1517,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493532269
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1538,8 +1538,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493533782
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1559,8 +1559,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493534309
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1580,8 +1580,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493534506
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1601,8 +1601,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493535979
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1622,8 +1622,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493535058
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1643,8 +1643,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493536655
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1664,8 +1664,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493537458
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817011
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1685,8 +1685,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493540978
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817011} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1706,8 +1706,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493542613
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1727,8 +1727,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493545522
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561228
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817010
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1748,8 +1748,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493544122
 :isComplete true}}
-:block/updated-at 1692493561228} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817010} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1769,8 +1769,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493546399
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1790,8 +1790,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493545979
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1811,8 +1811,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493544632
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817014
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1832,8 +1832,8 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493545025
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/created-at 1692493561229
+:block/updated-at 1692508817014} 
+{:block/created-at 1692508817012
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -1853,8 +1853,9 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493557650
 :isComplete true}}
-:block/updated-at 1692493561229} 
-{:block/properties 
+:block/updated-at 1692508817012} 
+{:block/created-at 1692508817013
+:block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
 {:stroke ""
@@ -1873,7 +1874,27 @@
 :parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :nonce 1692493559785
 :isComplete true}}
-:block/updated-at 1692493561229})
+:block/updated-at 1692508817013} 
+{:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:stroke ""
+:index 89
+:scale [1 1]
+:scaleLevel "md"
+:fill ""
+:type "pencil"
+:points [[0 0 0.5]]
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "3f721f00-3f19-11ee-9b10-af67b7f4b354"
+:noFill true
+:point [163.1640625 2600.57421875]
+:parentId "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
+:nonce 1692508816626
+:isComplete true}}
+:block/updated-at 1692508817012})
 :pages (
 {:block/uuid #uuid "64e0ea82-295c-4cda-8377-bf195f0c4d3f"
 :block/properties 

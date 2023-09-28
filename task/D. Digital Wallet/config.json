@@ -1,0 +1,39 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - COMPFEST 15 - Preliminary Online Mirror (Unrated, ICPC Rules, Teams Preferred)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "D. Digital Wallet",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "3 3 1\n10 4 2\n8 1 9\n4 8 2\n",
+      "output": "27\n"
+    },
+    {
+      "active": true,
+      "answer": true,
+      "index": 1,
+      "input": "3 3 2\n5 9 4\n1 3 1\n2 8 7\n",
+      "output": "17\n"
+    },
+    {
+      "active": true,
+      "answer": true,
+      "index": 2,
+      "input": "3 4 3\n5 9 10 1\n1 3 1 5\n2 5 7 2\n",
+      "output": "19\n"
+    }
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1866/D",
+  "useGeneration": false
+}

@@ -1,0 +1,32 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 858 (Div. 2)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "E. Tree Master",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "6 2\n1 5 2 3 1 1\n1 2 3 3 2\n4 5\n6 6\n",
+      "output": "33\n27\n"
+    },
+    {
+      "active": true,
+      "answer": true,
+      "index": 1,
+      "input": "14 8\n3 2 5 3 1 4 2 2 2 5 5 5 2 4\n1 2 3 1 1 4 7 3 3 1 5 3 8\n4 4\n4 10\n13 10\n3 12\n13 9\n3 12\n9 10\n11 5\n",
+      "output": "47\n53\n48\n36\n42\n36\n48\n14\n"
+    }
+  ],
+  "timeLimit": 3000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1806/E",
+  "useGeneration": false
+}

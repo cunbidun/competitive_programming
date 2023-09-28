@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 879 (Div. 2)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "E. MEX of LCM",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "6\n3\n1 2 3\n5\n1 2 3 4 5\n2\n2 3\n1\n1000000000\n12\n1 8 4 2 3 5 7 2 9 10 11 13\n12\n7 2 5 4 2 1 1 2 3 11 8 9\n",
+      "output": "4\n7\n1\n1\n16\n13\n"
+    }
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/contest/1834/problem/E",
+  "useGeneration": false
+}

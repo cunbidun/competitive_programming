@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 892 (Div. 2)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "B. Olya and Game with Arrays",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "3\n2\n2\n1 2\n2\n4 3\n1\n3\n100 1 6\n3\n4\n1001 7 1007 5\n3\n8 11 6\n2\n2 9\n",
+      "output": "5\n1\n19\n"
+    }
+  ],
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1859/B",
+  "useGeneration": false
+}

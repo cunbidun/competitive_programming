@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Educational Codeforces Round 155 (Rated for Div. 2)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "B. Chips on the Board",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "4\n3\n1 4 1\n3 2 2\n1\n4\n5\n2\n4 5\n2 3\n5\n5 2 4 5 3\n3 4 2 1 5\n",
+      "output": "10\n9\n13\n24\n"
+    }
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/contest/1879/problem/B",
+  "useGeneration": false
+}

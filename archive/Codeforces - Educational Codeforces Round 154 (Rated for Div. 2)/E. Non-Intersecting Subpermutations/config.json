@@ -1,0 +1,43 @@
+{
+  "genParameters": "",
+  "name": "E. Non-Intersecting Subpermutations",
+  "group": "Codeforces - Educational Codeforces Round 154 (Rated for Div. 2)",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "10 3\n",
+      "output": "71712\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "2 2\n",
+      "output": "2\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "1337 42\n",
+      "output": "524933698\n",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

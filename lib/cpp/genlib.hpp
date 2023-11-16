@@ -265,4 +265,21 @@ inline vector<vector<int>> gen_connected_graph(int n, int m, int st = 1, bool p 
   }
   return g;
 }
+
+inline set<array<int, 2>> gen_dag(int n, int m, int st = 1, bool p = true) {
+  set<array<int, 2>> edge;
+  while ((int)edge.size() < m) {
+    int u = rnd.next(0, n - 2);
+    int v = rnd.next(u + 1, n - 1);
+    edge.insert({u, v});
+  }
+
+  if (p) {
+    for (auto [i, j] : edge) {
+      cout << i + st << " " << j + st << "\n";
+    }
+  }
+
+  return edge;
+}
 #endif

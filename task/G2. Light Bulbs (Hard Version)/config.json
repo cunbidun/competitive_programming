@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 916 (Div. 3)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "G2. Light Bulbs (Hard Version)",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "4\n2\n2 2 1 1\n2\n1 2 2 1\n2\n1 2 1 2\n5\n3 4 4 5 3 1 1 5 2 2\n",
+      "output": "2 4\n1 2\n1 4\n2 8\n"
+    }
+  ],
+  "timeLimit": 3000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1914/G2",
+  "useGeneration": false
+}

@@ -1,0 +1,71 @@
+{
+  "genParameters": "",
+  "name": "D. Counting Rhyme",
+  "group": "Codeforces - Codeforces Round 904 (Div. 2)",
+  "checker": "token_checker",
+  "numTest": 1000,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": true,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "6\n4\n2 4 4 4\n4\n2 3 4 4\n9\n6 8 9 4 6 8 9 4 9\n9\n7 7 4 4 9 9 6 2 9\n18\n10 18 18 15 14 4 5 6 8 9 10 12 15 16 18 17 13 11\n21\n12 19 19 18 18 12 2 18 19 12 12 3 12 12 12 18 19 16 18 19 12\n",
+      "output": "0\n3\n26\n26\n124\n82\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "1\n9\n6 8 9 4 6 8 9 4 9",
+      "output": "26",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "1\n12\n2 3 6 8 9 12 1 1 1 1 1 1",
+      "output": "",
+      "active": true,
+      "answer": false
+    },
+    {
+      "index": 3,
+      "input": "1\n21\n12 19 19 18 18 12 2 18 19 12 12 3 12 12 12 18 19 16 18 19 12",
+      "output": "82",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 4,
+      "input": "1\n18\n10 18 18 15 14 4 5 6 8 9 10 12 15 16 18 17 13 11",
+      "output": "124",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 5,
+      "input": "1\n42\n31 23 9 15 15 17 11 31 5 41 16 7 20 5 6 4 36 23 18 20 35 9 12 42 28 42 18 15 25 38 20 41 42 28 36 38 9 21 39 39 11 34\n",
+      "output": "",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 6,
+      "input": "1\n9\n7 7 4 4 9 9 6 2 9\n",
+      "output": "",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

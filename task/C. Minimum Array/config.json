@@ -1,25 +1,29 @@
 {
-  "checker": "token_checker",
   "genParameters": "",
-  "generatorSeed": "",
-  "group": "Codeforces - Codeforces Round 905 (Div. 1)",
-  "hideAcceptedTest": true,
-  "interactive": false,
-  "knowGenAns": false,
   "name": "C. Minimum Array",
+  "group": "Codeforces - Codeforces Round 905 (Div. 1)",
+  "checker": "token_checker",
   "numTest": 0,
+  "timeLimit": 3000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
   "stopAtWrongAnswer": false,
+  "interactive": false,
   "tests": [
     {
-      "active": true,
-      "answer": true,
       "index": 0,
       "input": "2\n4\n1 2 3 4\n2\n1 4 0\n1 3 -100\n5\n2 1 2 5 4\n3\n2 4 3\n2 5 -2\n1 3 1\n",
-      "output": "-99 -98 -97 4\n2 1 2 5 4\n"
+      "output": "-99 -98 -97 4\n2 1 2 5 4\n",
+      "active": true,
+      "answer": true
     }
   ],
-  "timeLimit": 3000,
-  "truncateLongTest": false,
-  "url": "https://codeforces.com/problemset/problem/1887/C",
-  "useGeneration": false
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
 }

@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <functional>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -162,32 +164,27 @@ int main() {
     })(1, 1);
     auto inside = [&](int x, int y) -> bool { return in[y] <= in[x] && out[x] <= out[y]; };
 
-    vector<vector<int>> array(30);
+    vector<int> array(N);
     tree.init_lca(1);
-    for (auto [u, v] : tree.edges) {
+    for (int i = 0; i < (int)tree.edges.size(); i++) {
+      auto [u, v] = tree.edges[i];
       int mask = 0;
-      for (int i = 0; i < K; i++) {
-        auto [p1, p2] = path[i];
+      for (int j = 0; j < K; j++) {
+        auto [p1, p2] = path[j];
         int lca = tree.lca(p1, p2);
         if (inside(u, lca) && inside(v, lca) && inside(p1, u) && inside(p1, v)) {
-          mask += (1 << i);
-          // if (u == 5 && v == 2) {
-          //   cout << p1 << ' ' << p2 << '\n';
-          // }
+          mask += (1 << j);
         }
         if (inside(u, lca) && inside(v, lca) && inside(p2, u) && inside(p2, v)) {
-          mask += (1 << i);
-          // if (u == 5 && v == 2) {
-          //   cout << p1 << ' ' << p2 << ' ' << i << '\n';
-          // }
+          mask += (1 << j);
         }
       }
-      if (!mask) {
-        continue;
-      }
-      int most_sig = 31 - __builtin_clz(mask) + 1;
-      array[most_sig].push_back(mask);
+      array[i] = mask;
     }
+
+    vector<int> f(1 << K, 1e9);
+    f[0] = 0;
+    for (int)
 
     // vector<int> f(30, 1e9);
     // f[0] = 0;

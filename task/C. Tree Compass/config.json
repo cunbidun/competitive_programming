@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 934 (Div. 1)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "C. Tree Compass",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "4\n1\n2\n1 2\n4\n1 2\n1 3\n1 4\n7\n2 7\n3 2\n6 4\n5 7\n1 6\n6 7\n",
+      "output": "1\n1 0\n2\n1 1\n2 1\n2\n1 1\n2 1\n3\n6 1\n7 1\n2 1\n"
+    }
+  ],
+  "timeLimit": 2000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1943/C",
+  "useGeneration": false
+}

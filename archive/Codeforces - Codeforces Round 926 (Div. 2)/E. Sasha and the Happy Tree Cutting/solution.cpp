@@ -1,6 +1,4 @@
-#include <functional>
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -164,8 +162,10 @@ int main() {
     })(1, 1);
     auto inside = [&](int x, int y) -> bool { return in[y] <= in[x] && out[x] <= out[y]; };
 
-    vector<int> array(N);
+    set<int> value;
     tree.init_lca(1);
+
+    // for each edge in the tree and for every pair of input paths, check if the edge is in the path.
     for (int i = 0; i < (int)tree.edges.size(); i++) {
       auto [u, v] = tree.edges[i];
       int mask = 0;
@@ -179,26 +179,21 @@ int main() {
           mask += (1 << j);
         }
       }
-      array[i] = mask;
+      value.insert(mask);
     }
 
+    // f[mask] = the minimun number of edges need to cover the corresponding set of pair
+    // answer = f[111...111]: all paths are covered
     vector<int> f(1 << K, 1e9);
     f[0] = 0;
-    for (int)
 
-    // vector<int> f(30, 1e9);
-    // f[0] = 0;
-    // for (int i = 1; i <= K; i++) {
-    //   f[i] = f[i - 1] + 1;
-    //   for (int mask : array[i]) {
-    //     int invert = mask ^ ((1 << i) - 1);
-    //     int prev = 0;
-    //     if (invert) {
-    //       prev = 31 - __builtin_clz(invert) + 1;
-    //     }
-    //     f[i] = min(f[i], 1 + f[prev]);
-    //   }
-    // }
-    // cout << f[K] << '\n';
+    // the trick here is the size of value is O(k), so the time complexity for the next nested for loop
+    // will be O(K * 2^K)
+    for (int i = 0; i < (1 << K); i++) {
+      for (int j : value) {
+        f[i | j] = min(f[i | j], f[i] + 1);
+      }
+    }
+    cout << f[(1 << K) - 1] << '\n';
   }
 }

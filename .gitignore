@@ -15,3 +15,6 @@ stdc++.h.gch
 # Rust 
 target/
 Cargo.lock
+
+# Python 
+.venv

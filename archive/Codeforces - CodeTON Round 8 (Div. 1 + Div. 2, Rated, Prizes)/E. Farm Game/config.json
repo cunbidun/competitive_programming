@@ -2,24 +2,24 @@
   "checker": "token_checker",
   "genParameters": "",
   "generatorSeed": "",
-  "group": "Codeforces - Codeforces Round 934 (Div. 1)",
+  "group": "Codeforces - CodeTON Round 8 (Div. 1 + Div. 2, Rated, Prizes)",
   "hideAcceptedTest": true,
   "interactive": false,
   "knowGenAns": false,
-  "name": "C. Tree Compass",
+  "name": "E. Farm Game",
   "numTest": 0,
   "stopAtWrongAnswer": false,
   "tests": [
     {
-      "active": false,
+      "active": true,
       "answer": true,
       "index": 0,
-      "input": "4\n1\n2\n1 2\n4\n1 2\n1 3\n1 4\n7\n2 7\n3 2\n6 4\n5 7\n1 6\n6 7\n",
-      "output": "1\n1 0\n2\n1 1\n2 1\n2\n1 1\n2 1\n3\n6 1\n7 1\n2 1\n"
+      "input": "3\n2 1\n3 1\n420 69\n",
+      "output": "0\n2\n870279412\n"
     }
   ],
   "timeLimit": 2000,
   "truncateLongTest": false,
-  "url": "https://codeforces.com/problemset/problem/1943/C",
+  "url": "https://codeforces.com/problemset/problem/1942/E",
   "useGeneration": false
 }

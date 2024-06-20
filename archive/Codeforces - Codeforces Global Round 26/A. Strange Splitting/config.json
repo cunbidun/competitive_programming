@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Global Round 26",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "A. Strange Splitting",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "7\n4\n1 1 2 2\n5\n1 2 3 4 5\n3\n3 3 3\n4\n1 2 2 2\n3\n1 2 2\n3\n1 1 2\n3\n1 9 84\n",
+      "output": "YES\nRBRR\nYES\nBBRBB\nNO\nYES\nRBBR\nYES\nRRB\nYES\nBRR\nYES\nBRB\n"
+    }
+  ],
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/contest/1984/problem/A",
+  "useGeneration": false
+}

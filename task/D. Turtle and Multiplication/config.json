@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 949 (Div. 2)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "D. Turtle and Multiplication",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "3\n2\n3\n4\n",
+      "output": "114514 114514\n1 2 2\n3 3 4 4\n"
+    }
+  ],
+  "timeLimit": 3000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1981/D",
+  "useGeneration": false
+}

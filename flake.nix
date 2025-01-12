@@ -25,9 +25,8 @@
           pkill cpcli_cc; cpcli_cc --project-config project_config.json -o 2>&1 > /dev/null &
           echo "Competitive Companion server started"
           echo "compiling headers..."
-          cpcli_app project -g
-          echo "headers compiled"
-          echo -e "\e]2;Competitive Programming\007"; exec zsh -c 'nvim .'
+          echo -e "\e]2;Competitive Programming\007"
+          exec zsh
         '';
       };
   };

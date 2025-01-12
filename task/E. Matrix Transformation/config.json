@@ -1,0 +1,50 @@
+{
+  "genParameters": "",
+  "name": "E. Matrix Transformation",
+  "group": "Codeforces - Educational Codeforces Round 173 (Rated for Div. 2)",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 1000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "4\n1 1\n12\n13\n2 2\n10 10\n42 42\n21 21\n21 21\n2 2\n74 10\n42 106\n21 85\n85 21\n2 4\n1 2 3 4\n5 6 7 8\n3 2 3 4\n1 0 1 0\n",
+      "output": "Yes\nYes\nNo\nYes\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "1\n2 2\n10 10\n42 42\n21 21\n21 21",
+      "output": "Yes",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "1\n2 2\n1 0\n1 0\n1 0\n0 1",
+      "output": "No",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 3,
+      "input": "1\n2 2\n74 10\n42 106\n21 85\n85 21",
+      "output": "No",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

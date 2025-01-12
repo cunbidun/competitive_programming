@@ -1,0 +1,43 @@
+{
+  "genParameters": "",
+  "name": "E. Range Minimum Sum",
+  "group": "Codeforces - Codeforces Round 958 (Div. 2)",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 4000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "4\n1\n1\n3\n3 1 2\n5\n4 2 1 5 3\n8\n8 1 4 6 7 3 5 2\n",
+      "output": "0\n4 7 5\n19 21 27 17 19\n79 100 72 68 67 80 73 80\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "1\n\n8\n8 1 4 6 7 3 5 2",
+      "output": "79 100 72 68 67 80 73 80",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "\n1\n3\n3 1 2",
+      "output": "4 7 5",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

@@ -1,0 +1,101 @@
+#include "interactive.h"
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int sgn(int a) {
+  return (a > 0) - (0 > a);
+}
+
+void interactor() {
+  dual_in iin(cin, screen);
+  dual_out iout(cout, screen);
+  int q_asked = 0;
+  int LIMIT = 62;
+
+  int bound = (1 << 30);
+
+  int a, b;
+  in >> a >> b;
+
+  while (1) {
+    char type;
+    int c, d;
+    iin >> type >> c >> d >> endl;
+    q_asked++;
+    if ((type != '?' && type != '!') || c < 0 || d < 0 || bound <= c || bound <= d) {
+      WA(2);
+      break;
+    }
+    if (type == '?') {
+      if (q_asked > LIMIT) {
+        iout << -2;
+        WA(1);
+        break;
+      }
+      iout << sgn((a ^ c) - (b ^ d)) << endl;
+    } else {
+      if (a == c && b == d) {
+        OK();
+      } else {
+        WA(0, "incorrect output");
+      }
+      break;
+    }
+  }
+}
+
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+/**
+ * @brief The interactor program for interactive task. 
+ *        The program should accept 3 arguments and can be invoke this way:
+ *       
+ *          interactor <input_file> <screen_file> <result_file> 
+ *  
+ *        The input_file will contain data that will be feed into interactor
+ * 
+ *        The screen_file will store interaction between solution and the interactor. 
+ *        Later, this data will be print to screen. 
+ * 
+ *        The result_file will contain the result of the test. 
+ *        Later, this data will be use to report error and verdict.
+ */
+int main(int argc, char *argv[]) {
+  char const *que = "/tmp/que";
+  char const *ans = "/tmp/ans";
+  mkfifo(que, 0777);
+  mkfifo(ans, 0777);
+  pid_t pid = fork();
+  if (pid < 0) {
+    return 1;
+  }
+  if (pid == 0) {
+    int fd_read = open(ans, O_RDONLY);
+    int fd_write = open(que, O_WRONLY);
+    dup2(fd_read, 0);
+    dup2(fd_write, 1);
+    execl("solution", "solution", NULL);
+  } else {
+    signal(SIGPIPE, [](int sig) {
+      res << "wrong answer\nsolution exited unexpectedly (SIGPIPE)";
+      exit(0);
+    });
+    int fd_write = open(ans, O_WRONLY);
+    int fd_read = open(que, O_RDONLY);
+    dup2(fd_read, 0);
+    dup2(fd_write, 1);
+    in.open(argv[1]);
+    screen.open(argv[2]);
+    res.open(argv[3]);
+    interactor();
+    in.close();
+    screen.close();
+    res.close();
+  }
+  unlink(que);
+  unlink(ans);
+  return 0;
+}

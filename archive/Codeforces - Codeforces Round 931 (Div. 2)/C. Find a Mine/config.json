@@ -1,0 +1,29 @@
+{
+  "genParameters": "",
+  "name": "C. Find a Mine",
+  "group": "Codeforces - Codeforces Round 931 (Div. 2)",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": true,
+  "tests": [
+    {
+      "index": 0,
+      "input": "2\n4 4\n\n3\n\n2\n\n2\n\n0\n\n5 5\n\n1\n\n2\n\n3\n",
+      "output": "\n? 1 1\n\n? 1 4\n\n? 4 1\n\n? 2 3\n\n! 2 3\n\n? 5 5\n\n? 2 2\n\n? 3 3\n\n! 1 1\n",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

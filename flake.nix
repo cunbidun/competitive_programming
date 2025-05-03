@@ -20,11 +20,11 @@
           cowsay
         ];
         shellHook = ''
+          export CP_ENV=1
           cowsay "welcome to cunbidun's competitive programming shell"
           echo "starting Competitive Companion server..."
           pkill cpcli_cc; cpcli_cc --project-config project_config.json -o 2>&1 > /dev/null &
           echo "Competitive Companion server started"
-          echo "compiling headers..."
           echo -e "\e]2;Competitive Programming\007"
           exec zsh
         '';

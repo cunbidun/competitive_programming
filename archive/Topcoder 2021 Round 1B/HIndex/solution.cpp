@@ -26,7 +26,7 @@ public:
 };
 
 int main() {
-  ios_base::sync_with_stdio(false);
+  ios_base::sync_with_stdio(false);:
   cin.tie(nullptr);
   HIndex m;
   m.cheat({25, 3, 5, 3, 8, 0}, 1001, 1000);

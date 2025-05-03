@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 864 (Div. 2)",
+  "hideAcceptedTest": true,
+  "interactive": true,
+  "knowGenAns": false,
+  "name": "C. Li Hua and Chess",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "2\n3 4\n\n1\n\n2\n\n5 3\n\n3\n\n1\n\n2\n",
+      "output": "\n? 2 3\n\n? 2 4\n\n! 2 2\n\n? 2 2\n\n? 5 2\n\n? 5 3\n\n! 5 1\n"
+    }
+  ],
+  "timeLimit": 1000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/problemset/problem/1797/C",
+  "useGeneration": false
+}

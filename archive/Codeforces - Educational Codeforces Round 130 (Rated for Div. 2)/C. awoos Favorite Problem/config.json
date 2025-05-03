@@ -1,0 +1,36 @@
+{
+  "genParameters": "",
+  "name": "C. awoos Favorite Problem",
+  "group": "Codeforces - Educational Codeforces Round 130 (Rated for Div. 2)",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "5\n3\ncab\ncab\n1\na\nb\n6\nabbabc\nbbaacb\n10\nbcaabababc\ncbbababaac\n2\nba\nab\n",
+      "output": "YES\nNO\nYES\nYES\nNO\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "1\n6\nabbabc\nbbaacb",
+      "output": "YES",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

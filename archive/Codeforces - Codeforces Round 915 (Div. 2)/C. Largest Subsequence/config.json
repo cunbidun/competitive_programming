@@ -1,0 +1,64 @@
+{
+  "genParameters": "",
+  "name": "C. Largest Subsequence",
+  "group": "Codeforces - Codeforces Round 915 (Div. 2)",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 1000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "6\n5\naaabc\n3\nacb\n3\nbac\n4\nzbca\n15\nczddeneeeemigec\n13\ncdefmopqsvxzz\n",
+      "output": "0\n1\n-1\n2\n6\n0\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "1\n5\naaaaa",
+      "output": "0",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 2,
+      "input": "4\n1\na\n2\nba\n3\ncba\n3\ncab",
+      "output": "0\n1\n2\n-1",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 3,
+      "input": "1\n7\nazabcba",
+      "output": "3",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 4,
+      "input": "1\n5\nbbcbb",
+      "output": "2",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 5,
+      "input": "1\n6\n\nbdcdcb",
+      "output": "",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

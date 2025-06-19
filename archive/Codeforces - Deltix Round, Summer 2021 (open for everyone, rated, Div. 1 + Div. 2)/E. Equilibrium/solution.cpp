@@ -2,32 +2,26 @@
 
 using namespace std;
 
-template <class c>
-struct rge { c b, e; };
-template <class c>
-rge<c> range(c i, c j) { return rge<c>{i, j}; }
-template <class c>
-auto dud(c *x) -> decltype(cerr << *x, 0);
-template <class c>
-char dud(...);
+template <class c> struct rge {
+  c b, e;
+};
+template <class c> rge<c> range(c i, c j) { return rge<c>{i, j}; }
+template <class c> auto dud(c *x) -> decltype(cerr << *x, 0);
+template <class c> char dud(...);
 struct debug {
 #ifdef LOCAL
   ~debug() { cout << endl; }
-  template <class c>
-  typename enable_if<sizeof dud<c>(0) != 1, debug &>::type operator<<(c i) {
+  template <class c> typename enable_if<sizeof dud<c>(0) != 1, debug &>::type operator<<(c i) {
     cout << boolalpha << i;
     return *this;
   }
-  template <class c>
-  typename enable_if<sizeof dud<c>(0) == 1, debug &>::type operator<<(c i) {
+  template <class c> typename enable_if<sizeof dud<c>(0) == 1, debug &>::type operator<<(c i) {
     return *this << range(begin(i), end(i));
   }
-  template <class c, class b>
-  debug &operator<<(pair<b, c> d) {
+  template <class c, class b> debug &operator<<(pair<b, c> d) {
     return *this << "(" << d.first << ", " << d.second << ")";
   }
-  template <class c>
-  debug &operator<<(rge<c> d) {
+  template <class c> debug &operator<<(rge<c> d) {
     *this << "[";
     for (auto it = d.b; it != d.e; ++it) {
       *this << ", " + 2 * (it == d.b) << *it;
@@ -35,19 +29,17 @@ struct debug {
     return *this << "]";
   }
 #else
-  template <class c>
-  debug &operator<<(const c &) { return *this; }
+  template <class c> debug &operator<<(const c &) { return *this; }
 #endif
 };
 #define imie(...) "[" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
 
-template <typename T, class F = function<T(const T &, const T &)>>
-class sparse_table {
+template <typename T, class F = function<T(const T &, const T &)>> class SparseTable {
 public:
   int N;
   vector<vector<T>> st;
   F func;
-  sparse_table(const vector<T> &a, const F &f) : func(f) {
+  SparseTable(const vector<T> &a, const F &f) : func(f) {
     N = static_cast<int>(a.size());
     int max_log = 32 - __builtin_clz(N);
     st.resize(N, vector<T>(max_log));
@@ -87,11 +79,9 @@ int main() {
   for (int i = 1; i < N; i++) {
     s[i] = s[i - 1] + a[i];
   }
-  auto get_sum = [&](int l, int r) -> ll {
-    return (l == 0) ? s[r] : s[r] - s[l - 1];
-  };
-  sparse_table<ll> rmin(s, [](ll x1, ll x2) -> ll { return min(x1, x2); });
-  sparse_table<ll> rmax(s, [](ll x1, ll x2) -> ll { return max(x1, x2); });
+  auto get_sum = [&](int l, int r) -> ll { return (l == 0) ? s[r] : s[r] - s[l - 1]; };
+  SparseTable<ll> rmin(s, [](ll x1, ll x2) -> ll { return min(x1, x2); });
+  SparseTable<ll> rmax(s, [](ll x1, ll x2) -> ll { return max(x1, x2); });
   while (Q--) {
     int l, r;
     cin >> l >> r;

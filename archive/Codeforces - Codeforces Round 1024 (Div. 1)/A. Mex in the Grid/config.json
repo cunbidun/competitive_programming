@@ -1,0 +1,36 @@
+{
+  "genParameters": "",
+  "name": "A. Mex in the Grid",
+  "group": "Codeforces - Codeforces Round 1024 (Div. 1)",
+  "checker": "token_checker",
+  "numTest": 0,
+  "timeLimit": 2000,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "index": 0,
+      "input": "2\n2\n3\n",
+      "output": "0 1\n2 3\n8 4 5\n6 0 1\n7 2 3\n",
+      "active": true,
+      "answer": true
+    },
+    {
+      "index": 1,
+      "input": "3\n5 6 7",
+      "output": "",
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {
+    "solution": "",
+    "slow": "",
+    "gen": ""
+  }
+}

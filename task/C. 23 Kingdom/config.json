@@ -1,0 +1,25 @@
+{
+  "checker": "token_checker",
+  "genParameters": "",
+  "generatorSeed": "",
+  "group": "Codeforces - Codeforces Round 1024 (Div. 1)",
+  "hideAcceptedTest": true,
+  "interactive": false,
+  "knowGenAns": false,
+  "name": "C. 23 Kingdom",
+  "numTest": 0,
+  "stopAtWrongAnswer": false,
+  "tests": [
+    {
+      "active": true,
+      "answer": true,
+      "index": 0,
+      "input": "4\n4\n1 2 1 2\n2\n2 2\n10\n1 2 1 5 1 2 2 1 1 2\n8\n1 5 2 8 4 1 4 2\n",
+      "output": "4\n1\n16\n16\n"
+    }
+  ],
+  "timeLimit": 4000,
+  "truncateLongTest": false,
+  "url": "https://codeforces.com/contest/2101/problem/C",
+  "useGeneration": false
+}

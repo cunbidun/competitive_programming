@@ -1,6 +1,6 @@
 {
   "root": "/home/cunbidun/competitive_programming",
-  "task_editor_exec": "java -jar ~/.local/share/cpcli/task-editor/java-task-editor.jar",
+  "task_editor_exec": "/home/cunbidun/share/cpcli/task-editor/task-editor",
   "language_config": {
     "default": "cpp",
     "override": {},

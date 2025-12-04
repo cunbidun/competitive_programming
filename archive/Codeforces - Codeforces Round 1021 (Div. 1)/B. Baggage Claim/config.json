@@ -1,0 +1,46 @@
+{
+  "genParameters": "",
+  "name": "B. Baggage Claim",
+  "group": "Codeforces - Codeforces Round 1021 (Div. 1)",
+  "checker": "custom",
+  "numTest": 0,
+  "timeLimit": 2004,
+  "generatorSeed": "",
+  "useGeneration": false,
+  "knowGenAns": false,
+  "hideAcceptedTest": true,
+  "truncateLongTest": false,
+  "stopAtWrongAnswer": false,
+  "interactive": false,
+  "tests": [
+    {
+      "input": "5\n2 4 2\n1 1\n2 2\n2 4\n1 4 1\n1 1\n1 4\n5 5 11\n2 5\n3 4\n4 5\n5 4\n4 3\n5 2\n4 1\n3 2\n2 1\n1 2\n2 3\n1 4\n3 4 4\n1 2\n2 1\n3 2\n2 3\n3 4\n3 3 2\n2 2\n1 1\n1 3\n",
+      "output": "2\n0\n2\n5\n1",
+      "index": 0,
+      "active": true,
+      "answer": true
+    },
+    {
+      "input": "1\n10 10 2\n1 1\n3 4 ",
+      "output": "0",
+      "index": 1,
+      "active": true,
+      "answer": true
+    },
+    {
+      "input": "1\n2 4 2\n1 1\n2 2\n2 4",
+      "output": "2",
+      "index": 2,
+      "active": true,
+      "answer": true
+    },
+    {
+      "input": "1\n3 3 2\n2 2\n1 1\n1 3\n",
+      "output": "1",
+      "index": 3,
+      "active": true,
+      "answer": true
+    }
+  ],
+  "languageConfig": {}
+}
